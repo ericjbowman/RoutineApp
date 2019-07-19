@@ -1,8 +1,18 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
+import styled from 'styled-components'
 
 import { signIn } from '../api'
 import messages from '../messages'
+
+const Input = styled.input`
+  border-radius: 3px;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 0 5px deeppink;
+  }
+`
 
 class SignIn extends Component {
   constructor () {
@@ -41,7 +51,7 @@ class SignIn extends Component {
       <form className='auth-form' onSubmit={this.onSignIn}>
         <h3>Sign In</h3>
         <label htmlFor="email">Email</label>
-        <input
+        <Input
           required
           type="email"
           name="email"
@@ -50,7 +60,7 @@ class SignIn extends Component {
           onChange={this.handleChange}
         />
         <label htmlFor="password">Password</label>
-        <input
+        <Input
           required
           name="password"
           value={password}
