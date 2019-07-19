@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 
 class ThreeSets extends Component {
   render () {
+    const { circuit, antagCircuit } = this.props.sets
     const ifNoWeight = function (num) {
       if (num === 0) {
         return 'n/a'
@@ -10,14 +11,14 @@ class ThreeSets extends Component {
       }
     }
     console.log('3 set props...', this.props.sets)
-    console.log('3 set second weight', this.props.sets.circuit.antag.weight[1])
+    console.log('3 set second weight', circuit.antag.weight[1])
     return (
       <Fragment>
         <table className="table table-bordered table-dark table-sm">
           <thead>
             <tr>
               <th colSpan="3" className="mainMover">
-                Set 1: {this.props.sets.circuit.intensity}
+                Set 1: {circuit.intensity}
               </th>
             </tr>
             <tr>
@@ -28,19 +29,19 @@ class ThreeSets extends Component {
           </thead>
           <tbody>
             <tr>
-              <td scope="row">{this.props.sets.circuit.antag.name}</td>
-              <td>{ifNoWeight(this.props.sets.antagCircuit.antag.weight[0])}</td>
-              <td>{this.props.sets.antagCircuit.antag.reps[0]}</td>
+              <td scope="row">{circuit.antag.name}</td>
+              <td>{ifNoWeight(antagCircuit.antag.weight[0])}</td>
+              <td>{antagCircuit.antag.reps[0]}</td>
             </tr>
             <tr>
-              <td scope="row">{this.props.sets.circuit.main.name}</td>
-              <td>{this.props.sets.circuit.main.weight[0]} lb</td>
-              <td>{this.props.sets.circuit.main.reps[0]}</td>
+              <td scope="row">{circuit.main.name}</td>
+              <td>{circuit.main.weight[0]} lb</td>
+              <td>{circuit.main.reps[0]}</td>
             </tr>
             <tr>
-              <td scope="row">{this.props.sets.circuit.core.name}</td>
+              <td scope="row">{circuit.core.name}</td>
               <td>n/a</td>
-              <td>{this.props.sets.circuit.core.reps[0]}</td>
+              <td>10-20</td>
             </tr>
             <tr>
               <td colSpan="3">90 Seconds Rest</td>
@@ -51,7 +52,7 @@ class ThreeSets extends Component {
           <thead>
             <tr>
               <th colSpan="3" className="mainMover">
-                Set 2: {this.props.sets.circuit.intensity}
+                Set 2: {circuit.intensity}
               </th>
             </tr>
             <tr>
@@ -62,19 +63,19 @@ class ThreeSets extends Component {
           </thead>
           <tbody>
             <tr>
-              <td scope="row">{this.props.sets.antagCircuit.antag.name}</td>
-              <td>{ifNoWeight(this.props.sets.antagCircuit.antag.weight[1])}</td>
-              <td>{this.props.sets.circuit.antag.reps[1]}</td>
+              <td scope="row">{antagCircuit.antag.name}</td>
+              <td>{ifNoWeight(antagCircuit.antag.weight[1])}</td>
+              <td>{antagCircuit.antag.reps[1]}</td>
             </tr>
             <tr>
-              <td scope="row">{this.props.sets.circuit.main.name}</td>
-              <td>{this.props.sets.antagCircuit.main.weight[1]} lb</td>
-              <td>{this.props.sets.antagCircuit.main.reps[1]}</td>
+              <td scope="row">{circuit.main.name}</td>
+              <td>{circuit.main.weight[1]} lb</td>
+              <td>{circuit.main.reps[1]}</td>
             </tr>
             <tr>
-              <td scope="row">{this.props.sets.circuit.core.name}</td>
+              <td scope="row">{circuit.core.name}</td>
               <td>n/a</td>
-              <td>{this.props.sets.circuit.core.reps[1]}</td>
+              <td>10-20</td>
             </tr>
             <tr>
               <td colSpan="3">90 Seconds Rest</td>
@@ -85,7 +86,7 @@ class ThreeSets extends Component {
           <thead>
             <tr>
               <th colSpan="3" className="mainMover">
-                Set 3: {this.props.sets.circuit.intensity}
+                Set 3: {circuit.intensity}
               </th>
             </tr>
             <tr>
@@ -96,19 +97,19 @@ class ThreeSets extends Component {
           </thead>
           <tbody>
             <tr>
-              <td scope="row">{this.props.sets.antagCircuit.antag.name}</td>
-              <td>{ifNoWeight(this.props.sets.antagCircuit.antag.weight[2])}</td>
-              <td>{this.props.sets.antagCircuit.antag.reps[2]}</td>
+              <td scope="row">{antagCircuit.antag.name}</td>
+              <td>{ifNoWeight(antagCircuit.antag.weight[2])}</td>
+              <td>{antagCircuit.antag.reps[2]}</td>
             </tr>
             <tr>
-              <td scope="row">{this.props.sets.circuit.main.name}</td>
-              <td>{this.props.sets.circuit.main.weight[2]} lb</td>
-              <td>{this.props.sets.circuit.main.reps[2]}</td>
+              <td scope="row">{circuit.main.name}</td>
+              <td>{circuit.main.weight[2]} lb</td>
+              <td>{circuit.main.reps[2]}</td>
             </tr>
             <tr>
-              <td scope="row">{this.props.sets.circuit.core.name}</td>
+              <td scope="row">{circuit.core.name}</td>
               <td>n/a</td>
-              <td>{this.props.sets.circuit.core.reps[2]}</td>
+              <td>10-20</td>
             </tr>
             <tr>
               <td colSpan="3">90 Seconds Rest</td>
