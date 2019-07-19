@@ -29,8 +29,8 @@ class ThreeSets extends Component {
           <tbody>
             <tr>
               <td scope="row">{this.props.sets.circuit.antag.name}</td>
-              <td>{ifNoWeight(this.props.sets.circuit.antag.weight[0])}</td>
-              <td>{this.props.sets.circuit.antag.reps[0]}</td>
+              <td>{ifNoWeight(this.props.sets.antagCircuit.antag.weight[0])}</td>
+              <td>{this.props.sets.antagCircuit.antag.reps[0]}</td>
             </tr>
             <tr>
               <td scope="row">{this.props.sets.circuit.main.name}</td>
@@ -62,14 +62,14 @@ class ThreeSets extends Component {
           </thead>
           <tbody>
             <tr>
-              <td scope="row">{this.props.sets.circuit.antag.name}</td>
-              <td>{ifNoWeight(this.props.sets.circuit.antag.weight[1])}</td>
+              <td scope="row">{this.props.sets.antagCircuit.antag.name}</td>
+              <td>{ifNoWeight(this.props.sets.antagCircuit.antag.weight[1])}</td>
               <td>{this.props.sets.circuit.antag.reps[1]}</td>
             </tr>
             <tr>
               <td scope="row">{this.props.sets.circuit.main.name}</td>
-              <td>{this.props.sets.circuit.main.weight[1]} lb</td>
-              <td>{this.props.sets.circuit.main.reps[1]}</td>
+              <td>{this.props.sets.antagCircuit.main.weight[1]} lb</td>
+              <td>{this.props.sets.antagCircuit.main.reps[1]}</td>
             </tr>
             <tr>
               <td scope="row">{this.props.sets.circuit.core.name}</td>
@@ -96,9 +96,9 @@ class ThreeSets extends Component {
           </thead>
           <tbody>
             <tr>
-              <td scope="row">{this.props.sets.circuit.antag.name}</td>
-              <td>{ifNoWeight(this.props.sets.circuit.antag.weight[2])}</td>
-              <td>{this.props.sets.circuit.antag.reps[2]}</td>
+              <td scope="row">{this.props.sets.antagCircuit.antag.name}</td>
+              <td>{ifNoWeight(this.props.sets.antagCircuit.antag.weight[2])}</td>
+              <td>{this.props.sets.antagCircuit.antag.reps[2]}</td>
             </tr>
             <tr>
               <td scope="row">{this.props.sets.circuit.main.name}</td>

@@ -7,12 +7,20 @@ class Day extends Component {
   //   const { fromWave } = this.props.location.state
   // }
   render () {
+    const { fromWave, fromWave1 } = this.props.location.state
+    const isWave1 = () => {
+      if ((fromWave.name === 'Day 2') || (fromWave.name === 'Day 4')) {
+        return (fromWave1)
+      } else {
+        return (fromWave)
+      }
+    }
     return (
       <div>
-        <h3>{this.props.dayNum}</h3>
-        <Circuit circuit={this.props.location.state.fromWave.circuit1} name='Primary'/>
-        <Circuit circuit={this.props.location.state.fromWave.circuit2} name='Technique'/>
-        <Circuit circuit={this.props.location.state.fromWave.circuit3} name='Assistance'/>
+        <h3>{this.props.location.state.fromWave.name}</h3>
+        <Circuit circuit={fromWave.circuit1} antagCircuit={isWave1().circuit1} name='Primary'/>
+        <Circuit circuit={fromWave.circuit2} antagCircuit={isWave1().circuit2} name='Technique'/>
+        <Circuit circuit={fromWave.circuit3} antagCircuit={isWave1().circuit3} name='Assistance'/>
         <button className="btn btn-success">Completed</button>
       </div>
     )

@@ -17,28 +17,32 @@ const Wave = (props) => (
           <td><Link to={{
             pathname: `/days/${props.number}-1`,
             state: {
-              fromWave: props.wave.week1.day1
+              fromWave: props.wave.week1.day1,
+              fromWave1: props.wave1.week1.day1
             }
           }}>Day1
           </Link></td>
           <td><Link to={{
             pathname: `/days/${props.number}-2`,
             state: {
-              fromWave: props.wave.week1.day2
+              fromWave: props.wave.week1.day2,
+              fromWave1: props.wave1.week1.day2
             }
           }}>Day2
           </Link></td>
           <td><Link to={{
             pathname: `/days/${props.number}-3`,
             state: {
-              fromWave: props.wave.week1.day3
+              fromWave: props.wave.week1.day3,
+              fromWave1: props.wave1.week1.day3
             }
           }}>Day3
           </Link></td>
           <td><Link to={{
             pathname: `/days/${props.number}-4`,
             state: {
-              fromWave: props.wave.week1.day4
+              fromWave: props.wave.week1.day4,
+              fromWave1: props.wave1.week1.day4
             }
           }}>Day4
           </Link></td>
@@ -48,28 +52,32 @@ const Wave = (props) => (
           <td><Link to={{
             pathname: `/days/${props.number}-5`,
             state: {
-              fromWave: props.wave.week2.day1
+              fromWave: props.wave.week2.day1,
+              fromWave1: props.wave1.week2.day1
             }
           }}>Day1
           </Link></td>
           <td><Link to={{
             pathname: `/days/${props.number}-6`,
             state: {
-              fromWave: props.wave.week2.day2
+              fromWave: props.wave.week2.day2,
+              fromWave1: props.wave1.week2.day2
             }
           }}>Day2
           </Link></td>
           <td><Link to={{
             pathname: `/days/${props.number}-7`,
             state: {
-              fromWave: props.wave.week2.day3
+              fromWave: props.wave.week2.day3,
+              fromWave1: props.wave1.week2.day3
             }
           }}>Day3
           </Link></td>
           <td><Link to={{
             pathname: `/days/${props.number}-8`,
             state: {
-              fromWave: props.wave.week2.day4
+              fromWave: props.wave.week2.day4,
+              fromWave1: props.wave1.week2.day4
             }
           }}>Day4
           </Link></td>
@@ -79,28 +87,32 @@ const Wave = (props) => (
           <td><Link to={{
             pathname: `/days/${props.number}-9`,
             state: {
-              fromWave: props.wave.week3.day1
+              fromWave: props.wave.week3.day1,
+              fromWave1: props.wave1.week3.day1
             }
           }}>Day1
           </Link></td>
           <td><Link to={{
             pathname: `/days/${props.number}-10`,
             state: {
-              fromWave: props.wave.week3.day2
+              fromWave: props.wave.week3.day2,
+              fromWave1: props.wave1.week3.day2
             }
           }}>Day2
           </Link></td>
           <td><Link to={{
             pathname: `/days/${props.number}-11`,
             state: {
-              fromWave: props.wave.week3.day3
+              fromWave: props.wave.week3.day3,
+              fromWave1: props.wave1.week3.day3
             }
           }}>Day3
           </Link></td>
           <td><Link to={{
             pathname: `/days/${props.number}-12`,
             state: {
-              fromWave: props.wave.week3.day4
+              fromWave: props.wave.week3.day4,
+              fromWave1: props.wave1.week3.day4
             }
           }}>Day4
           </Link></td>
