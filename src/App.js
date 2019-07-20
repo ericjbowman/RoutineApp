@@ -10,6 +10,7 @@ import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import Routines from './Routines'
 import Day from './Day.js'
+import InputCreate from './InputCreate'
 
 import Alert from 'react-bootstrap/Alert'
 
@@ -57,7 +58,8 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
           )} />
-          <Routines></Routines>
+          <Route exact path="/create-input" component={InputCreate}/>
+          <Route exact path="/routines" component={Routines}/>
           <Route exact path="/days/:id" component={Day}/>
         </main>
       </React.Fragment>
