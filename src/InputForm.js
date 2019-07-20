@@ -90,6 +90,14 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
         max="12"
       />
 
+      <label>Secondary Squat Primer</label>
+      <input
+        placeholder="Secondary Squat Primer"
+        value={input.antagSquat2Name}
+        name="antagSquat2Name"
+        onChange={handleChange}
+        type="text"
+      />
       <label>Secondary Squat Exercise</label>
       <input
         placeholder="Secondary Squat Exercise"
@@ -112,6 +120,34 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
         placeholder="Secondary Squat Reps"
         value={input.squat2Reps}
         name="squat2Reps"
+        onChange={handleChange}
+        type="number"
+        min="1"
+        max="12"
+      />
+
+      <label>Secondary OHP Antagonist Exercise</label>
+      <input
+        placeholder="Secondary OHP Antagonist Exercise"
+        value={input.antagOhp2Name}
+        name="antagOhp2Name"
+        onChange={handleChange}
+        type="text"
+      />
+      <label>Secondary OHP Antagonist Weight</label>
+      <input
+        placeholder="Secondary OHP Antagonist Weight"
+        value={input.antagOhp2Weight}
+        name="antagOhp2Weight"
+        onChange={handleChange}
+        type="number"
+        min="0"
+      />
+      <label>Secondary OHP Antagonist Reps</label>
+      <input
+        placeholder="Secondary OHP Antagonist Reps"
+        value={input.antagOhp2Reps}
+        name="antagOhp2Reps"
         onChange={handleChange}
         type="number"
         min="1"
@@ -144,6 +180,14 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
         min="1"
         max="12"
       />
+      <label>Secondary Deadlift Primer</label>
+      <input
+        placeholder="Secondary Deadlift Primer"
+        value={input.antagDeadlift2Name}
+        name="antagDeadlift2Name"
+        onChange={handleChange}
+        type="text"
+      />
       <label>Secondary Deadlift Exercise</label>
       <input
         placeholder="Secondary Deadlift Exercise"
@@ -171,6 +215,35 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
         min="1"
         max="12"
       />
+
+      <label>Secondary Bench-press Antagonist Exercise</label>
+      <input
+        placeholder="Secondary Bench-press Antagonist Exercise"
+        value={input.antagBench2Name}
+        name="antagBench2Name"
+        onChange={handleChange}
+        type="text"
+      />
+      <label>Secondary Bench-press Antagonist Weight</label>
+      <input
+        placeholder="Secondary Bench-press Antagonist Weight"
+        value={input.antagBench2Weight}
+        name="antagBench2Weight"
+        onChange={handleChange}
+        type="number"
+        min="0"
+      />
+      <label>Secondary Bench-press Antagonist Reps</label>
+      <input
+        placeholder="Secondary Bench-press Antagonist Reps"
+        value={input.antagBench2Reps}
+        name="antagBench2Reps"
+        onChange={handleChange}
+        type="number"
+        min="1"
+        max="12"
+      />
+
       <label>Secondary Bench-press Exercise</label>
       <input
         placeholder="Secondary Bench-press Exercise"
@@ -199,6 +272,14 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
         max="12"
       />
 
+      <label>Assistance Squat Primer</label>
+      <input
+        placeholder="Assistance Squat Primer"
+        value={input.antagSquat3Name}
+        name="antagSquat3Name"
+        onChange={handleChange}
+        type="text"
+      />
       <label>Assistance Squat Exercise</label>
       <input
         placeholder="Assistance Squat Exercise"
@@ -226,6 +307,34 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
         min="1"
         max="12"
       />
+
+      <label>Assistance Ohp Antagonist Exercise</label>
+      <input
+        placeholder="Assistance Ohp Antagonist Exercise"
+        value={input.antagOhp3Name}
+        name="antagOhp3Name"
+        onChange={handleChange}
+        type="text"
+      />
+      <label>Assistance Ohp Antagonist Weight</label>
+      <input
+        placeholder="Assistance Ohp Antagonist Weight"
+        value={input.antagOhp3Weight}
+        name="antagOhp3Weight"
+        onChange={handleChange}
+        type="text"
+      />
+      <label>Assistance Ohp Antagonist Reps</label>
+      <input
+        placeholder="Assistance Ohp Antagonist Reps"
+        value={input.antagOhp3Reps}
+        name="antagOhp3Reps"
+        onChange={handleChange}
+        type="number"
+        min="1"
+        max="12"
+      />
+
       <label>Assistance Over-head Press Exercise</label>
       <input
         placeholder="Assistance Over-head Press Exercise"
@@ -251,6 +360,14 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
         type="number"
         min="1"
         max="12"
+      />
+      <label>Assistance Dead-lift Primer</label>
+      <input
+        placeholder="Assistance Dead-lift Primer"
+        value={input.antagDeadlift3Name}
+        name="antagDeadlift3Name"
+        onChange={handleChange}
+        type="text"
       />
       <label>Assistance Dead-lift Exercise</label>
       <input
@@ -279,6 +396,36 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
         min="1"
         max="12"
       />
+
+      <label>Assistance Bench-press Antagonist Exercise</label>
+      <input
+        placeholder="Assistance Bench-press Antagonist Exercise"
+        value={input.antagBench3Name}
+        name="antagBench3Name"
+        onChange={handleChange}
+        type="text"
+        min="0"
+      />
+      <label>Assistance Bench-press Antagonist Weight</label>
+      <input
+        placeholder="Assistance Bench-press Antagonist Weight"
+        value={input.antagBench3Weight}
+        name="antagBench3Weight"
+        onChange={handleChange}
+        type="number"
+        min="0"
+      />
+      <label>Assistance Bench-press Antagonist Reps</label>
+      <input
+        placeholder="Assistance Bench-press Antagonist Reps"
+        value={input.antagBench3Reps}
+        name="antagBench3Reps"
+        onChange={handleChange}
+        type="number"
+        min="1"
+        max="12"
+      />
+
       <label>Assistance Bench-press Exercise</label>
       <input
         placeholder="Assistance Bench-press Exercise"

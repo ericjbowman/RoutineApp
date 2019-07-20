@@ -11,46 +11,70 @@ class InputCreate extends Component {
       input: {
         routineName: '',
 
+        antagSquatName: '',
         squatWeight: null,
         squatReps: null,
 
+        antagOhpName: '',
+        antagOhpWeight: null,
+        antagOhpReps: null,
         ohpWeight: null,
         ohpReps: null,
 
+        antagDeadliftName: '',
         deadliftWeight: null,
         deadliftReps: null,
 
+        antagBenchName: '',
+        antagBenchWeight: null,
+        antagBenchReps: null,
         benchWeight: null,
         benchReps: null,
 
+        antagSquat2Name: '',
         squat2Name: '',
         squat2Weight: null,
         squat2Reps: null,
 
+        antagOhp2Name: '',
+        antagOhp2Weight: null,
+        antagOhp2Reps: null,
         ohp2Name: '',
         ohp2Weight: null,
         ohp2Reps: null,
 
+        antagDeadlift2Name: '',
         deadlift2Name: '',
         deadlift2Weight: null,
         deadlift2Reps: null,
 
+        antagBench2Name: '',
+        antagBench2Weight: null,
+        antagBench2Reps: null,
         bench2Name: '',
         bench2Weight: null,
         bench2Reps: null,
 
+        antagSquat3Name: '',
         squat3Name: '',
         squat3Weight: null,
         squat3Reps: null,
 
+        antagOhp3Name: '',
+        antagOhp3Weight: null,
+        antagOhp3Reps: null,
         ohp3Name: '',
         ohp3Weight: null,
         ohp3Reps: null,
 
+        antagDeadlift3Name: '',
         deadlift3Name: '',
         deadlift3Weight: null,
         deadlift3Reps: null,
 
+        antagBench3Name: '',
+        antagBench3Weight: null,
+        antagBench3Reps: null,
         bench3Name: '',
         bench3Weight: null,
         bench3Reps: null,
