@@ -3,7 +3,6 @@ import InputForm from './InputForm'
 import { Redirect } from 'react-router-dom'
 // import axios from 'axios'
 // import apiUrl from '../../apiConfig'
-
 class InputCreate extends Component {
   constructor (props) {
     super(props)

@@ -87,6 +87,322 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath }) => (
       min="1"
       max="12"
     />
+
+    <label>Secondary Squat Exercise</label>
+    <input
+      placeholder="Secondary Squat Exercise"
+      value={input.squat2Name}
+      name="squat2Name"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Secondary Squat Weight</label>
+    <input
+      placeholder="Secondary Squat Weight"
+      value={input.squat2Weight}
+      name="squat2Weight"
+      onChange={handleChange}
+      type="number"
+      min="0"
+    />
+    <label>Secondary Squat Reps</label>
+    <input
+      placeholder="Secondary Squat Reps"
+      value={input.squat2Reps}
+      name="squat2Reps"
+      onChange={handleChange}
+      type="number"
+      min="1"
+      max="12"
+    />
+    <label>Secondary Over-head Press Exercise</label>
+    <input
+      placeholder="Secondary Over-head Press Exercise"
+      value={input.ohp2Name}
+      name="ohp2Name"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Secondary Over-head Press Weight</label>
+    <input
+      placeholder="Secondary Over-head Press Weight"
+      value={input.ohp2Weight}
+      name="ohp2Weight"
+      onChange={handleChange}
+      type="number"
+      min="0"
+    />
+    <label>Secondary Over-head Press Reps</label>
+    <input
+      placeholder="Secondary Over-head Press Reps"
+      value={input.ohp2Reps}
+      name="ohp2Reps"
+      onChange={handleChange}
+      type="number"
+      min="1"
+      max="12"
+    />
+    <label>Secondary Deadlift Exercise</label>
+    <input
+      placeholder="Secondary Deadlift Exercise"
+      value={input.deadlift2Name}
+      name="deadlift2Name"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Secondary Deadlift Weight</label>
+    <input
+      placeholder="Secondary Deadlift Weight"
+      value={input.deadlift2Weight}
+      name="deadlift2Weight"
+      onChange={handleChange}
+      type="number"
+      min="0"
+    />
+    <label>Secondary Deadlift Reps</label>
+    <input
+      placeholder="Secondary Deadlift Reps"
+      value={input.deadlift2Reps}
+      name="deadlift2Reps"
+      onChange={handleChange}
+      type="number"
+      min="1"
+      max="12"
+    />
+    <label>Secondary Bench-press Exercise</label>
+    <input
+      placeholder="Secondary Bench-press Exercise"
+      value={input.bench2Name}
+      name="bench2Name"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Secondary Bench-press Weight</label>
+    <input
+      placeholder="Secondary Bench-press Weight"
+      value={input.bench2Weight}
+      name="bench2Weight"
+      onChange={handleChange}
+      type="number"
+      min="0"
+    />
+    <label>Secondary Bench-press Reps</label>
+    <input
+      placeholder="Secondary Bench-press Reps"
+      value={input.bench2Reps}
+      name="bench2Reps"
+      onChange={handleChange}
+      type="number"
+      min="1"
+      max="12"
+    />
+
+    <label>Assistance Squat Exercise</label>
+    <input
+      placeholder="Assistance Squat Exercise"
+      value={input.squat3Name}
+      name="squat3Name"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Assistance Squat Weight</label>
+    <input
+      placeholder="Assistance Squat Weight"
+      value={input.squat3Weight}
+      name="squat3Weight"
+      onChange={handleChange}
+      type="number"
+      min="0"
+    />
+    <label>Assistance Squat Reps</label>
+    <input
+      placeholder="Assistance Squat Reps"
+      value={input.squat3Reps}
+      name="squat3Reps"
+      onChange={handleChange}
+      type="number"
+      min="1"
+      max="12"
+    />
+    <label>Assistance Over-head Press Exercise</label>
+    <input
+      placeholder="Assistance Over-head Press Exercise"
+      value={input.ohp3Name}
+      name="ohp3Name"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Assistance Over-head Press Weight</label>
+    <input
+      placeholder="Assistance Over-head Press Weight"
+      value={input.ohp3Weight}
+      name="ohp3Weight"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Assistance Over-head Press Reps</label>
+    <input
+      placeholder="Assistance Over-head Press Reps"
+      value={input.ohp3Reps}
+      name="ohp3Reps"
+      onChange={handleChange}
+      type="number"
+      min="1"
+      max="12"
+    />
+    <label>Assistance Dead-lift Exercise</label>
+    <input
+      placeholder="Assistance Dead-lift Exercise"
+      value={input.deadlift3Name}
+      name="deadlift3Name"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Assistance Dead-lift Weight</label>
+    <input
+      placeholder="Assistance Dead-lift Weight"
+      value={input.deadlift3Weight}
+      name="deadlift3Weight"
+      onChange={handleChange}
+      type="number"
+      min="0"
+    />
+    <label>Assistance Dead-lift Reps</label>
+    <input
+      placeholder="Assistance Dead-lift Reps"
+      value={input.deadlift3Reps}
+      name="deadlift3Reps"
+      onChange={handleChange}
+      type="number"
+      min="1"
+      max="12"
+    />
+    <label>Assistance Bench-press Exercise</label>
+    <input
+      placeholder="Assistance Bench-press Exercise"
+      value={input.bench3Name}
+      name="bench3Name"
+      onChange={handleChange}
+      type="text"
+      min="0"
+    />
+    <label>Assistance Bench-press Weight</label>
+    <input
+      placeholder="Assistance Bench-press Weight"
+      value={input.bench3Weight}
+      name="bench3Weight"
+      onChange={handleChange}
+      type="number"
+      min="0"
+    />
+    <label>Assistance Bench-press Reps</label>
+    <input
+      placeholder="Assistance Bench-press Reps"
+      value={input.bench3Reps}
+      name="bench3Reps"
+      onChange={handleChange}
+      type="number"
+      min="1"
+      max="12"
+    />
+
+    <label>Core 1</label>
+    <input
+      placeholder="Core 1"
+      value={input.core1}
+      name="core1"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Core 2</label>
+    <input
+      placeholder="Core 2"
+      value={input.core2}
+      name="core2"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Core 3</label>
+    <input
+      placeholder="Core 3"
+      value={input.core3}
+      name="core3"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Core 4</label>
+    <input
+      placeholder="Core 4"
+      value={input.core4}
+      name="core4"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Core 5</label>
+    <input
+      placeholder="Core 5"
+      value={input.core5}
+      name="core5"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Core 6</label>
+    <input
+      placeholder="Core 6"
+      value={input.core6}
+      name="core6"
+      onChange={handleChange}
+      type="text"
+    />
+
+    <label>Oblique 1</label>
+    <input
+      placeholder="Oblique 1"
+      value={input.oblique1}
+      name="oblique1"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Oblique 2</label>
+    <input
+      placeholder="Oblique 2"
+      value={input.oblique2}
+      name="oblique2"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Oblique 3</label>
+    <input
+      placeholder="Oblique 3"
+      value={input.oblique3}
+      name="oblique3"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Oblique 4</label>
+    <input
+      placeholder="Oblique 4"
+      value={input.oblique4}
+      name="oblique4"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Oblique 5</label>
+    <input
+      placeholder="Oblique 5"
+      value={input.oblique5}
+      name="oblique5"
+      onChange={handleChange}
+      type="text"
+    />
+    <label>Oblique 6</label>
+    <input
+      placeholder="Oblique 6"
+      value={input.oblique6}
+      name="oblique6"
+      onChange={handleChange}
+      type="text"
+    />
     <button type="submit">Submit</button>
     <Link to={cancelPath}>
       <button>Cancel</button>
