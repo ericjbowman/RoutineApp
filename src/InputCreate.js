@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import InputForm from './InputForm'
 import { Redirect } from 'react-router-dom'
+import RoutineLogic from './RoutineLogic'
 // import axios from 'axios'
 // import apiUrl from '../../apiConfig'
 class InputCreate extends Component {
@@ -152,6 +153,9 @@ class InputCreate extends Component {
           handleSubmit={handleSubmit}
           toggleAutoFill={toggleAutoFill}
           cancelPath="/"
+        />
+        <RoutineLogic
+          input={input}
         />
       </div>
     )

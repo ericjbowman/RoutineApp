@@ -8,7 +8,7 @@ import SignUp from './auth/components/SignUp'
 import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
-import Routines from './Routines'
+// import RoutineLogic from './Routines'
 import Day from './Day.js'
 import InputCreate from './InputCreate'
 
@@ -59,7 +59,6 @@ class App extends Component {
             <ChangePassword alert={this.alert} user={user} />
           )} />
           <Route exact path="/create-input" component={InputCreate}/>
-          <Route path="/" component={Routines}/>
           <Route exact path="/days/:id" component={Day}/>
         </main>
       </React.Fragment>

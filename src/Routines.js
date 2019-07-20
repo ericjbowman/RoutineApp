@@ -2,18 +2,10 @@ import React, { Component, Fragment } from 'react'
 import Wave from './Wave'
 import { withRouter } from 'react-router-dom'
 
-const routines = require('./routine-logic.js')
-
 class Routines extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = routines
-  }
-
   render () {
-    console.log('All Routines', this.state)
-    return this.state.routines.map((routine, index) => (
+    console.log('All Routines', this.props.routineList)
+    return this.props.routineList.map((routine, index) => (
       <Fragment key={index}>
         <h3>{routine.title}</h3>
         <div className="container">
