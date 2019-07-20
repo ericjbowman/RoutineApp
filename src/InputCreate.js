@@ -129,10 +129,16 @@ class InputCreate extends Component {
   //     .catch(console.error)
   }
 
+  toggleAutoFill = event => {
+    this.setState(prevState => ({
+      autoFill: !prevState.autoFill
+    }))
+  }
+
   render () {
-    const { handleChange, handleSubmit } = this
+    const { handleChange, handleSubmit, toggleAutoFill } = this
     const { input, isRoutineCreated } = this.state
-    console.log({ input })
+    console.log(this.state)
 
     if (isRoutineCreated) {
       return <Redirect to='/routines'/>
@@ -144,6 +150,7 @@ class InputCreate extends Component {
           input={input}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
+          toggleAutoFill={toggleAutoFill}
           cancelPath="/"
         />
       </div>

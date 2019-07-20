@@ -177,10 +177,10 @@ const Wave1 = function (core1, core2, core3, core4, core5, core6, oblique1, obli
   }
 
   this.week3 = {
-    day1: new DayA3Sets2('Day 1', 'Light', antSquat2, null, 0.5, 0.6, 0.7, 15, 10, 8, squat2, squat2Max, core1, 'Reps', antDeadlift, 5, null, 0.7, 5, deadlift, deadliftMax, core2, 'Heavy', antSquat3, 4, null, 0.6, 0.7, 0.8, 10, 8, 6, squat3, squat3Max, core3),
+    day1: new DayA3Sets2('Day 1', 'Light', antSquat2, null, 0.5, 0.6, 0.7, 15, 10, 8, squat2, squat2Max, core1, 'Reps', antDeadlift, 5, null, 0.7, 5, deadlift, deadliftMax, core2, 'Heavy', antSquat3, null, 0.6, 0.7, 0.8, 10, 8, 6, squat3, squat3Max, core3),
     day2: new DayAStatic2('Day 2', 'Heavy', antOhp2, antOhp2Max, 0.6, 0.7, 0.8, 10, 8, 6, ohp2, ohp2Max, oblique1, 'Speed', antBench, 10, antBenchMax, 0.55, 3, bench, benchMax, oblique2, 'Reps', antOhp3, 5, antOhp3Max, 0.7, 5, ohp3, ohp3Max, oblique3),
     day3: new DayA3Sets2('Day 3', 'Medium', antDeadlift2, null, 0.55, 0.65, 0.75, 12, 9, 7, deadlift2, deadlift2Max, core4, 'Endurance', antSquat, 4, null, 0.60, 8, squat, squatMax, core5, 'Light', antDeadlift3, null, 0.5, 0.6, 0.7, 15, 10, 8, deadlift3, deadlift3Max, core6),
-    day4: new DayA3Sets2('Day 4', 'Light', antBench2, antBench2Max, 0.5, 0.6, 0.7, 15, 10, 8, bench2, bench2Max, oblique4, 'Reps', antOhp, 5, antOhpMax, 0.7, 5, ohp, ohpMax, oblique5, 'Heavy', antBench3, 4, antBench3Max, 0.6, 0.7, 0.8, 10, 8, 6, bench3, bench3Max, oblique6)
+    day4: new DayA3Sets2('Day 4', 'Light', antBench2, antBench2Max, 0.5, 0.6, 0.7, 15, 10, 8, bench2, bench2Max, oblique4, 'Reps', antOhp, 5, antOhpMax, 0.7, 5, ohp, ohpMax, oblique5, 'Heavy', antBench3, antBench3Max, 0.6, 0.7, 0.8, 10, 8, 6, bench3, bench3Max, oblique6)
   }
 }
 
@@ -204,10 +204,10 @@ const Wave2 = function (core1, core2, core3, core4, core5, core6, oblique1, obli
   }
 
   this.week3 = {
-    day1: new DayA3Sets2('Day 1', 'Light', antSquat2, null, 0.55, 0.65, 0.75, 12, 9, 6, squat2, squat2Max, core1, 'Reps', antDeadlift, 5, null, 0.75, 5, deadlift, deadliftMax, core2, 'Heavy', antSquat3, 4, null, 0.65, 0.75, 0.85, 9, 7, 4, squat3, squat3Max, core3),
+    day1: new DayA3Sets2('Day 1', 'Light', antSquat2, null, 0.55, 0.65, 0.75, 12, 9, 6, squat2, squat2Max, core1, 'Reps', antDeadlift, 5, null, 0.75, 5, deadlift, deadliftMax, core2, 'Heavy', antSquat3, null, 0.65, 0.75, 0.85, 9, 7, 4, squat3, squat3Max, core3),
     day2: new DayAStatic2('Day 2', 'Heavy', antOhp2, antOhp2Max, 0.65, 0.75, 0.85, 9, 7, 4, ohp2, ohp2Max, oblique1, 'Speed', antBench, 10, antBenchMax, 0.6, 3, bench, benchMax, oblique2, 'Reps', antOhp3, 5, antOhp3Max, 0.75, 5, ohp3, ohp3Max, oblique3),
     day3: new DayA3Sets2('Day 3', 'Medium', antDeadlift2, null, 0.6, 0.7, 0.8, 10, 8, 6, deadlift2, deadlift2Max, core4, 'Endurance', antSquat, 4, null, 0.65, 8, squat, squatMax, core5, 'Light', antDeadlift3, null, 0.55, 0.65, 0.75, 12, 9, 7, deadlift3, deadlift3Max, core6),
-    day4: new DayA3Sets2('Day 4', 'Light', antBench2, antBench2Max, 0.55, 0.65, 0.75, 12, 9, 6, bench2, bench2Max, oblique4, 'Reps', antOhp, 5, antOhpMax, 0.75, 5, ohp, ohpMax, oblique5, 'Heavy', antBench3, 4, antBench3Max, 0.65, 0.75, 0.85, 9, 7, 4, bench3, bench3Max, oblique6)
+    day4: new DayA3Sets2('Day 4', 'Light', antBench2, antBench2Max, 0.55, 0.65, 0.75, 12, 9, 6, bench2, bench2Max, oblique4, 'Reps', antOhp, 5, antOhpMax, 0.75, 5, ohp, ohpMax, oblique5, 'Heavy', antBench3, antBench3Max, 0.65, 0.75, 0.85, 9, 7, 4, bench3, bench3Max, oblique6)
   }
 }
 
@@ -231,10 +231,10 @@ const Wave3 = function (core1, core2, core3, core4, core5, core6, oblique1, obli
   }
 
   this.week3 = {
-    day1: new DayA3Sets2('Day 1', 'Light', antSquat2, null, 0.6, 0.7, 0.8, 10, 8, 6, squat2, squat2Max, core1, 'Reps', antDeadlift, 5, null, 0.8, 5, deadlift, deadliftMax, core2, 'Heavy', antSquat3, 4, null, 0.7, 0.8, 0.9, 8, 6, 2, squat3, squat3Max, core3),
+    day1: new DayA3Sets2('Day 1', 'Light', antSquat2, null, 0.6, 0.7, 0.8, 10, 8, 6, squat2, squat2Max, core1, 'Reps', antDeadlift, 5, null, 0.8, 5, deadlift, deadliftMax, core2, 'Heavy', antSquat3, null, 0.7, 0.8, 0.9, 8, 6, 2, squat3, squat3Max, core3),
     day2: new DayAStatic2('Day 2', 'Heavy', antOhp2, antOhp2Max, 0.7, 0.8, 0.9, 8, 6, 2, ohp2, ohp2Max, oblique1, 'Speed', antBench, 10, antBenchMax, 0.65, 3, bench, benchMax, oblique2, 'Reps', antOhp3, 5, antOhp3Max, 0.8, 5, ohp3, ohp3Max, oblique3),
     day3: new DayA3Sets2('Day 3', 'Medium', antDeadlift2, null, 0.65, 0.75, 0.85, 9, 7, 4, deadlift2, deadlift2Max, core4, 'Endurance', antSquat, 4, null, 0.7, 8, squat, squatMax, core5, 'Light', antDeadlift3, null, 0.6, 0.7, 0.8, 10, 8, 6, deadlift3, deadlift3Max, core6),
-    day4: new DayA3Sets2('Day 4', 'Light', antBench2, antBench2Max, 0.6, 0.7, 0.8, 10, 8, 6, bench2, bench2Max, oblique4, 'Reps', antOhp, 5, antOhpMax, 0.8, 5, ohp, ohpMax, oblique5, 'Heavy', antBench3, 4, antBench3Max, 0.7, 0.8, 0.9, 8, 6, 2, bench3, bench3Max, oblique6)
+    day4: new DayA3Sets2('Day 4', 'Light', antBench2, antBench2Max, 0.6, 0.7, 0.8, 10, 8, 6, bench2, bench2Max, oblique4, 'Reps', antOhp, 5, antOhpMax, 0.8, 5, ohp, ohpMax, oblique5, 'Heavy', antBench3, antBench3Max, 0.7, 0.8, 0.9, 8, 6, 2, bench3, bench3Max, oblique6)
   }
 }
 
@@ -258,10 +258,10 @@ const Wave4 = function (core1, core2, core3, core4, core5, core6, oblique1, obli
   }
 
   this.week3 = {
-    day1: new DayA3Sets2('Day 1', 'Light', antSquat2, null, 0.65, 0.75, 0.85, 9, 7, 4, squat2, squat2Max, core1, 'Reps', antDeadlift, 5, null, 0.85, 5, deadlift, deadliftMax, core2, 'Heavy', antSquat3, 4, null, 0.75, 0.85, 0.95, 7, 4, 1, squat3, squat3Max, core3),
+    day1: new DayA3Sets2('Day 1', 'Light', antSquat2, null, 0.65, 0.75, 0.85, 9, 7, 4, squat2, squat2Max, core1, 'Reps', antDeadlift, 5, null, 0.85, 5, deadlift, deadliftMax, core2, 'Heavy', antSquat3, null, 0.75, 0.85, 0.95, 7, 4, 1, squat3, squat3Max, core3),
     day2: new DayAStatic2('Day 2', 'Heavy', antOhp2, antOhp2Max, 0.75, 0.85, 0.95, 7, 4, 1, ohp2, ohp2Max, oblique1, 'Speed', antBench, 10, antBenchMax, 0.7, 3, bench, benchMax, oblique2, 'Reps', antOhp3, 5, antOhp3Max, 0.85, 5, ohp3, ohp3Max, oblique3),
     day3: new DayA3Sets2('Day 3', 'Medium', antDeadlift2, null, 0.7, 0.8, 0.9, 8, 6, 2, deadlift2, deadlift2Max, core4, 'Endurance', antSquat, 4, null, 0.75, 8, squat, squatMax, core5, 'Light', antDeadlift3, null, 0.65, 0.75, 0.85, 9, 7, 4, deadlift3, deadlift3Max, core6),
-    day4: new DayA3Sets2('Day 4', 'Light', antBench2, antBench2Max, 0.65, 0.75, 0.85, 9, 7, 4, bench2, bench2Max, oblique4, 'Reps', antOhp, 5, antOhpMax, 0.85, 5, ohp, ohpMax, oblique5, 'Heavy', antBench3, 4, antBench3Max, 0.75, 0.85, 0.95, 7, 4, 1, bench3, bench3Max, oblique6)
+    day4: new DayA3Sets2('Day 4', 'Light', antBench2, antBench2Max, 0.65, 0.75, 0.85, 9, 7, 4, bench2, bench2Max, oblique4, 'Reps', antOhp, 5, antOhpMax, 0.85, 5, ohp, ohpMax, oblique5, 'Heavy', antBench3, antBench3Max, 0.75, 0.85, 0.95, 7, 4, 1, bench3, bench3Max, oblique6)
   }
 }
 

@@ -12,6 +12,7 @@ class Routines extends Component {
   }
 
   render () {
+    console.log('All Routines', this.state)
     return this.state.routines.map((routine, index) => (
       <Fragment key={index}>
         <h3>{routine.title}</h3>
