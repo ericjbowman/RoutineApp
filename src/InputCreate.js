@@ -81,9 +81,31 @@ class InputCreate extends Component {
     // use object to create updated state object
     const editedInput = Object.assign(this.state.input, updatedField)
     // finally setState with updates object
+
+    const ratios = (name) => {
+      if (name === 'Front Squat') {
+        return Math.floor(this.state.input.squatWeight * 0.85)
+      } else if (name === 'Incline Bench Press') {
+        return Math.floor(this.state.input.benchWeight * 0.8)
+      } else if (name === 'Weighted Dip') {
+        return Math.floor(this.state.input.benchWeight * 1.05)
+      } else if (name === 'Close-grip Bench Press') {
+        return Math.floor(this.state.input.benchWeight * 0.9)
+      } else if (name === 'Push press') {
+        return Math.floor(this.state.input.benchWeight * 0.85)
+      } else if (name === 'Snatch-grip Deadlift') {
+        return Math.floor(this.state.input.deadliftWeight * 0.75)
+      } else if (name === 'Hex-bar Deadlift') {
+        return Math.floor(this.state.input.deadliftWeight * 1.10)
+      }
+    }
     const autoMax = {
-      squat2Weight: (this.state.input.squatWeight * 0.9),
-      squat2Reps: this.state.input.squatReps
+      squat2Weight: ratios(this.state.input.squat2Name),
+      squat2Reps: this.state.input.squatReps,
+      bench2Weight: ratios(this.state.input.bench2Name),
+      bench2Reps: this.state.input.benchReps,
+      deadlift2Weight: ratios(this.state.input.deadlift2Name),
+      deadlift2Reps: this.state.input.deadliftReps
     }
     if (this.state.autoFill === true) {
       const autoMaxInput = Object.assign(this.state.input, autoMax)
