@@ -1,7 +1,5 @@
 'use strict'
 
-const formInput2 = require('./InputCreate.js')
-
 const oneRepMax = function (weight, reps) {
   if (reps === 1) {
     return weight
