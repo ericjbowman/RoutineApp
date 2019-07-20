@@ -68,7 +68,8 @@ class InputCreate extends Component {
         oblique5: '',
         oblique6: ''
       },
-      isRoutineCreated: false
+      isRoutineCreated: false,
+      autoFill: true
     }
   }
 
@@ -80,7 +81,16 @@ class InputCreate extends Component {
     // use object to create updated state object
     const editedInput = Object.assign(this.state.input, updatedField)
     // finally setState with updates object
-    this.setState({ input: editedInput })
+    const autoMax = {
+      squat2Weight: (this.state.input.squatWeight * 0.9),
+      squat2Reps: this.state.input.squatReps
+    }
+    if (this.state.autoFill === true) {
+      const autoMaxInput = Object.assign(this.state.input, autoMax)
+      this.setState({ input: autoMaxInput })
+    } else {
+      this.setState({ input: editedInput })
+    }
   }
 
   handleSubmit = event => {
