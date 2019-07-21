@@ -99,22 +99,19 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
       />
 
       <label>Squat Primer</label>
-      <input
-        placeholder="Squat Primer"
-        value={input.antagSquatName}
-        name="antagSquatName"
-        onChange={handleChange}
-        type="text"
-      />
+      <select value={input.antagSquatName} name="antagSquatName" onChange={handleChange}>
+        <option value="Box-jumps">Box-jumps</option>
+        <option value="Squat-jumps">Squat-jumps</option>
+        <option value="Prisoner-squats">Prisoner-squats</option>
+      </select>
 
       <label>Over-head Press Antagonist</label>
-      <input
-        placeholder="Over-head Press Antagonist"
-        value={input.antagOhpName}
-        name="antagOhpName"
-        onChange={handleChange}
-        type="text"
-      />
+      <select value={input.antagOhpName} name="antagOhpName" onChange={handleChange}>
+        <option value="Lat Pull-down">Lat Pull-down</option>
+        <option value="Supinated Chin-up">Supinated Chin-up</option>
+        <option value="Wide-grip Pull-up">Wide-grip Pull-up</option>
+        <option value="Face Pull">Face Pull</option>
+      </select>
 
       <label>Over-head Press Antagonist Weight</label>
       <input
@@ -138,13 +135,11 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
       />
 
       <label>Deadlift Primer</label>
-      <input
-        placeholder="Deadlift Primer"
-        value={input.antagDeadliftName}
-        name="antagDeadliftName"
-        onChange={handleChange}
-        type="text"
-      />
+      <select value={input.antagDeadliftName} name="antagDeadliftName" onChange={handleChange}>
+        <option value="Kettle-bell Swings">Kettle-bell Swings</option>
+        <option value="Squat-jumps">Squat-jumps</option>
+        <option value="Dumbbell Snatch">Dumbbell Snatch</option>
+      </select>
 
       <label>Bench-press Antagonist</label>
       <input
@@ -186,13 +181,13 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
       />
 
       <label>Secondary Squat Exercise</label>
-      <input
-        placeholder="Secondary Squat Exercise"
-        value={input.squat2Name}
-        name="squat2Name"
-        onChange={handleChange}
-        type="text"
-      />
+      <select value={input.squat2Name} name="squat2Name" onChange={handleChange}>
+        <option value="" selected disabled hidden>Choose here</option>
+        <option value="Box-Squat">Box-Squat</option>
+        <option value="Front-Squat">Front-Squat</option>
+        <option value="Barbell-Lunge">Barbell-Lunge</option>
+        <option value="Bulgarian Split-Squat">Bulgarian Split-Squat</option>
+      </select>
 
       <label>Secondary Squat Weight</label>
       <input
@@ -673,13 +668,14 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
       />
 
       <label>Oblique 6</label>
-      <input
-        placeholder="Oblique 6"
-        value={input.oblique6}
-        name="oblique6"
-        onChange={handleChange}
-        type="text"
-      />
+      <select value={input.oblique6} name="oblique6" onChange={handleChange}>
+        <option value="Russian Twist">Russian Twist</option>
+        <option value="Side Plank">Side Plank</option>
+        <option value="Air Bicycle">Air Bicycle</option>
+        <option value="Barbell Twist">Barbell Twist</option>
+        <option value="Single-arm Farmer's Walk">Single-arm Farmer Walk</option>
+        <option value="Wind-shield Wipers">Wind-shield Wipers</option>
+      </select>
       <button type="submit">Submit</button>
       <Link to={cancelPath}>
         <button>Cancel</button>
