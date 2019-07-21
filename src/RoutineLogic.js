@@ -14,32 +14,35 @@ class RoutineLogic extends Component {
   // }
 
   render () {
-    console.log('Routine Logic props', this.props.input)
+    const { input } = this.props
+    console.log('Routine Logic props', input)
     const oneRepMax = function (weight, reps) {
-      if (reps === 1) {
-        return weight
-      } else if (reps === 2) {
-        return Math.floor(weight * 1.05)
-      } else if (reps === 3) {
-        return Math.floor(weight * 1.08)
-      } else if (reps === 4) {
-        return Math.floor(weight * 1.11)
-      } else if (reps === 5) {
-        return Math.floor(weight * 1.15)
-      } else if (reps === 6) {
-        return Math.floor(weight * 1.18)
-      } else if (reps === 7) {
-        return Math.floor(weight * 1.20)
-      } else if (reps === 8) {
-        return Math.floor(weight * 1.25)
-      } else if (reps === 9) {
-        return Math.floor(weight * 1.30)
-      } else if (reps === 10) {
-        return Math.floor(weight * 1.33)
-      } else if (reps === 11) {
-        return Math.floor(weight * 1.43)
-      } else if (reps === 12) {
-        return Math.floor(weight * 1.49)
+      const weightNum = parseInt(weight, 10)
+      const repsNum = parseInt(reps, 10)
+      if (repsNum === 1) {
+        return weightNum
+      } else if (repsNum === 2) {
+        return Math.floor(weightNum * 1.05)
+      } else if (repsNum === 3) {
+        return Math.floor(weightNum * 1.08)
+      } else if (repsNum === 4) {
+        return Math.floor(weightNum * 1.11)
+      } else if (repsNum === 5) {
+        return Math.floor(weightNum * 1.15)
+      } else if (repsNum === 6) {
+        return Math.floor(weightNum * 1.18)
+      } else if (repsNum === 7) {
+        return Math.floor(weightNum * 1.20)
+      } else if (repsNum === 8) {
+        return Math.floor(weightNum * 1.25)
+      } else if (repsNum === 9) {
+        return Math.floor(weightNum * 1.30)
+      } else if (repsNum === 10) {
+        return Math.floor(weightNum * 1.33)
+      } else if (repsNum === 11) {
+        return Math.floor(weightNum * 1.43)
+      } else if (repsNum === 12) {
+        return Math.floor(weightNum * 1.49)
       }
     }
 
@@ -280,6 +283,14 @@ class RoutineLogic extends Component {
       }
     }
 
+    // const routine2 = new Routine(input.routineName, input.core1, input.core2, input.core3, input.core4, input.core5, input.core6, input.oblique1, input.oblique2,
+    //   input.oblique3, input.oblique4, input.oblique5, input.oblique6, input.antagSquatName, input.antagSquat2Name, input.antagSquat3Name, 'Back-Squat', oneRepMax(input.squatWeight, input.squatReps),
+    //   input.squat2Name, oneRepMax(input.squat2Weight, input.squat2Reps), input.squat3Name, oneRepMax(input.squat3Weight, input.squat3Reps), input.antagOhpName, oneRepMax(input.antagOhpWeight, input.antagOhpReps), input.antagOhp2Name, oneRepMax(input.antagOhp2Weight, input.antagOhp2Reps), input.antagOhp3Name, oneRepMax(input.antagOhp3Weight, input.antagOhp3Reps),
+    //   'Over-head Press', oneRepMax(input.ohpWeight, input.ohpReps), input.ohp2Name, oneRepMax(input.ohp2Weight, input.ohp2Reps), input.ohp3Name, oneRepMax(input.ohp3Weight, input.ohp3Reps), input.antagDeadliftName, input.antagDeadlift2Name, input.antagDeadlift3Name, 'Dead-lift',
+    //   oneRepMax(input.deadliftWeight, input.deadliftReps), input.deadlift2Name, oneRepMax(input.deadlift2Weight, input.deadlift2Reps), input.deadlift3Name, oneRepMax(input.deadlift3Weight, input.deadlift3Reps), input.antagBenchName, oneRepMax(input.antagBenchWeight, input.antagBenchReps), input.antagBench2Name,
+    //   oneRepMax(input.antagBench2Weight, input.antagBench2Reps), input.antagBench3Name, oneRepMax(input.antagBench3Weight, input.antagBench3Reps), 'Bench-press', oneRepMax(input.benchWeight, input.benchReps), input.bench2Name, oneRepMax(input.bench2Weight, input.bench2Reps), input.bench3Name, oneRepMax(input.bench3Weight, input.bench3Reps)
+    // )
+
     const Routine = function (title, core1, core2, core3, core4, core5, core6, oblique1, oblique2,
       oblique3, oblique4, oblique5, oblique6, antSquat, antSquat2, antSquat3, squat, squatMax,
       squat2, squat2Max, squat3, squat3Max, antOhp, antOhpMax, antOhp2, antOhp2Max, antOhp3, antOhp3Max,
@@ -320,6 +331,14 @@ class RoutineLogic extends Component {
       375, 'Romanian Dl', 350, 'pause dl', 325, 'barbell row', 175, 'dumbbell row',
       90, 'bicep curls', 120, 'Bench press', 275, 'Incline bench', 250, 'tricp extensions', 100)
 
+    const routine2 = new Routine(input.routineName, input.core1, input.core2, input.core3, input.core4, input.core5, input.core6, input.oblique1, input.oblique2,
+      input.oblique3, input.oblique4, input.oblique5, input.oblique6, input.antagSquatName, input.antagSquat2Name, input.antagSquat3Name, 'Back-Squat', oneRepMax(parseInt(input.squatWeight, 10), parseInt(input.squatReps, 10)),
+      input.squat2Name, oneRepMax(input.squat2Weight, input.squat2Reps), input.squat3Name, oneRepMax(input.squat3Weight, input.squat3Reps), input.antagOhpName, oneRepMax(input.antagOhpWeight, input.antagOhpReps), input.antagOhp2Name, oneRepMax(input.antagOhp2Weight, input.antagOhp2Reps), input.antagOhp3Name, oneRepMax(input.antagOhp3Weight, input.antagOhp3Reps),
+      'Over-head Press', oneRepMax(input.ohpWeight, input.ohpReps), input.ohp2Name, oneRepMax(input.ohp2Weight, input.ohp2Reps), input.ohp3Name, oneRepMax(input.ohp3Weight, input.ohp3Reps), input.antagDeadliftName, input.antagDeadlift2Name, input.antagDeadlift3Name, 'Dead-lift',
+      oneRepMax(input.deadliftWeight, input.deadliftReps), input.deadlift2Name, oneRepMax(input.deadlift2Weight, input.deadlift2Reps), input.deadlift3Name, oneRepMax(input.deadlift3Weight, input.deadlift3Reps), input.antagBenchName, oneRepMax(input.antagBenchWeight, input.antagBenchReps), input.antagBench2Name,
+      oneRepMax(input.antagBench2Weight, input.antagBench2Reps), input.antagBench3Name, oneRepMax(input.antagBench3Weight, input.antagBench3Reps), 'Bench-press', oneRepMax(input.benchWeight, input.benchReps), input.bench2Name, oneRepMax(input.bench2Weight, input.bench2Reps), input.bench3Name, oneRepMax(input.bench3Weight, input.bench3Reps)
+    )
+
     // const paramsArray= ['Routine 1', 'situp', 'v-up', 'leg-raises', 'toe-touch-crunch', 'plank', 'side-plank', 'air bike', 'russian twist',
     //   'barbell twist', 'landmine twist', 'roman chair', 'wood-chopper', 'prisoner-squat', 'jump-squat', 'box-jump', 'back-squat', 300,
     //   'front-squat', 275, 'lunge', 225, 'chin-up', 250, 'wid-grip-chin-up', 225, 'high-row', 115,
@@ -344,7 +363,13 @@ class RoutineLogic extends Component {
     //   375, 'Romanian Dl', 350, 'pause dl', 325, 'barbell row', 175, 'dumbbell row',
     //   90, 'bicep curls', 120, 'Bench press', 275, 'Incline bench', 250, 'tricp extensions', 100)
 
-    const completedRoutines = [routine1]
+    const completedRoutines = [routine2]
+    console.log('routine 1', routine1)
+    console.log('routine 2', routine2)
+    console.log('squatName', input.squatName)
+    console.log('squatWeight', parseInt(input.squatWeight, 10))
+    console.log('type of squatWeight', typeof parseInt(input.squatWeight, 10))
+    console.log('squat 1RM', oneRepMax(input.squatWeight, input.squatReps))
     console.log(completedRoutines)
     return (
       <Routines routineList = {completedRoutines}

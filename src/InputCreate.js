@@ -94,7 +94,7 @@ class InputCreate extends Component {
         oblique6: ''
       },
       isRoutineCreated: false,
-      autoFill: true
+      autoFill: false
     }
   }
 
@@ -135,6 +135,7 @@ class InputCreate extends Component {
     if (this.state.autoFill === true) {
       const autoMaxInput = Object.assign(this.state.input, autoMax)
       this.setState({ input: autoMaxInput })
+      this.setState({ input: editedInput })
     } else {
       this.setState({ input: editedInput })
     }
@@ -163,7 +164,7 @@ class InputCreate extends Component {
   render () {
     const { handleChange, handleSubmit, toggleAutoFill } = this
     const { input, isRoutineCreated } = this.state
-    console.log(this.state)
+    console.log('Input state is', this.state)
 
     if (isRoutineCreated) {
       return <Redirect to='/routines'/>
