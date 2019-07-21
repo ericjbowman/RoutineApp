@@ -58,7 +58,7 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
           )} />
-          <Route exact path="/create-input" component={InputCreate}/>
+          <Route path="/" component={InputCreate}/>
           <Route exact path="/days/:id" component={Day}/>
         </main>
       </React.Fragment>

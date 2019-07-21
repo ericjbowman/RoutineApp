@@ -94,7 +94,7 @@ class InputCreate extends Component {
         oblique6: ''
       },
       isRoutineCreated: false,
-      autoFill: false
+      autoFill: true
     }
   }
 
@@ -110,27 +110,73 @@ class InputCreate extends Component {
     const ratios = (name) => {
       if (name === 'Front Squat') {
         return Math.floor(this.state.input.squatWeight * 0.85)
+      } else if (name === 'Barbell Lunge') {
+        return Math.floor(this.state.input.squatWeight * 0.60)
+      } else if (name === 'Box Squat') {
+        return this.state.input.squatWeight
+      } else if (name === 'Bulgarian Split Squat') {
+        return Math.floor(this.state.input.squatWeight * 0.50)
       } else if (name === 'Incline Bench Press') {
         return Math.floor(this.state.input.benchWeight * 0.8)
       } else if (name === 'Weighted Dip') {
         return Math.floor(this.state.input.benchWeight * 1.05)
       } else if (name === 'Close-grip Bench Press') {
         return Math.floor(this.state.input.benchWeight * 0.9)
-      } else if (name === 'Push press') {
-        return Math.floor(this.state.input.benchWeight * 0.85)
+      } else if (name === 'Dumbbell Fly') {
+        return Math.floor(this.state.input.benchWeight * 0.25)
       } else if (name === 'Snatch-grip Deadlift') {
         return Math.floor(this.state.input.deadliftWeight * 0.75)
       } else if (name === 'Hex-bar Deadlift') {
         return Math.floor(this.state.input.deadliftWeight * 1.10)
-      }
+      } else if (name === 'Romanian Deadlift') {
+        return Math.floor(this.state.input.deadliftWeight * 0.75)
+      } else if (name === 'Pause Deadlift') {
+        return Math.floor(this.state.input.deadliftWeight * 0.6)
+      } else if (name === 'Dumbbell Shoulder Press') {
+        return Math.floor(this.state.input.ohpWeight * 0.5)
+      } else if (name === 'Landmine Single-arm Press') {
+        return Math.floor(this.state.input.ohpWeight * 0.6)
+      } else if (name === 'Z Press') {
+        return Math.floor(this.state.input.ohpWeight * 0.5)
+      } else if (name === 'Trap-bar Press') {
+        return Math.floor(this.state.input.ohpWeight * 0.9)
+      } else if (name === 'Supinated Chin-up') {
+        return Math.floor(this.state.input.benchWeight * 0.9)
+      } else if (name === 'Wide-grip Pull-up') {
+        return Math.floor(this.state.input.benchWeight * 0.85)
+      } else if (name === 'Face Pull') {
+        return Math.floor(this.state.input.benchWeight * 0.4)
+      } else if (name === 'Lat Pull-down') {
+        return Math.floor(this.state.input.benchWeight * 0.8)
+      } else if (name === 'Barbell Row') {
+        return Math.floor(this.state.input.benchWeight * 0.7)
     }
     const autoMax = {
       squat2Weight: ratios(this.state.input.squat2Name),
       squat2Reps: this.state.input.squatReps,
+      squat3Weight: ratios(this.state.input.squat3Name),
+      squat3Reps: this.state.input.squatReps,
       bench2Weight: ratios(this.state.input.bench2Name),
       bench2Reps: this.state.input.benchReps,
+      bench3Weight: ratios(this.state.input.bench3Name),
+      bench3Reps: this.state.input.benchReps,
       deadlift2Weight: ratios(this.state.input.deadlift2Name),
-      deadlift2Reps: this.state.input.deadliftReps
+      deadlift2Reps: this.state.input.deadliftReps,
+      deadlift3Weight: ratios(this.state.input.deadlift3Name),
+      deadlift3Reps: this.state.input.deadliftReps,
+      ohp2Weight: ratios(this.state.input.ohp2Name),
+      ohp2Reps: this.state.input.ohpReps,
+      ohp3Weight: ratios(this.state.input.ohp3Name),
+      ohp3Reps: this.state.input.ohpReps,
+      antBench2Weight: ratios(this.state.input.antBench2Name),
+      antBench2Reps: this.state.input.antBenchReps,
+      antBench3Weight: ratios(this.state.input.antBench3Name),
+      antBench3Reps: this.state.input.antBenchReps,
+      antOhp2Weight: ratios(this.state.input.antOhp2Name),
+      antOhp2Reps: this.state.input.antOhpReps,
+      antOhp3Weight: ratios(this.state.input.antOhp3Name),
+      antOhp3Reps: this.state.input.antOhpReps
+
     }
     if (this.state.autoFill === true) {
       const autoMaxInput = Object.assign(this.state.input, autoMax)
@@ -144,7 +190,6 @@ class InputCreate extends Component {
   handleSubmit = event => {
     event.preventDefault()
     console.log(this.state)
-    this.setState({ isRoutineCreated: true })
 
   //   axios.post(`${apiUrl}/movies`, {
   //     movie: this.state.movie

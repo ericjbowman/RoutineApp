@@ -363,14 +363,8 @@ class RoutineLogic extends Component {
     //   375, 'Romanian Dl', 350, 'pause dl', 325, 'barbell row', 175, 'dumbbell row',
     //   90, 'bicep curls', 120, 'Bench press', 275, 'Incline bench', 250, 'tricp extensions', 100)
 
-    const completedRoutines = [routine2]
-    console.log('routine 1', routine1)
-    console.log('routine 2', routine2)
-    console.log('squatName', input.squatName)
-    console.log('squatWeight', parseInt(input.squatWeight, 10))
-    console.log('type of squatWeight', typeof parseInt(input.squatWeight, 10))
-    console.log('squat 1RM', oneRepMax(input.squatWeight, input.squatReps))
-    console.log(completedRoutines)
+    const completedRoutines = [routine2, routine1]
+    console.log('Routines after logic', completedRoutines)
     return (
       <Routines routineList = {completedRoutines}
       />
