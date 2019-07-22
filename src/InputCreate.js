@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import InputForm from './InputForm'
 import { Redirect } from 'react-router-dom'
 import RoutineLogic from './RoutineLogic'
-// import axios from 'axios'
-// import apiUrl from '../../apiConfig'
+import axios from 'axios'
+import apiUrl from './apiConfig'
 class InputCreate extends Component {
   constructor (props) {
     super(props)
@@ -205,13 +205,13 @@ class InputCreate extends Component {
     event.preventDefault()
     console.log(this.state)
 
-  //   axios.post(`${apiUrl}/movies`, {
-  //     movie: this.state.movie
-  //   })
-  //     .then(res => this.setState({
-  //       createdMovieId: res.data.movie.id
-  //     }))
-  //     .catch(console.error)
+    axios.post(`${apiUrl}/inputs`, {
+      input: this.state.input
+    })
+      .then(res => this.setState({
+        isRoutineCreated: true
+      }))
+      .catch(console.error)
   }
 
   toggleAutoFill = event => {
