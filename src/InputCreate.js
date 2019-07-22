@@ -204,8 +204,15 @@ class InputCreate extends Component {
     event.preventDefault()
     console.log(this.state)
 
-    axios.post(`${apiUrl}/inputs`, {
-      input: this.state.input
+    axios({
+      url: (`${apiUrl}/inputs`),
+      method: 'POST',
+      headers: {
+        'Authorization': `Token token=${this.props.user.token}`
+      },
+      data: {
+        input: this.state.input
+      }
     })
       .then(res => this.setState({
         isRoutineCreated: true

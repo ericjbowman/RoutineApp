@@ -14,7 +14,17 @@ class RoutineLogic extends Component {
   }
 
   componentDidMount () {
-    axios(`${apiUrl}/inputs`)
+    // axios(`${apiUrl}/inputs`)
+    //   .then(res => this.setState({ inputs: res.data.inputs, loaded: true }))
+    //   .then(console.log('Routine Logic state is', this.state.inputs))
+    //   .catch(err => this.setState({ error: err.message }))
+
+    axios({
+      url: (`${apiUrl}/inputs`),
+      headers: {
+        'Authorization': `Token token=${this.props.user.token}`
+      }
+    })
       .then(res => this.setState({ inputs: res.data.inputs, loaded: true }))
       .then(console.log('Routine Logic state is', this.state.inputs))
       .catch(err => this.setState({ error: err.message }))
@@ -387,6 +397,7 @@ class RoutineLogic extends Component {
     const completedRoutines = routineGenerator()
     console.log('Routines after logic', completedRoutines)
     console.log('Routine Generator', routineGenerator())
+    console.log('props.user', this.props.user)
     return (
       <Routines routineList = {completedRoutines}
       />
