@@ -8,7 +8,7 @@ import SignUp from './auth/components/SignUp'
 import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
-// import RoutineLogic from './Routines'
+import RoutineLogic from './RoutineLogic'
 import Day from './Day.js'
 import InputCreate from './InputCreate'
 
@@ -58,8 +58,18 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
           )} />
-          <Route path="/" component={InputCreate}/>
-          <Route exact path="/days/:id" component={Day}/>
+          <AuthenticatedRoute user={user} path='/days/:id' render={() => (
+            <React.Fragment>
+              <RoutineLogic user={user} />
+              <Day user={user} />
+            </React.Fragment>
+          )} />
+          <AuthenticatedRoute user={user} path='/routines' render={() => (
+            <RoutineLogic user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-input' render={() => (
+            <InputCreate user={user} />
+          )} />
         </main>
       </React.Fragment>
     )

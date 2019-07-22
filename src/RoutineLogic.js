@@ -345,20 +345,20 @@ class RoutineLogic extends Component {
       return routines
     }
 
-    const routine1 = new Routine('Routine 1', 'situp', 'v-up', 'leg-raises', 'toe-touch-crunch', 'plank', 'side-plank', 'air bike', 'russian twist',
-      'barbell twist', 'landmine twist', 'roman chair', 'wood-chopper', 'prisoner-squat', 'jump-squat', 'box-jump', 'back-squat', 300,
-      'front-squat', oneRepMax(225, 8), 'lunge', 225, 'chin-up', 250, 'wid-grip-chin-up', 225, 'high-row', 115,
-      'over-head-press', 175, 'z-press', 125, 'landmine-press', 260, 'kb swing', 'snatch', 'glute bridge', 'Deadlfit',
-      375, 'Romanian Dl', 350, 'pause dl', 325, 'barbell row', 175, 'dumbbell row',
-      90, 'bicep curls', 120, 'Bench press', 275, 'Incline bench', 250, 'tricp extensions', 100)
-
-    const routine2 = new Routine(input.routineName, input.core1, input.core2, input.core3, input.core4, input.core5, input.core6, input.oblique1, input.oblique2,
-      input.oblique3, input.oblique4, input.oblique5, input.oblique6, input.antagSquatName, input.antagSquat2Name, input.antagSquat3Name, 'Back-Squat', oneRepMax(parseInt(input.squatWeight, 10), parseInt(input.squatReps, 10)),
-      input.squat2Name, oneRepMax(input.squat2Weight, input.squat2Reps), input.squat3Name, oneRepMax(input.squat3Weight, input.squat3Reps), input.antagOhpName, oneRepMax(input.antagOhpWeight, input.antagOhpReps), input.antagOhp2Name, oneRepMax(input.antagOhp2Weight, input.antagOhp2Reps), input.antagOhp3Name, oneRepMax(input.antagOhp3Weight, input.antagOhp3Reps),
-      'Over-head Press', oneRepMax(input.ohpWeight, input.ohpReps), input.ohp2Name, oneRepMax(input.ohp2Weight, input.ohp2Reps), input.ohp3Name, oneRepMax(input.ohp3Weight, input.ohp3Reps), input.antagDeadliftName, input.antagDeadlift2Name, input.antagDeadlift3Name, 'Dead-lift',
-      oneRepMax(input.deadliftWeight, input.deadliftReps), input.deadlift2Name, oneRepMax(input.deadlift2Weight, input.deadlift2Reps), input.deadlift3Name, oneRepMax(input.deadlift3Weight, input.deadlift3Reps), input.antagBenchName, oneRepMax(input.antagBenchWeight, input.antagBenchReps), input.antagBench2Name,
-      oneRepMax(input.antagBench2Weight, input.antagBench2Reps), input.antagBench3Name, oneRepMax(input.antagBench3Weight, input.antagBench3Reps), 'Bench-press', oneRepMax(input.benchWeight, input.benchReps), input.bench2Name, oneRepMax(input.bench2Weight, input.bench2Reps), input.bench3Name, oneRepMax(input.bench3Weight, input.bench3Reps)
-    )
+    // const routine1 = new Routine('Routine 1', 'situp', 'v-up', 'leg-raises', 'toe-touch-crunch', 'plank', 'side-plank', 'air bike', 'russian twist',
+    //   'barbell twist', 'landmine twist', 'roman chair', 'wood-chopper', 'prisoner-squat', 'jump-squat', 'box-jump', 'back-squat', 300,
+    //   'front-squat', oneRepMax(225, 8), 'lunge', 225, 'chin-up', 250, 'wid-grip-chin-up', 225, 'high-row', 115,
+    //   'over-head-press', 175, 'z-press', 125, 'landmine-press', 260, 'kb swing', 'snatch', 'glute bridge', 'Deadlfit',
+    //   375, 'Romanian Dl', 350, 'pause dl', 325, 'barbell row', 175, 'dumbbell row',
+    //   90, 'bicep curls', 120, 'Bench press', 275, 'Incline bench', 250, 'tricp extensions', 100)
+    //
+    // const routine2 = new Routine(input.routineName, input.core1, input.core2, input.core3, input.core4, input.core5, input.core6, input.oblique1, input.oblique2,
+    //   input.oblique3, input.oblique4, input.oblique5, input.oblique6, input.antagSquatName, input.antagSquat2Name, input.antagSquat3Name, 'Back-Squat', oneRepMax(parseInt(input.squatWeight, 10), parseInt(input.squatReps, 10)),
+    //   input.squat2Name, oneRepMax(input.squat2Weight, input.squat2Reps), input.squat3Name, oneRepMax(input.squat3Weight, input.squat3Reps), input.antagOhpName, oneRepMax(input.antagOhpWeight, input.antagOhpReps), input.antagOhp2Name, oneRepMax(input.antagOhp2Weight, input.antagOhp2Reps), input.antagOhp3Name, oneRepMax(input.antagOhp3Weight, input.antagOhp3Reps),
+    //   'Over-head Press', oneRepMax(input.ohpWeight, input.ohpReps), input.ohp2Name, oneRepMax(input.ohp2Weight, input.ohp2Reps), input.ohp3Name, oneRepMax(input.ohp3Weight, input.ohp3Reps), input.antagDeadliftName, input.antagDeadlift2Name, input.antagDeadlift3Name, 'Dead-lift',
+    //   oneRepMax(input.deadliftWeight, input.deadliftReps), input.deadlift2Name, oneRepMax(input.deadlift2Weight, input.deadlift2Reps), input.deadlift3Name, oneRepMax(input.deadlift3Weight, input.deadlift3Reps), input.antagBenchName, oneRepMax(input.antagBenchWeight, input.antagBenchReps), input.antagBench2Name,
+    //   oneRepMax(input.antagBench2Weight, input.antagBench2Reps), input.antagBench3Name, oneRepMax(input.antagBench3Weight, input.antagBench3Reps), 'Bench-press', oneRepMax(input.benchWeight, input.benchReps), input.bench2Name, oneRepMax(input.bench2Weight, input.bench2Reps), input.bench3Name, oneRepMax(input.bench3Weight, input.bench3Reps)
+    // )
 
     // const paramsArray= ['Routine 1', 'situp', 'v-up', 'leg-raises', 'toe-touch-crunch', 'plank', 'side-plank', 'air bike', 'russian twist',
     //   'barbell twist', 'landmine twist', 'roman chair', 'wood-chopper', 'prisoner-squat', 'jump-squat', 'box-jump', 'back-squat', 300,
@@ -385,7 +385,6 @@ class RoutineLogic extends Component {
     //   90, 'bicep curls', 120, 'Bench press', 275, 'Incline bench', 250, 'tricp extensions', 100)
 
     const completedRoutines = routineGenerator()
-    console.log('Routine 1 and Routine 2', routine1, routine2)
     console.log('Routines after logic', completedRoutines)
     console.log('Routine Generator', routineGenerator())
     return (
