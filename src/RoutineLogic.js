@@ -363,7 +363,8 @@ class RoutineLogic extends Component {
     //   375, 'Romanian Dl', 350, 'pause dl', 325, 'barbell row', 175, 'dumbbell row',
     //   90, 'bicep curls', 120, 'Bench press', 275, 'Incline bench', 250, 'tricp extensions', 100)
 
-    const completedRoutines = [routine2, routine1]
+    const completedRoutines = [routine2]
+    console.log(routine1)
     console.log('Routines after logic', completedRoutines)
     return (
       <Routines routineList = {completedRoutines}

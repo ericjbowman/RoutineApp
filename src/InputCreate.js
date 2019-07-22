@@ -11,7 +11,7 @@ class InputCreate extends Component {
       input: {
         routineName: '',
 
-        antagSquatName: '',
+        antagSquatName: 'Squat-jumps',
         squatWeight: null,
         squatReps: null,
 
@@ -21,7 +21,7 @@ class InputCreate extends Component {
         ohpWeight: null,
         ohpReps: null,
 
-        antagDeadliftName: '',
+        antagDeadliftName: 'Kettle-bell Swings',
         deadliftWeight: null,
         deadliftReps: null,
 
@@ -31,7 +31,7 @@ class InputCreate extends Component {
         benchWeight: null,
         benchReps: null,
 
-        antagSquat2Name: '',
+        antagSquat2Name: 'Box-jumps',
         squat2Name: 'Front Squat',
         squat2Weight: null,
         squat2Reps: null,
@@ -43,7 +43,7 @@ class InputCreate extends Component {
         ohp2Weight: null,
         ohp2Reps: null,
 
-        antagDeadlift2Name: '',
+        antagDeadlift2Name: 'Squat Jumps',
         deadlift2Name: 'Snatch-grip Deadlift',
         deadlift2Weight: null,
         deadlift2Reps: null,
@@ -51,11 +51,11 @@ class InputCreate extends Component {
         antagBench2Name: 'Dumbbell Row',
         antagBench2Weight: null,
         antagBench2Reps: null,
-        bench2Name: 'Weight Dip',
+        bench2Name: 'Weighted Dip',
         bench2Weight: null,
         bench2Reps: null,
 
-        antagSquat3Name: '',
+        antagSquat3Name: 'Lunge hops',
         squat3Name: 'Bulgarian Split Squat',
         squat3Weight: null,
         squat3Reps: null,
@@ -67,31 +67,31 @@ class InputCreate extends Component {
         ohp3Weight: null,
         ohp3Reps: null,
 
-        antagDeadlift3Name: '',
+        antagDeadlift3Name: 'Burpee',
         deadlift3Name: 'Romanian Deadlift',
         deadlift3Weight: null,
         deadlift3Reps: null,
 
-        antagBench3Name: 'Cable Row',
+        antagBench3Name: 'Seated Cable Row',
         antagBench3Weight: null,
         antagBench3Reps: null,
         bench3Name: 'Close-grip Bench Press',
         bench3Weight: null,
         bench3Reps: null,
 
-        core1: '',
-        core2: '',
-        core3: '',
-        core4: '',
-        core5: '',
-        core6: '',
+        core1: 'Plank w/ Hip Extension',
+        core2: 'Toe-touch Crunches',
+        core3: 'Decline Situps',
+        core4: 'Hanging Leg-raises',
+        core5: 'V-up',
+        core6: 'Dragon Flags',
 
-        oblique1: '',
-        oblique2: '',
-        oblique3: '',
-        oblique4: '',
-        oblique5: '',
-        oblique6: ''
+        oblique1: 'Side Plank',
+        oblique2: 'Air Bicycle',
+        oblique3: 'Barbell Twist',
+        oblique4: 'Woodchopper',
+        oblique5: 'Single-arm Farmer\'s Walk',
+        oblique6: 'Windshield Wipers'
       },
       isRoutineCreated: false,
       autoFill: true
@@ -114,6 +114,8 @@ class InputCreate extends Component {
         return Math.floor(this.state.input.squatWeight * 0.60)
       } if (name === 'Box Squat') {
         return this.state.input.squatWeight
+      } if (name === 'Pause Squat') {
+        return Math.floor(this.state.input.squatWeight * 0.70)
       } if (name === 'Bulgarian Split Squat') {
         return Math.floor(this.state.input.squatWeight * 0.50)
       } if (name === 'Incline Bench Press') {
@@ -149,6 +151,12 @@ class InputCreate extends Component {
       } if (name === 'Lat Pull-down') {
         return Math.floor(this.state.input.benchWeight * 0.8)
       } if (name === 'Barbell Row') {
+        return Math.floor(this.state.input.benchWeight * 0.7)
+      } if (name === 'Dumbbell Row') {
+        return Math.floor(this.state.input.benchWeight * 0.35)
+      } if (name === 'Seated Cable Row') {
+        return Math.floor(this.state.input.benchWeight * 0.7)
+      } if (name === 'Pendlay Row') {
         return Math.floor(this.state.input.benchWeight * 0.7)
       }
     }

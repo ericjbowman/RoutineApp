@@ -181,13 +181,13 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
       />
 
       <label>Secondary Squat Exercise</label>
-      <select value={input.squat2Name} name="squat2Name" onChange={handleChange}>
-        <option value="" selected disabled hidden>Choose here</option>
-        <option value="Box-Squat">Box-Squat</option>
-        <option value="Front-Squat">Front-Squat</option>
-        <option value="Barbell-Lunge">Barbell-Lunge</option>
-        <option value="Bulgarian Split-Squat">Bulgarian Split-Squat</option>
-      </select>
+      <input
+        placeholder="Secondary Squat Exercise"
+        value={input.squat2Name}
+        name="squat2Name"
+        onChange={handleChange}
+        type="text"
+      />
 
       <label>Secondary Squat Weight</label>
       <input
