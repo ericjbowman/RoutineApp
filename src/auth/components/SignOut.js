@@ -9,7 +9,7 @@ class SignOut extends Component {
     const { enqueueSnackbar, history, clearUser, user } = this.props
 
     signOut(user)
-      .finally(() => enqueueSnackbar(messages.signOutSuccess, { variant: 'info' }))
+      .finally(() => enqueueSnackbar(messages.signOutSuccess, { variant: 'info', autoHideDuration: 2000 }))
       .finally(() => history.push('/'))
       .finally(() => clearUser())
   }

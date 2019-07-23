@@ -23,8 +23,8 @@ class Routine extends Component {
       }
     })
       .then(() => this.setState({ deleted: true }))
-      .then(() => this.props.enqueueSnackbar(messages.routineDestroySuccess, { variant: 'success' }))
-      .catch(() => this.props.enqueueSnackbar(messages.routineDestroyFailure, { variant: 'error' }))
+      .then(() => this.props.enqueueSnackbar(messages.routineDestroySuccess, { variant: 'success', autoHideDuration: 2000 }))
+      .catch(() => this.props.enqueueSnackbar(messages.routineDestroyFailure, { variant: 'error', autoHideDuration: 2000 }))
   }
   render () {
     const { routine, id } = this.props
@@ -32,7 +32,7 @@ class Routine extends Component {
     if (deleted) {
       return (
         <Redirect to={
-          { pathname: '/', status: { msg: 'Routine Successfully Deleted' } }
+          { pathname: '/routines', status: { msg: 'Routine Successfully Deleted' } }
         } />
       )
     } if (!deleted) {

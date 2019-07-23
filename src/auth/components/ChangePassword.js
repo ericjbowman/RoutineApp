@@ -24,12 +24,12 @@ class ChangePassword extends Component {
     const { enqueueSnackbar, history, user } = this.props
 
     changePassword(this.state, user)
-      .then(() => enqueueSnackbar(messages.changePasswordSuccess, { variant: 'success' }))
+      .then(() => enqueueSnackbar(messages.changePasswordSuccess, { variant: 'success', autoHideDuration: 2000 }))
       .then(() => history.push('/'))
       .catch(error => {
         console.error(error)
         this.setState({ oldPassword: '', newPassword: '' })
-        enqueueSnackbar(messages.changePasswordFailure, { variant: 'error' })
+        enqueueSnackbar(messages.changePasswordFailure, { variant: 'error', autoHideDuration: 2000 })
       })
   }
 

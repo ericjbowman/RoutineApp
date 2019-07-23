@@ -27,12 +27,12 @@ class SignUp extends Component {
     signUp(this.state)
       .then(() => signIn(this.state))
       .then(res => setUser(res.data.user))
-      .then(() => enqueueSnackbar(messages.signUpSuccess, { variant: 'success' }))
+      .then(() => enqueueSnackbar(messages.signUpSuccess, { variant: 'success', autoHideDuration: 2000 }))
       .then(() => history.push('/'))
       .catch(error => {
         console.error(error)
         this.setState({ email: '', password: '', passwordConfirmation: '' })
-        enqueueSnackbar(messages.signUpFailure, { variant: 'error' })
+        enqueueSnackbar(messages.signUpFailure, { variant: 'error', autoHideDuration: 2000 })
       })
   }
 
