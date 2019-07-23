@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import InputForm from './InputForm'
-import { Redirect } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from './apiConfig'
+import messages from './auth/messages'
+import { withSnackbar } from 'notistack'
 class InputCreate extends Component {
   constructor (props) {
     super(props)
@@ -92,7 +94,7 @@ class InputCreate extends Component {
         oblique5: 'Single-arm Farmer\'s Walk',
         oblique6: 'Windshield Wipers'
       },
-      isRoutineCreated: false,
+      isRoutineEdited: false,
       autoFill: true
     }
   }
@@ -203,10 +205,11 @@ class InputCreate extends Component {
   handleSubmit = event => {
     event.preventDefault()
     console.log(this.state)
+    console.log(this.props.location.state.id)
 
     axios({
-      url: (`${apiUrl}/inputs`),
-      method: 'POST',
+      url: (`${apiUrl}/inputs/${this.props.location.state.id}`),
+      method: 'PATCH',
       headers: {
         'Authorization': `Token token=${this.props.user.token}`
       },
@@ -215,8 +218,11 @@ class InputCreate extends Component {
       }
     })
       .then(res => this.setState({
-        isRoutineCreated: true
+        isRoutineEdited: true
       }))
+      .then(() => console.log('PATCH SUCCESS'))
+      .then(() => this.props.enqueueSnackbar(messages.routineEditSuccess, { variant: 'success' }))
+      .catch(() => this.props.enqueueSnackbar(messages.routineEditFailure, { variant: 'error' }))
       .catch(console.error)
   }
 
@@ -228,10 +234,10 @@ class InputCreate extends Component {
 
   render () {
     const { handleChange, handleSubmit, toggleAutoFill } = this
-    const { input, isRoutineCreated } = this.state
+    const { input, isRoutineEdited } = this.state
     console.log('Input state is', this.state)
 
-    if (isRoutineCreated) {
+    if (isRoutineEdited) {
       return <Redirect to='/routines'/>
     }
     return (
@@ -243,11 +249,11 @@ class InputCreate extends Component {
           handleSubmit={handleSubmit}
           toggleAutoFill={toggleAutoFill}
           cancelPath="/"
-          isEdit={false}
+          isEdit={true}
         />
       </div>
     )
   }
 }
 
-export default InputCreate
+export default withSnackbar(withRouter(InputCreate))

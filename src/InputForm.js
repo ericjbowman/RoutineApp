@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 // import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 // import MenuItem from '@material-ui/core/MenuItem'
@@ -25,7 +25,7 @@ import Button from '@material-ui/core/Button'
 //
 // const classes = useStyles()
 
-const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFill }) => {
+const InputForm = ({ isEdit, input, handleSubmit, handleChange, cancelPath, toggleAutoFill }) => {
   const useStyles = makeStyles(theme => ({
     container: {
       display: 'flex',
@@ -48,8 +48,13 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
       display: 'none'
     }
   }))
-
+  // console.log(location.state.isEdit)
   const classes = useStyles()
+  // if (isEdit) {
+  //   return (
+  //     <button>Edit</button>
+  //   )
+  // }
   return (
     <Fragment>
       <Button onClick={toggleAutoFill} variant="contained" color="primary" className={classes.button}>
@@ -1014,4 +1019,4 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
   )
 }
 
-export default InputForm
+export default withRouter(InputForm)

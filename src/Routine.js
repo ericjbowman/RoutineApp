@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Wave from './Wave'
-import { withRouter, Redirect } from 'react-router-dom'
+import { withRouter, Redirect, Link } from 'react-router-dom'
 import { withSnackbar } from 'notistack'
 import axios from 'axios'
 import apiUrl from './apiConfig'
@@ -40,7 +40,13 @@ class Routine extends Component {
         <Fragment id={id} key={id}>
           <h3>{routine.title}</h3>
           <button onClick={this.deleteRoutine}>Delete</button>
-          <button>Edit</button>
+          <Link to={{
+            pathname: '/edit-input',
+            state: {
+              id: id
+            }
+          }}><button>Edit</button>
+          </Link>
           <div className="container">
             <div className="row">
               <div className="col-6">

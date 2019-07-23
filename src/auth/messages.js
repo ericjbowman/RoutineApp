@@ -7,5 +7,7 @@ export default {
   changePasswordSuccess: 'Password changed successfully!',
   changePasswordFailure: 'Failed to change passwords. Check your old password and try again.',
   routineDestroySuccess: 'Routine successfully deleted!',
-  routineDestroyFailure: 'Unable to delete routine'
+  routineDestroyFailure: 'Unable to delete routine',
+  routineEditSuccess: 'Routine successfully edited!',
+  routineEditFailure: 'Unable to edit routine'
 }
