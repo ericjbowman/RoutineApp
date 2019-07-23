@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { withSnackbar } from 'notistack'
 
 import { signUp, signIn } from '../api'
+import messages from '../messages'
 
 class SignUp extends Component {
   constructor () {
