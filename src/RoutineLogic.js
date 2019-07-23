@@ -394,19 +394,25 @@ class RoutineLogic extends Component {
     //   'over-head-press', 175, 'z-press', 125, 'landmine-press', 260, 'kb swing', 'snatch', 'glute bridge', 'Deadlfit',
     //   375, 'Romanian Dl', 350, 'pause dl', 325, 'barbell row', 175, 'dumbbell row',
     //   90, 'bicep curls', 120, 'Bench press', 275, 'Incline bench', 250, 'tricp extensions', 100)
-    const inputIds = this.state.inputs.forEach(input => {
-      const idList = []
-      idList.push(input.id)
-      return idList
-    })
+    const idList = []
+    const inputIds = () => {
+      this.state.inputs.forEach(input => {
+        // console.log('input id from function', input.id)
+        idList.push(input.id)
+        console.log('idList from function', idList)
+        return idList
+      })
+    }
+    inputIds()
     const completedRoutines = routineGenerator()
     console.log('Routines after logic', completedRoutines)
     console.log('Routine Generator', routineGenerator())
     console.log('props.user', this.props.user)
     console.log('this.state.inputs', this.state.inputs)
-    console.log('Input Ids', inputIds)
+    console.log('idList', idList)
+    // console.log('idList')
     return (
-      <Routines routineList = {completedRoutines} user= {this.props.user}
+      <Routines idList={idList} routineList= {completedRoutines} user= {this.props.user}
       />
     )
   }

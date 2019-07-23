@@ -7,7 +7,7 @@ import apiUrl from './apiConfig'
 class Routines extends Component {
   deleteRoutine = () => {
     axios({
-      url: (`${apiUrl}/routines/${this.props.match.params.id}`),
+      url: (`${apiUrl}/inputs/${this.props.idList[1]}`),
       method: 'DELETE',
       headers: {
         'Authorization': `Token token=${this.props.user.token}`
@@ -17,8 +17,9 @@ class Routines extends Component {
   render () {
     console.log('this.props.match.params', this.props.match.params)
     console.log('All Routines', this.props.routineList)
+    console.log('First routine id', this.props.idList[0])
     return this.props.routineList.map((routine, index) => (
-      <Fragment key={index}>
+      <Fragment id={this.props.idList[index]} key={index}>
         <h3>{routine.title}</h3>
         <button onClick={this.deleteRoutine}>Delete</button>
         <button>Edit</button>
