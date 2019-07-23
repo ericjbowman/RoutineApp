@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
+import Icon from '@material-ui/core/Icon'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -70,7 +71,9 @@ const Header = ({ user }) => {
             </React.Fragment>
           ) }
           { <React.Fragment>
-            <Button className={classes.menuButton} component={Link} to="/">Home</Button>
+            <Button color="inherit" component={Link} to="/">
+              <Icon>home</Icon>
+            </Button>
           </React.Fragment> }
         </Toolbar>
       </AppBar>
