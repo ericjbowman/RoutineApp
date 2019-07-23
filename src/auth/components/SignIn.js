@@ -47,7 +47,7 @@ class SignIn extends Component {
 
     return (
       <Fragment>
-        <div className="auth-form">
+        <div>
           <Paper>
             <CssBaseline />
             <div className="auth-style">

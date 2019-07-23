@@ -1,3 +1,11 @@
+$gold: #B29E40;
+$lightGold: #F5F3E7;
+
+body {
+  background-color: #F5F3E7;
+  margin: 0;
+}
+
 .mainMover {
   color: lightgreen;
 }
@@ -24,4 +32,23 @@ select, input {
 
 .center {
   text-align: center;
+}
+
+.welcome {
+  width: 75%;
+  margin: 2rem;
+}
+
+.welcome-main {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-content {
+  padding: 2em;
+}
+
+p {
+  font-size: 18px;
+  line-height: 2em;
 }
