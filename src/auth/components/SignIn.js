@@ -1,19 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import styled from 'styled-components'
 import { withSnackbar } from 'notistack'
-import messages from '../messages'
-
 import { signIn } from '../api'
-
-const Input = styled.input`
-  border-radius: 3px;
-  outline: none;
-
-  &:focus {
-    box-shadow: 0 0 0 5px deeppink;
-  }
-`
+import messages from '../messages'
 
 class SignIn extends Component {
   constructor () {
@@ -36,11 +25,12 @@ class SignIn extends Component {
 
     signIn(this.state)
       .then(res => setUser(res.data.user))
-      .then(() => enqueueSnackbar(messages.SignInSuccess, { variant: 'success' }))
+      .then(() => enqueueSnackbar(messages.signInSuccess, { variant: 'success' }))
       .then(() => history.push('/'))
       .catch(error => {
         console.error(error)
         this.setState({ email: '', password: '' })
+        enqueueSnackbar(messages.signInFailure, { variant: 'error' })
       })
   }
 
@@ -51,7 +41,7 @@ class SignIn extends Component {
       <form className='auth-form' onSubmit={this.onSignIn}>
         <h3>Sign In</h3>
         <label htmlFor="email">Email</label>
-        <Input
+        <input
           required
           type="email"
           name="email"
@@ -60,7 +50,7 @@ class SignIn extends Component {
           onChange={this.handleChange}
         />
         <label htmlFor="password">Password</label>
-        <Input
+        <input
           required
           name="password"
           value={password}

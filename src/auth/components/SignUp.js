@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { withSnackbar } from 'notistack'
-
 import { signUp, signIn } from '../api'
 import messages from '../messages'
 
@@ -28,11 +27,12 @@ class SignUp extends Component {
     signUp(this.state)
       .then(() => signIn(this.state))
       .then(res => setUser(res.data.user))
-      .then(() => enqueueSnackbar(messages.SignUpSuccess, { variant: 'success' }))
+      .then(() => enqueueSnackbar(messages.signUpSuccess, { variant: 'success' }))
       .then(() => history.push('/'))
       .catch(error => {
         console.error(error)
         this.setState({ email: '', password: '', passwordConfirmation: '' })
+        enqueueSnackbar(messages.signUpFailure, { variant: 'error' })
       })
   }
 

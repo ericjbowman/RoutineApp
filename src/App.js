@@ -13,8 +13,6 @@ import Day from './Day.js'
 import InputCreate from './InputCreate'
 import { SnackbarProvider } from 'notistack'
 
-// import Alert from 'react-bootstrap/Alert'
-
 class App extends Component {
   constructor () {
     super()
