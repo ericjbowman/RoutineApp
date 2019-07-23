@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Routines from './Routines'
+import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from './apiConfig'
 
@@ -393,16 +394,22 @@ class RoutineLogic extends Component {
     //   'over-head-press', 175, 'z-press', 125, 'landmine-press', 260, 'kb swing', 'snatch', 'glute bridge', 'Deadlfit',
     //   375, 'Romanian Dl', 350, 'pause dl', 325, 'barbell row', 175, 'dumbbell row',
     //   90, 'bicep curls', 120, 'Bench press', 275, 'Incline bench', 250, 'tricp extensions', 100)
-
+    const inputIds = this.state.inputs.forEach(input => {
+      const idList = []
+      idList.push(input.id)
+      return idList
+    })
     const completedRoutines = routineGenerator()
     console.log('Routines after logic', completedRoutines)
     console.log('Routine Generator', routineGenerator())
     console.log('props.user', this.props.user)
+    console.log('this.state.inputs', this.state.inputs)
+    console.log('Input Ids', inputIds)
     return (
-      <Routines routineList = {completedRoutines}
+      <Routines routineList = {completedRoutines} user= {this.props.user}
       />
     )
   }
 }
 
-export default RoutineLogic
+export default withRouter(RoutineLogic)
