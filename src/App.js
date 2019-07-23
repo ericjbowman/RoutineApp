@@ -11,6 +11,7 @@ import ChangePassword from './auth/components/ChangePassword'
 import RoutineLogic from './RoutineLogic'
 import Day from './Day.js'
 import InputCreate from './InputCreate'
+import { SnackbarProvider } from 'notistack'
 
 // import Alert from 'react-bootstrap/Alert'
 
@@ -32,7 +33,7 @@ class App extends Component {
     const { user } = this.state
 
     return (
-      <React.Fragment>
+      <SnackbarProvider maxSnack={3}>
         <Header user={user} />
         <main className="container">
           <Route path='/sign-up' render={() => (
@@ -60,7 +61,7 @@ class App extends Component {
             <InputCreate user={user} />
           )} />
         </main>
-      </React.Fragment>
+      </SnackbarProvider>
     )
   }
 }
