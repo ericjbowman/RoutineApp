@@ -2,7 +2,7 @@ import React from 'react'
 
 const Welcome = () => (
   <React.Fragment>
-    <h1>Welcome to Lunkedin!</h1>
+    <h1 className="center">Welcome to Lunkedin!</h1>
     <p>Lunkedin is an app that generates an exercise routine based on your
     squat, bench press, deadlift, and over-head press maximums. You can choose
     all other exercises. If you choose any of the recommended exercises, your
