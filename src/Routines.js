@@ -1,47 +1,14 @@
-import React, { Component, Fragment } from 'react'
-import Wave from './Wave'
+import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import axios from 'axios'
-import apiUrl from './apiConfig'
+import Routine from './Routine'
 
 class Routines extends Component {
-  deleteRoutine = () => {
-    axios({
-      url: (`${apiUrl}/inputs/${this.props.idList[1]}`),
-      method: 'DELETE',
-      headers: {
-        'Authorization': `Token token=${this.props.user.token}`
-      }
-    })
-  }
   render () {
     console.log('this.props.match.params', this.props.match.params)
     console.log('All Routines', this.props.routineList)
     console.log('First routine id', this.props.idList[0])
     return this.props.routineList.map((routine, index) => (
-      <Fragment id={this.props.idList[index]} key={index}>
-        <h3>{routine.title}</h3>
-        <button onClick={this.deleteRoutine}>Delete</button>
-        <button>Edit</button>
-        <div className="container">
-          <div className="row">
-            <div className="col-6">
-              <Wave wave={routine.wave1} number='1' wave1={routine.wave1}/>
-            </div>
-            <div className="col-6">
-              <Wave wave={routine.wave2} number='2'wave1={routine.wave1}/>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-6">
-              <Wave wave={routine.wave3} number='3'wave1={routine.wave1}/>
-            </div>
-            <div className="col-6">
-              <Wave wave={routine.wave4} number='4'wave1={routine.wave1}/>
-            </div>
-          </div>
-        </div>
-      </Fragment>
+      <Routine user={this.props.user} routine={routine} id={this.props.idList[index]} key={this.props.idList[index]} />
     ))
   }
 }
