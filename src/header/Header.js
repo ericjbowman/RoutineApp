@@ -55,7 +55,7 @@ const Header = ({ user }) => {
           <Typography variant="h6" className={classes.title}>
             Lunkedin
           </Typography>
-          { user && <span>Welcome, {user.email}</span>}
+          { user && <span className={classes.menuButton}>Welcome, {user.email}</span>}
           { user ? (
             <React.Fragment>
               <Button className={classes.menuButton} component={Link} to="/create-input">Create Routine</Button>
