@@ -1009,11 +1009,9 @@ const InputForm = ({ isEdit, input, handleSubmit, handleChange, cancelPath, togg
         <Button type="submit" variant="contained" color="primary" className={classes.button}>
           Submit
         </Button>
-        <Link to={cancelPath}>
-          <Button variant="contained" color="secondary" className={classes.button}>
-            Cancel
-          </Button>
-        </Link>
+        <Button component={Link} to={cancelPath} variant="contained" color="secondary" className={classes.button}>
+          Cancel
+        </Button>
       </form>
     </Fragment>
   )
