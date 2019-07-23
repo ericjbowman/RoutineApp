@@ -24,6 +24,7 @@ class Routine extends Component {
     })
       .then(() => this.setState({ deleted: true }))
       .then(() => this.props.enqueueSnackbar(messages.routineDestroySuccess, { variant: 'success' }))
+      .catch(() => this.props.enqueueSnackbar(messages.routineDestroyFailure, { variant: 'error' }))
   }
   render () {
     const { routine, id } = this.props
