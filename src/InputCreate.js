@@ -236,7 +236,6 @@ class InputCreate extends Component {
     }
     return (
       <div>
-        <h4>Input your Max/Choose exercises</h4>
         <InputForm
           input={input}
           handleChange={handleChange}

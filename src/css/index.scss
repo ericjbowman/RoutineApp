@@ -2,7 +2,9 @@ $gold: #B29E40;
 $lightGold: #F5F3E7;
 
 body {
-  background-color: #F5F3E7;
+  background-image: url('../Dumbbells.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
 }
 
@@ -51,4 +53,24 @@ select, input {
 p {
   font-size: 18px;
   line-height: 2em;
+}
+
+.form-container {
+  margin: auto;
+  width: 80%;
+}
+
+.form-body {
+  display: flex;
+  justify-content: center;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+}
+
+.form-title {
+  width: 100%;
+  text-align: center;
 }
