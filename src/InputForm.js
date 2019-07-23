@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
 // import MenuItem from '@material-ui/core/MenuItem'
 import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
 
 // const useStyles = makeStyles(theme => ({
 //   container: {
@@ -39,13 +40,21 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
     },
     menu: {
       width: 200
+    },
+    button: {
+      margin: theme.spacing(1)
+    },
+    input: {
+      display: 'none'
     }
   }))
 
   const classes = useStyles()
   return (
     <Fragment>
-      <button onClick={toggleAutoFill}>Auto-Fill</button>
+      <Button onClick={toggleAutoFill} variant="contained" color="primary" className={classes.button}>
+        Auto-Fill
+      </Button>
       <form className={classes.container} noValidate autoComplete="off" onSubmit={handleSubmit}>
         <TextField
           id="outlined-name"
@@ -992,9 +1001,13 @@ const InputForm = ({ input, handleSubmit, handleChange, cancelPath, toggleAutoFi
           onChange={handleChange}
           type="text"
         />
-        <button type="submit">Submit</button>
+        <Button type="submit" variant="contained" color="primary" className={classes.button}>
+          Submit
+        </Button>
         <Link to={cancelPath}>
-          <button>Cancel</button>
+          <Button variant="contained" color="secondary" className={classes.button}>
+            Cancel
+          </Button>
         </Link>
       </form>
     </Fragment>
