@@ -13,6 +13,7 @@ import Day from './Day.js'
 import InputCreate from './InputCreate'
 import { SnackbarProvider } from 'notistack'
 import InputEdit from './InputEdit'
+import Welcome from './Welcome'
 
 class App extends Component {
   constructor () {
@@ -46,6 +47,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword user={user} />
+          )} />
+          <Route exact path='/' render={() => (
+            <Welcome />
           )} />
           <AuthenticatedRoute user={user} path='/days/:id' render={() => (
             <React.Fragment>
