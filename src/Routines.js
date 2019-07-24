@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import Routine from './Routine'
+import Paper from '@material-ui/core/Paper'
 
 class Routines extends Component {
   render () {
@@ -9,7 +10,17 @@ class Routines extends Component {
     console.log('First routine id', this.props.idList[0])
     if (this.props.routineList.length === 0) {
       return (
-        <h1>Click Create Routine to get started</h1>
+        <React.Fragment>
+          <div className="welcome-main">
+            <div className="welcome">
+              <Paper style={{ background: 'rgba(255,255,255,0.8)' }}>
+                <div className="welcome-content">
+                  <h1 className="center">You have no routines!</h1>
+                </div>
+              </Paper>
+            </div>
+          </div>
+        </React.Fragment>
       )
     }
     return this.props.routineList.map((routine, index) => (

@@ -1,5 +1,6 @@
 $gold: #B29E40;
 $lightGold: #F5F3E7;
+$transparent: rgba(255, 255, 255, .3);
 
 body {
   background-image: url('../Dumbbells.jpg');
@@ -39,6 +40,8 @@ select, input {
 .welcome {
   width: 75%;
   margin: 2rem;
+  background: #7f7f7f;
+  background: rgba(255,255,255,0.5);
 }
 
 .welcome-main {
@@ -53,6 +56,7 @@ select, input {
 p {
   font-size: 18px;
   line-height: 2em;
+  text-align: center;
 }
 
 .form-container {

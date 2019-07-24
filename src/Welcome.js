@@ -5,7 +5,7 @@ const Welcome = () => (
   <React.Fragment>
     <div className="welcome-main">
       <div className="welcome">
-        <Paper>
+        <Paper style={{ background: 'rgba(255,255,255,0.8)' }}>
           <div className="welcome-content">
             <h1 className="center">Welcome to Lunkedin!</h1>
             <p className="welcome-p">Lunkedin is an app that generates an exercise routine based on your
@@ -15,7 +15,7 @@ const Welcome = () => (
             and deadlift.
             </p>
             <p>This routine is ideal for lifters who want to get stronger, build muscle
-            mass, and burn fat. The intensity undulates daily and weekly and progresses
+            mass, and burn fat. The intensity undulates daily and weekly, and progresses
             in a linear fashion, monthly.
             </p>
           </div>
