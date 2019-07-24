@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import InputForm from './InputForm'
+import Form1 from './InputForm'
 import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from './apiConfig'
 import messages from './auth/messages'
 import { withSnackbar } from 'notistack'
-class InputCreate extends Component {
+class InputEdit extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -243,7 +243,7 @@ class InputCreate extends Component {
     return (
       <div>
         <h4>Input your Max/Choose exercises</h4>
-        <InputForm
+        <Form1
           input={input}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
@@ -256,4 +256,4 @@ class InputCreate extends Component {
   }
 }
 
-export default withSnackbar(withRouter(InputCreate))
+export default withSnackbar(withRouter(InputEdit))

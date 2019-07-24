@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import InputForm from './InputForm'
+import Form1 from './Form1'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from './apiConfig'
@@ -236,7 +236,7 @@ class InputCreate extends Component {
     }
     return (
       <div>
-        <InputForm
+        <Form1
           input={input}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
