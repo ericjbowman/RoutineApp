@@ -47,7 +47,7 @@ class Form1 extends Component {
                         value={input.routineName}
                         onChange={handleChange}
                         name="routineName"
-                        className="name-form"
+                        className="title-form"
                       />
                     </div>
                     <Button onClick={this.nextStep} variant="contained" color="primary">
@@ -246,126 +246,129 @@ class Form1 extends Component {
           <div className="form-body">
             <div className="form-container">
               <Paper>
-                <div>
-                  <Button onClick={toggleAutoFill} variant="contained" color="primary">
-                    Auto-Fill
-                  </Button>
-                  <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="form-title">Input your Max/Choose exercises</h2>
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Squat Primer"
-                      placeholder="Squat Primer"
-                      value={input.antagSquatName}
-                      name="antagSquatName"
-                      onChange={handleChange}
-                    />
+                <div className="form-padding">
+                  <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
+                    <h2 className="center-text">Squat Variations</h2>
+                    <div className="input-row">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Squat Primer"
+                        value={input.antagSquatName}
+                        name="antagSquatName"
+                        onChange={handleChange}
+                        className="third-form"
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Secondary Squat Primer"
-                      placeholder="Secondary Squat Primer"
-                      value={input.antagSquat2Name}
-                      name="antagSquat2Name"
-                      onChange={handleChange}
-                      type="text"
-                    />
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Secondary Squat Primer"
+                        value={input.antagSquat2Name}
+                        name="antagSquat2Name"
+                        onChange={handleChange}
+                        type="text"
+                        className="third-form"
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Assistance Squat Primer"
-                      placeholder="Assistance Squat Primer"
-                      value={input.antagSquat3Name}
-                      name="antagSquat3Name"
-                      onChange={handleChange}
-                      type="text"
-                    />
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Assistance Squat Primer"
+                        value={input.antagSquat3Name}
+                        name="antagSquat3Name"
+                        onChange={handleChange}
+                        type="text"
+                        className="third-form"
+                      />
+                    </div>
+                    <div className="input-row">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Secondary"
+                        value={input.squat2Name}
+                        name="squat2Name"
+                        onChange={handleChange}
+                        type="text"
+                        className="name-form"
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Secondary Squat Exercise"
-                      placeholder="Secondary Squat Exercise"
-                      value={input.squat2Name}
-                      name="squat2Name"
-                      onChange={handleChange}
-                      type="text"
-                    />
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Weight"
+                        value={input.squat2Weight}
+                        name="squat2Weight"
+                        onChange={handleChange}
+                        type="number"
+                        min="0"
+                        className="num-form"
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Secondary Squat Weight"
-                      placeholder="Secondary Squat Weight"
-                      value={input.squat2Weight}
-                      name="squat2Weight"
-                      onChange={handleChange}
-                      type="number"
-                      min="0"
-                    />
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Reps"
+                        value={input.squat2Reps}
+                        name="squat2Reps"
+                        onChange={handleChange}
+                        type="number"
+                        min="1"
+                        max="12"
+                        className="num-form"
+                      />
+                    </div>
+                    <div className="input-row">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Assistance Squat"
+                        value={input.squat3Name}
+                        name="squat3Name"
+                        onChange={handleChange}
+                        type="text"
+                        className="name-form"
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Secondary Squat Reps"
-                      placeholder="Secondary Squat Reps"
-                      value={input.squat2Reps}
-                      name="squat2Reps"
-                      onChange={handleChange}
-                      type="number"
-                      min="1"
-                      max="12"
-                    />
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Weight"
+                        value={input.squat3Weight}
+                        name="squat3Weight"
+                        onChange={handleChange}
+                        type="number"
+                        min="0"
+                        className="num-form"
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Assistance Squat"
-                      placeholder="Assistance Squat"
-                      value={input.squat3Name}
-                      name="squat3Name"
-                      onChange={handleChange}
-                      type="text"
-                    />
-
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Assistance Squat Weight"
-                      placeholder="Assistance Squat Weight"
-                      value={input.squat3Weight}
-                      name="squat3Weight"
-                      onChange={handleChange}
-                      type="number"
-                      min="0"
-                    />
-
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Assistance Squat Reps"
-                      placeholder="Assistance Squat Reps"
-                      value={input.squat3Reps}
-                      name="squat3Reps"
-                      onChange={handleChange}
-                      type="number"
-                      min="1"
-                      max="12"
-                    />
-
-                    <Button onClick={this.nextStep} variant="contained" color="primary">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Reps"
+                        value={input.squat3Reps}
+                        name="squat3Reps"
+                        onChange={handleChange}
+                        type="number"
+                        min="1"
+                        max="12"
+                        className="num-form"
+                      />
+                    </div>
+                    <Button onClick={this.nextStep} variant="contained" color="primary" style={{
+                      marginLeft: '7px',
+                      marginRight: '7px'
+                    }}>
                       Next Step
                     </Button>
                     <Button component={Link} to={cancelPath} variant="contained" color="secondary">
