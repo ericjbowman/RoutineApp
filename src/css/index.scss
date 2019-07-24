@@ -37,6 +37,11 @@ select, input {
   text-align: center;
 }
 
+.center-element {
+  display: flex;
+  justify-content: center;
+}
+
 .welcome {
   width: 75%;
   margin: 2rem;

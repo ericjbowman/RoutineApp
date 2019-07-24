@@ -39,15 +39,17 @@ class Routine extends Component {
     } if (!deleted) {
       return (
         <React.Fragment key={id}>
-          <h3>{routine.title}</h3>
-          <button onClick={this.deleteRoutine}>Delete</button>
-          <Link to={{
-            pathname: '/edit-input',
-            state: {
-              id: id
-            }
-          }}><button>Edit</button>
-          </Link>
+          <h3 className="center">{routine.title}</h3>
+          <div className="center-element">
+            <button onClick={this.deleteRoutine}>Delete</button>
+            <Link to={{
+              pathname: '/edit-input',
+              state: {
+                id: id
+              }
+            }}><button classsName="center-element">Edit</button>
+            </Link>
+          </div>
           <div className="wave-container">
             <SimpleTable wave={routine.wave1} number='1' wave1={routine.wave1}/>
             <SimpleTable wave={routine.wave2} number='2'wave1={routine.wave1}/>
