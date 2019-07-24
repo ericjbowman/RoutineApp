@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ThreeSets from './ThreeSets'
-import StaticSets from './StaticSets'
+import StaticSets2 from './StaticSets2'
 
 class Circuit extends Component {
   render () {
@@ -10,7 +10,7 @@ class Circuit extends Component {
       return (
         <React.Fragment>
           <h5>{this.props.name}</h5>
-          <StaticSets sets={this.props}/>
+          <StaticSets2 sets={this.props}/>
         </React.Fragment>
       )
     } else {

@@ -37,7 +37,7 @@ class Routine extends Component {
       )
     } if (!deleted) {
       return (
-        <Fragment id={id} key={id}>
+        <Fragment key={id}>
           <h3>{routine.title}</h3>
           <button onClick={this.deleteRoutine}>Delete</button>
           <Link to={{
