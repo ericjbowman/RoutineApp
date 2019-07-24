@@ -35,21 +35,21 @@ class Form1 extends Component {
           <div className="form-body">
             <div className="form-container">
               <Paper>
-                <div className="form-background">
-                  <Button onClick={toggleAutoFill} variant="contained" color="primary">
-                    Auto-Fill
-                  </Button>
-                  <form className="forms" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="form-title">Input your Max/Choose exercises</h2>
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Routine Name"
-                      value={input.routineName}
-                      onChange={handleChange}
-                      name="routineName"
-                    />
+                <div className="form-padding">
+                  <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
+                    <h2 className="center-text">Name Your Routine</h2>
+                    <div className="input-container">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Routine Name"
+                        value={input.routineName}
+                        onChange={handleChange}
+                        name="routineName"
+                        className="name-form"
+                      />
+                    </div>
                     <Button onClick={this.nextStep} variant="contained" color="primary">
                       Next Step
                     </Button>
@@ -69,120 +69,165 @@ class Form1 extends Component {
           <div className="form-body">
             <div className="form-container">
               <Paper>
-                <div>
-                  <Button onClick={toggleAutoFill} variant="contained" color="primary">
-                    Auto-Fill
-                  </Button>
-                  <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="form-title">Input your Max/Choose exercises</h2>
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Squat Weight"
-                      placeholder="Squat Weight"
-                      value={input.squatWeight}
-                      name="squatWeight"
-                      onChange={handleChange}
-                      type="number"
-                      min="0"
-                    />
+                <div className="form-padding">
+                  <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
+                    <h2 className="center-text">Input your Maximums</h2>
+                    <div className="input-row">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Squat Weight"
+                        placeholder="Squat Weight"
+                        value={input.squatWeight}
+                        name="squatWeight"
+                        onChange={handleChange}
+                        type="number"
+                        min="0"
+                        className="half-form"
+                        style={{
+                          marginTop: '14px',
+                          marginBottom: '7px'
+                        }}
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Squat reps"
-                      placeholder="Squat Reps"
-                      value={input.squatReps}
-                      name="squatReps"
-                      onChange={handleChange}
-                      type="number"
-                      min="1"
-                      max="12"
-                    />
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Squat reps"
+                        placeholder="Squat Reps"
+                        value={input.squatReps}
+                        name="squatReps"
+                        onChange={handleChange}
+                        type="number"
+                        min="1"
+                        max="12"
+                        className="half-form"
+                        style={{
+                          marginTop: '14px',
+                          marginBottom: '7px'
+                        }}
+                      />
+                    </div>
+                    <div className="input-row">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Over-head Press Weight"
+                        placeholder="Over-head Press Weight"
+                        value={input.ohpWeight}
+                        name="ohpWeight"
+                        onChange={handleChange}
+                        type="number"
+                        min="0"
+                        className="half-form"
+                        style={{
+                          marginTop: '7px',
+                          marginBottom: '7px'
+                        }}
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Over-head Press Weight"
-                      placeholder="Over-head Press Weight"
-                      value={input.ohpWeight}
-                      name="ohpWeight"
-                      onChange={handleChange}
-                      type="number"
-                      min="0"
-                    />
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Over-head Press Reps"
+                        placeholder="Over-head Press Reps"
+                        value={input.ohpReps}
+                        name="ohpReps"
+                        onChange={handleChange}
+                        type="number"
+                        min="1"
+                        max="12"
+                        className="half-form"
+                        style={{
+                          marginTop: '7px',
+                          marginBottom: '7px'
+                        }}
+                      />
+                    </div>
+                    <div className="input-row">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Deadlift Weight"
+                        placeholder="Deadlift Weight"
+                        value={input.deadliftWeight}
+                        name="deadliftWeight"
+                        onChange={handleChange}
+                        type="number"
+                        min="0"
+                        className="half-form"
+                        style={{
+                          marginTop: '7px',
+                          marginBottom: '7px'
+                        }}
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Over-head Press Reps"
-                      placeholder="Over-head Press Reps"
-                      value={input.ohpReps}
-                      name="ohpReps"
-                      onChange={handleChange}
-                      type="number"
-                      min="1"
-                      max="12"
-                    />
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Deadlift Reps"
+                        placeholder="Deadlift Reps"
+                        value={input.deadliftReps}
+                        name="deadliftReps"
+                        onChange={handleChange}
+                        type="number"
+                        min="1"
+                        max="12"
+                        className="half-form"
+                        style={{
+                          marginTop: '7px',
+                          marginBottom: '7px'
+                        }}
+                      />
+                    </div>
+                    <div className="input-row">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Bench-press Weight"
+                        placeholder="Bench-press Weight"
+                        value={input.benchWeight}
+                        name="benchWeight"
+                        onChange={handleChange}
+                        type="number"
+                        min="0"
+                        className="half-form"
+                        style={{
+                          marginTop: '7px',
+                          marginBottom: '14px'
+                        }}
+                      />
 
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Deadlift Weight"
-                      placeholder="Deadlift Weight"
-                      value={input.deadliftWeight}
-                      name="deadliftWeight"
-                      onChange={handleChange}
-                      type="number"
-                      min="0"
-                    />
-
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Deadlift Reps"
-                      placeholder="Deadlift Reps"
-                      value={input.deadliftReps}
-                      name="deadliftReps"
-                      onChange={handleChange}
-                      type="number"
-                      min="1"
-                      max="12"
-                    />
-
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Bench-press Weight"
-                      placeholder="Bench-press Weight"
-                      value={input.benchWeight}
-                      name="benchWeight"
-                      onChange={handleChange}
-                      type="number"
-                      min="0"
-                    />
-
-                    <TextField
-                      id="outlined-name"
-                      margin="normal"
-                      variant="outlined"
-                      label="Bench-Press Reps"
-                      placeholder="Bench-press Reps"
-                      value={input.benchReps}
-                      name="benchReps"
-                      onChange={handleChange}
-                      type="number"
-                      min="1"
-                      max="12"
-                    />
-                    <Button onClick={this.nextStep} variant="contained" color="primary">
+                      <TextField
+                        id="outlined-name"
+                        margin="normal"
+                        variant="outlined"
+                        label="Bench-Press Reps"
+                        placeholder="Bench-press Reps"
+                        value={input.benchReps}
+                        name="benchReps"
+                        onChange={handleChange}
+                        type="number"
+                        min="1"
+                        max="12"
+                        className="half-form"
+                        style={{
+                          marginTop: '7px',
+                          marginBottom: '14px'
+                        }}
+                      />
+                    </div>
+                    <Button onClick={this.nextStep} variant="contained" color="primary" style={{
+                      marginLeft: '7px',
+                      marginRight: '7px'
+                    }}>
                       Next Step
                     </Button>
                     <Button component={Link} to={cancelPath} variant="contained" color="secondary">

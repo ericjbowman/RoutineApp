@@ -65,6 +65,7 @@ p {
 }
 
 .form-body {
+  margin: 1.5em;
   display: flex;
   justify-content: center;
 }
@@ -77,4 +78,40 @@ p {
 .form-title {
   width: 100%;
   text-align: center;
+}
+
+.center-text {
+  text-align: center;
+  margin: 0 0 1em 0; 
+}
+
+.form-padding {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.name-form {
+  width: 100%;
+}
+
+.form-class {
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-around;
+  // margin: 0 auto;
+  // width: 100%;
+}
+
+.half-form {
+  width: 48%;
 }
