@@ -44,7 +44,6 @@ class StaticSets extends Component {
         </table>
       )
     } else {
-      console.log('StaticSets props.sets', this.props.sets)
       return (
         <table className="table table-bordered table-dark table-sm">
           <thead>

@@ -10,8 +10,6 @@ class ThreeSets extends Component {
         return num + ' lb'
       }
     }
-    console.log('3 set props...', this.props.sets)
-    console.log('3 set second weight', circuit.antag.weight[1])
     return (
       <Fragment>
         <table className="table table-bordered table-dark table-sm">

@@ -6,9 +6,6 @@ import Typography from '@material-ui/core/Typography'
 
 class Routines extends Component {
   render () {
-    console.log('this.props.match.params', this.props.match.params)
-    console.log('All Routines', this.props.routineList)
-    console.log('First routine id', this.props.idList[0])
     if (this.props.routineList.length === 0) {
       return (
         <React.Fragment>

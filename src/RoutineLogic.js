@@ -15,11 +15,6 @@ class RoutineLogic extends Component {
   }
 
   componentDidMount () {
-    // axios(`${apiUrl}/inputs`)
-    //   .then(res => this.setState({ inputs: res.data.inputs, loaded: true }))
-    //   .then(console.log('Routine Logic state is', this.state.inputs))
-    //   .catch(err => this.setState({ error: err.message }))
-
     axios({
       url: (`${apiUrl}/inputs`),
       headers: {
@@ -27,14 +22,10 @@ class RoutineLogic extends Component {
       }
     })
       .then(res => this.setState({ inputs: res.data.inputs, loaded: true }))
-      .then(console.log('Routine Logic state is', this.state.inputs))
       .catch(err => this.setState({ error: err.message }))
   }
 
   render () {
-    const { input } = this.props
-    console.log('Routine Logic props', input)
-    console.log('Routine Logic state', this.state.inputs)
     const oneRepMax = function (weight, reps) {
       const weightNum = parseInt(weight, 10)
       const repsNum = parseInt(reps, 10)
@@ -397,20 +388,12 @@ class RoutineLogic extends Component {
     const idList = []
     const inputIds = () => {
       this.state.inputs.forEach(input => {
-        // console.log('input id from function', input.id)
         idList.push(input.id)
-        console.log('idList from function', idList)
         return idList
       })
     }
     inputIds()
     const completedRoutines = routineGenerator()
-    console.log('Routines after logic', completedRoutines)
-    console.log('Routine Generator', routineGenerator())
-    console.log('props.user', this.props.user)
-    console.log('this.state.inputs', this.state.inputs)
-    console.log('idList', idList)
-    // console.log('idList')
     return (
       <Routines idList={idList} routineList= {completedRoutines} user= {this.props.user}
       />

@@ -217,7 +217,6 @@ class InputEdit extends Component {
       .then(res => this.setState({
         isRoutineEdited: true
       }))
-      .then(() => console.log('PATCH SUCCESS'))
       .then(() => this.props.enqueueSnackbar(messages.routineEditSuccess, { variant: 'success' }))
       .catch(() => this.props.enqueueSnackbar(messages.routineEditFailure, { variant: 'error' }))
       .catch(console.error)
@@ -232,7 +231,6 @@ class InputEdit extends Component {
   render () {
     const { handleChange, handleSubmit, toggleAutoFill } = this
     const { input, isRoutineEdited } = this.state
-    console.log('Input state is', this.state)
 
     if (isRoutineEdited) {
       return <Redirect to='/routines'/>
