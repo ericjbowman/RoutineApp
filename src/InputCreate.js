@@ -191,7 +191,6 @@ class InputCreate extends Component {
       antagOhp3Reps: this.state.input.benchReps
 
     }
-    console.log('antagBench name is', ratios(this.state.input.antagBenchName))
     if (this.state.autoFill === true) {
       const autoMaxInput = Object.assign(this.state.input, autoMax)
       this.setState({ input: autoMaxInput })
@@ -203,7 +202,6 @@ class InputCreate extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log(this.state)
 
     axios({
       url: (`${apiUrl}/inputs`),
@@ -230,7 +228,6 @@ class InputCreate extends Component {
   render () {
     const { handleChange, handleSubmit, toggleAutoFill } = this
     const { input, isRoutineCreated } = this.state
-    console.log('Input state is', this.state)
 
     if (isRoutineCreated) {
       return <Redirect to='/routines'/>

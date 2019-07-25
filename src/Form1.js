@@ -25,7 +25,6 @@ class Form1 extends Component {
     } else {
       this.setState({ step: 0 })
     }
-    console.log(this.state.step)
   }
 
   render () {

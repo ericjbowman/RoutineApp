@@ -192,7 +192,6 @@ class InputEdit extends Component {
       antagOhp3Reps: this.state.input.benchReps
 
     }
-    console.log('antagBench name is', ratios(this.state.input.antagBenchName))
     if (this.state.autoFill === true) {
       const autoMaxInput = Object.assign(this.state.input, autoMax)
       this.setState({ input: autoMaxInput })
@@ -204,8 +203,6 @@ class InputEdit extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log(this.state)
-    console.log(this.props.location.state.id)
 
     axios({
       url: (`${apiUrl}/inputs/${this.props.location.state.id}`),
