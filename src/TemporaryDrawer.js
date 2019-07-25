@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
 import List from '@material-ui/core/List'
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   }
 })
 
-export default function TemporaryDrawer () {
+function TemporaryDrawer () {
   const classes = useStyles()
   const [state, setState] = React.useState({
     top: false,
@@ -109,3 +109,5 @@ export default function TemporaryDrawer () {
     </div>
   )
 }
+
+export default withRouter(TemporaryDrawer)
