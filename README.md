@@ -52,6 +52,10 @@ User Stories
 * As a signed in user, I can edit my input for a routine.
 * As a signed in user, I can delete a routine I have created.
 
+Screenshot
+------
+https://i.imgur.com/IY9yqMM.png
+
 Wireframe
 ------
 ![wireframe](https://i.imgur.com/RGin49m.png)
