@@ -47,8 +47,8 @@ class SignIn extends Component {
 
     return (
       <Fragment>
-        <div>
-          <Paper style={{ maxWidth: '500px', margin: 'auto' }}>
+        <div className="auth-container">
+          <Paper style={{ maxWidth: '500px', margin: 'auto', backgroundColor: '#F1F1F1' }}>
             <CssBaseline />
             <div className="auth-style">
               <Typography component="h1" variant="h5">

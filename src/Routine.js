@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import SimpleTable from './Wave2'
+import Button from '@material-ui/core/Button'
 import { withRouter, Redirect, Link } from 'react-router-dom'
 import { withSnackbar } from 'notistack'
 import axios from 'axios'
 import apiUrl from './apiConfig'
 import messages from './auth/messages'
-// import Paper from '@material-ui/core/Paper'
+import Paper from '@material-ui/core/Paper'
 
 class Routine extends Component {
   constructor (props) {
@@ -38,17 +39,22 @@ class Routine extends Component {
       )
     } if (!deleted) {
       return (
-        <React.Fragment key={id}>
-          <h3 className="center">{routine.title}</h3>
-          <div className="center-element">
-            <button onClick={this.deleteRoutine}>Delete</button>
-            <Link to={{
-              pathname: '/edit-input',
-              state: {
-                id: id
-              }
-            }}><button classsName="center-element">Edit</button>
-            </Link>
+        <React.Fragment>
+          <div className="routine-header-container">
+            <Paper key={id} className="routine-header" style={{ background: 'rgba(255,255,255,0.8)' }}>
+              <h3 className="center">{routine.title}</h3>
+              <div className="center-element">
+                <Button component={Link} to={{
+                  pathname: '/edit-input',
+                  state: {
+                    id: id
+                  }
+                }} variant="contained" color="primary">
+                  Edit
+                </Button>
+                <Button onClick={this.deleteRoutine} variant="contained" color="secondary">Delete</Button>
+              </div>
+            </Paper>
           </div>
           <div className="wave-container">
             <SimpleTable wave={routine.wave1} number='1' wave1={routine.wave1}/>

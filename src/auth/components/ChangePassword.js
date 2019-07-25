@@ -47,7 +47,7 @@ class ChangePassword extends Component {
     return (
       <Fragment>
         <div className="auth-form">
-          <Paper style={{ maxWidth: '500px', margin: 'auto' }}>
+          <Paper style={{ maxWidth: '500px', margin: 'auto', backgroundColor: '#F1F1F1' }}>
             <CssBaseline />
             <div className="auth-style">
               <Typography component="h1" variant="h5">

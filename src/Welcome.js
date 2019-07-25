@@ -1,5 +1,6 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 
 const Welcome = () => (
   <React.Fragment>
@@ -7,7 +8,9 @@ const Welcome = () => (
       <div className="welcome">
         <Paper style={{ background: 'rgba(255,255,255,0.8)' }}>
           <div className="welcome-content">
-            <h1 className="center">Welcome to Lunkedin!</h1>
+            <Typography component="h1" variant="h5" className="center">
+              Welcome to Lunkedin!
+            </Typography>
             <p className="welcome-p">Lunkedin is an app that generates an exercise routine based on your
             squat, bench press, deadlift, and over-head press maximums. You can choose
             all other exercises. If you choose any of the recommended exercises, your

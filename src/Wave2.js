@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 function SimpleTable (props) {
   const classes = useStyles()
   return (
-    <Paper className={classes.root} >
+    <Paper className={classes.root}>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>

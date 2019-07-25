@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import Routine from './Routine'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 
 class Routines extends Component {
   render () {
@@ -15,7 +16,9 @@ class Routines extends Component {
             <div className="welcome">
               <Paper style={{ background: 'rgba(255,255,255,0.8)' }}>
                 <div className="welcome-content">
-                  <h1 className="center">You have no routines!</h1>
+                  <Typography component="h1" variant="h5" className="center">
+                    You have no routines!
+                  </Typography>
                 </div>
               </Paper>
             </div>

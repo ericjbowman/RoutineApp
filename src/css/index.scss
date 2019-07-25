@@ -21,10 +21,6 @@ body {
   color: black;
 }
 
-table {
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.46),0 2px 10px 0 rgba(0,0,0,0.42);
-}
-
 .green {
   background-color: green;
 }
@@ -43,8 +39,8 @@ select, input {
 }
 
 .welcome {
-  width: 75%;
-  margin: 2rem;
+  max-width: 500px;
+  margin: 1em;
   background: #7f7f7f;
   background: rgba(255,255,255,0.5);
 }
@@ -59,7 +55,7 @@ select, input {
 }
 
 p {
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 2em;
   text-align: center;
 }
@@ -88,6 +84,7 @@ p {
 .center-text {
   text-align: center;
   margin: 0 0 1em 0;
+  font-size: 3em;
 }
 
 .form-padding {
@@ -137,11 +134,27 @@ p {
   max-width: 500px;
 }
 
-.wave-container {
+.wave-container, .circuit-container {
   display: flex;
   justify-content: center;
 
 }
+
 .PrivateNotchedOutline-root-430 {
   // position: relative;
+}
+
+.routine-header {
+  max-width: 300px;
+  padding: 1em;
+}
+
+.routine-header-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.auth-container {
+  margin: 1em;
 }

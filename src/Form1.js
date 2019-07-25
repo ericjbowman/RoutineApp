@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 // import clsx from 'clsx'
 // import { makeStyles } from '@material-ui/core/styles'
 // import MenuItem from '@material-ui/core/MenuItem'
@@ -34,10 +35,12 @@ class Form1 extends Component {
         <Fragment>
           <div className="form-body">
             <div className="form-container">
-              <Paper>
+              <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="center-text">Name Your Routine</h2>
+                    <Typography component="h1" variant="h5">
+                      Name Your Routine
+                    </Typography>
                     <div className="input-container">
                       <TextField
                         id="outlined-name"
@@ -48,9 +51,14 @@ class Form1 extends Component {
                         onChange={handleChange}
                         name="routineName"
                         className="title-form"
+                        style={{
+                          marginBottom: '1em'
+                        }}
                       />
                     </div>
-                    <Button onClick={this.nextStep} variant="contained" color="primary">
+                    <Button onClick={this.nextStep} variant="contained" color="primary" style={{
+                      marginRight: '1em'
+                    }}>
                       Next Step
                     </Button>
                     <Button component={Link} to={cancelPath} variant="contained" color="secondary">
@@ -68,10 +76,12 @@ class Form1 extends Component {
         <Fragment>
           <div className="form-body">
             <div className="form-container">
-              <Paper>
+              <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="center-text">Input your Maximums</h2>
+                    <Typography component="h1" variant="h5">
+                      Input Your Maximums
+                    </Typography>
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
@@ -237,10 +247,12 @@ class Form1 extends Component {
         <Fragment>
           <div className="form-body">
             <div className="form-container">
-              <Paper>
+              <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="center-text">Squat Variations</h2>
+                    <Typography component="h1" variant="h5">
+                      Squat Variations
+                    </Typography>
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
@@ -378,10 +390,12 @@ class Form1 extends Component {
         <Fragment>
           <div className="form-body">
             <div className="form-container">
-              <Paper>
+              <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="center-text">Bench Press Variations</h2>
+                    <Typography component="h1" variant="h5">
+                      Bench Press Variations
+                    </Typography>
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
@@ -601,10 +615,12 @@ class Form1 extends Component {
         <Fragment>
           <div className="form-body">
             <div className="form-container">
-              <Paper>
+              <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="center-text">Deadlift Variations</h2>
+                    <Typography component="h1" variant="h5">
+                      Deadlift Variations
+                    </Typography>
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
@@ -739,10 +755,12 @@ class Form1 extends Component {
         <Fragment>
           <div className="form-body">
             <div className="form-container">
-              <Paper>
+              <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="center-text">Over-head Variations</h2>
+                    <Typography component="h1" variant="h5">
+                      Over-head Variations
+                    </Typography>
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
@@ -961,10 +979,12 @@ class Form1 extends Component {
         <Fragment>
           <div className="form-body">
             <div className="form-container">
-              <Paper>
+              <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <h2 className="center-text">Core Variations</h2>
+                    <Typography component="h1" variant="h5">
+                      Core Variations
+                    </Typography>
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
