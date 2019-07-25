@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
+import Switch from '@material-ui/core/Switch'
 // import clsx from 'clsx'
 // import { makeStyles } from '@material-ui/core/styles'
 // import MenuItem from '@material-ui/core/MenuItem'
@@ -29,7 +30,7 @@ class Form1 extends Component {
 
   render () {
     const { step } = this.state
-    const { input, handleSubmit, handleChange, cancelPath } = this.props
+    const { input, handleSubmit, handleChange, cancelPath, toggleAutoFill } = this.props
     if (step === 0) {
       return (
         <Fragment>
@@ -254,6 +255,11 @@ class Form1 extends Component {
                     <Typography component="h1" variant="h5">
                       Squat Variations
                     </Typography>
+                    <span>Toggle Auto-Complete</span>
+                    <Switch
+                      onChange={toggleAutoFill}
+                      label="Toggle Auto-complete"
+                    />
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
