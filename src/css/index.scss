@@ -135,7 +135,7 @@ p {
   max-width: 500px;
 }
 
-.wave-container, .circuit-container {
+.wave-container, .flex-center {
   display: flex;
   justify-content: center;
 
@@ -147,15 +147,27 @@ p {
 
 .routine-header {
   max-width: 300px;
-  padding: 1em;
 }
 
-.routine-header-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 1em;
-}
+// .routine-header-container {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 1em;
+// }
 
 .auth-container {
   margin: 1em;
+}
+
+span, {
+  font-family: 'Roboto';
+}
+
+.routine-header {
+  font-family: 'Roboto';
+  color: white;
+}
+
+.white {
+  color: white;
 }

@@ -40,29 +40,31 @@ class Routine extends Component {
     } if (!deleted) {
       return (
         <React.Fragment>
-          <div className="routine-header-container">
-            <Paper key={id} className="routine-header" style={{ background: 'rgba(255,255,255,0.8)' }}>
-              <h3 className="center">{routine.title}</h3>
-              <div className="center-element">
-                <Button component={Link} to={{
-                  pathname: '/edit-input',
-                  state: {
-                    id: id
-                  }
-                }} variant="contained" color="primary">
-                  Edit
-                </Button>
-                <Button onClick={this.deleteRoutine} variant="contained" color="secondary">Delete</Button>
+          <div>
+            <Paper style={{ padding: '1em', background: 'rgba(0, 0, 0, 0.8)' }}>
+              <div className="routine-header-container">
+                <h2 className="center white">{routine.title}</h2>
+                <div className="center-element">
+                  <Button component={Link} to={{
+                    pathname: '/edit-input',
+                    state: {
+                      id: id
+                    }
+                  }} variant="contained" color="primary">
+                    Edit
+                  </Button>
+                  <Button onClick={this.deleteRoutine} variant="contained" color="secondary">Delete</Button>
+                </div>
+              </div>
+              <div className="wave-container">
+                <SimpleTable wave={routine.wave1} number='1' wave1={routine.wave1}/>
+                <SimpleTable wave={routine.wave2} number='2'wave1={routine.wave1}/>
+              </div>
+              <div className="wave-container">
+                <SimpleTable wave={routine.wave3} number='3'wave1={routine.wave1}/>
+                <SimpleTable wave={routine.wave4} number='4'wave1={routine.wave1}/>
               </div>
             </Paper>
-          </div>
-          <div className="wave-container">
-            <SimpleTable wave={routine.wave1} number='1' wave1={routine.wave1}/>
-            <SimpleTable wave={routine.wave2} number='2'wave1={routine.wave1}/>
-          </div>
-          <div className="wave-container">
-            <SimpleTable wave={routine.wave3} number='3'wave1={routine.wave1}/>
-            <SimpleTable wave={routine.wave4} number='4'wave1={routine.wave1}/>
           </div>
         </React.Fragment>
       )

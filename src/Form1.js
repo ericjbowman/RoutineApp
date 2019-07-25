@@ -88,6 +88,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
+                        required
                         variant="outlined"
                         label="Squat Weight"
                         value={input.squatWeight}
@@ -105,6 +106,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
+                        required
                         variant="outlined"
                         label="Squat reps"
                         value={input.squatReps}
@@ -124,6 +126,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
+                        required
                         variant="outlined"
                         label="Over-head Press Weight"
                         value={input.ohpWeight}
@@ -141,6 +144,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
+                        required
                         variant="outlined"
                         label="Over-head Press Reps"
                         value={input.ohpReps}
@@ -160,6 +164,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
+                        required
                         variant="outlined"
                         label="Deadlift Weight"
                         value={input.deadliftWeight}
@@ -177,6 +182,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
+                        required
                         variant="outlined"
                         label="Deadlift Reps"
                         value={input.deadliftReps}
@@ -196,6 +202,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
+                        required
                         variant="outlined"
                         label="Bench-press Weight"
                         value={input.benchWeight}
@@ -213,6 +220,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
+                        required
                         variant="outlined"
                         label="Bench-Press Reps"
                         value={input.benchReps}
@@ -308,7 +316,6 @@ class Form1 extends Component {
                         type="text"
                         className="name-form"
                       />
-
                       <TextField
                         id="outlined-name"
                         margin="normal"

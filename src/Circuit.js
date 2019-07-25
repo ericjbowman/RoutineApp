@@ -9,7 +9,9 @@ class Circuit extends Component {
       console.log('static', this.props)
       return (
         <React.Fragment>
-          <h5>{this.props.name}</h5>
+          <div className="flex-center">
+            <h3 className="routine-header">{this.props.name}</h3>
+          </div>
           <StaticSets2 sets={this.props}/>
         </React.Fragment>
       )
@@ -17,7 +19,9 @@ class Circuit extends Component {
       console.log('3 set', this.props)
       return (
         <React.Fragment>
-          <h5>{this.props.name}</h5>
+          <div className="flex-center">
+            <h3 className="routine-header">{this.props.name}</h3>
+          </div>
           <ThreeSets2 sets={this.props}/>
         </React.Fragment>
       )

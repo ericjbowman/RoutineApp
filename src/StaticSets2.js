@@ -6,10 +6,10 @@ import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 700,
     margin: theme.spacing(1),
     overflowX: 'auto'
   },
@@ -42,86 +42,90 @@ export default function SimpleTable (props) {
 
   if (circuit.intensity === 'Speed') {
     return (
-      <div className="circuit-container">
-        <Paper className={classes.root}>
-          <Table className={classes.table}>
-            <TableHead>
-              <TableRow>
-                <TableCell>Exercise</TableCell>
-                <TableCell align="right">Weight</TableCell>
-                <TableCell align="right">Sets</TableCell>
-                <TableCell align="right">Reps</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow key='1'>
-                <TableCell component="th" scope="row">
-                  {circuit.antag.name}
-                </TableCell>
-                <TableCell align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
-                <TableCell align="right">{circuit.antag.sets}</TableCell>
-                <TableCell align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
-              </TableRow>
-              <TableRow key='2'>
-                <TableCell component="th" scope="row">
-                  {circuit.main.name}
-                </TableCell>
-                <TableCell align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
-                <TableCell align="right">{circuit.main.sets}</TableCell>
-                <TableCell align="right">{ifNoReps(circuit.main.reps)}</TableCell>
-              </TableRow>
-              <TableRow key='2'>
-                <TableCell component="th" scope="row">
-                  Perform both sets on the top of every minute for 10 minutes
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </Paper>
-      </div>
+      <Grid container direction="row" justify="center">
+        <Grid container direction="row" justify="center" item xs={12} lg={8}>
+          <Paper className={classes.root}>
+            <Table className={classes.table}>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Exercise</TableCell>
+                  <TableCell align="right">Weight</TableCell>
+                  <TableCell align="right">Sets</TableCell>
+                  <TableCell align="right">Reps</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow key='1'>
+                  <TableCell component="th" scope="row">
+                    {circuit.antag.name}
+                  </TableCell>
+                  <TableCell align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
+                  <TableCell align="right">{circuit.antag.sets}</TableCell>
+                  <TableCell align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
+                </TableRow>
+                <TableRow key='2'>
+                  <TableCell component="th" scope="row">
+                    {circuit.main.name}
+                  </TableCell>
+                  <TableCell align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
+                  <TableCell align="right">{circuit.main.sets}</TableCell>
+                  <TableCell align="right">{ifNoReps(circuit.main.reps)}</TableCell>
+                </TableRow>
+                <TableRow key='2'>
+                  <TableCell component="th" scope="row">
+                    Perform both sets on the top of every minute for 10 minutes
+                  </TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </Paper>
+        </Grid>
+      </Grid>
     )
   } else {
     return (
-      <div className="circuit-container">
-        <Paper className={classes.root}>
-          <Table className={classes.table}>
-            <TableHead>
-              <TableRow>
-                <TableCell>Exercise</TableCell>
-                <TableCell align="right">Weight</TableCell>
-                <TableCell align="right">Sets</TableCell>
-                <TableCell align="right">Reps</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow key='1'>
-                <TableCell component="th" scope="row">
-                  {circuit.antag.name}
-                </TableCell>
-                <TableCell align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
-                <TableCell align="right">{circuit.antag.sets}</TableCell>
-                <TableCell align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
-              </TableRow>
-              <TableRow key='2'>
-                <TableCell component="th" scope="row">
-                  {circuit.main.name}
-                </TableCell>
-                <TableCell align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
-                <TableCell align="right">{circuit.main.sets}</TableCell>
-                <TableCell align="right">{ifNoReps(circuit.main.reps)}</TableCell>
-              </TableRow>
-              <TableRow key='3'>
-                <TableCell component="th" scope="row">
-                  {circuit.core.name}
-                </TableCell>
-                <TableCell align="right">{ifNoWeight(circuit.core.weight)}</TableCell>
-                <TableCell align="right">{circuit.core.sets}</TableCell>
-                <TableCell align="right">10-20</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </Paper>
-      </div>
+      <Grid container direction="row" justify="center">
+        <Grid container direction="row" justify="center" item xs={12} lg={8}>
+          <Paper className={classes.root}>
+            <Table className={classes.table}>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Exercise</TableCell>
+                  <TableCell align="right">Weight</TableCell>
+                  <TableCell align="right">Sets</TableCell>
+                  <TableCell align="right">Reps</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow key='1'>
+                  <TableCell component="th" scope="row">
+                    {circuit.antag.name}
+                  </TableCell>
+                  <TableCell align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
+                  <TableCell align="right">{circuit.antag.sets}</TableCell>
+                  <TableCell align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
+                </TableRow>
+                <TableRow key='2'>
+                  <TableCell component="th" scope="row">
+                    {circuit.main.name}
+                  </TableCell>
+                  <TableCell align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
+                  <TableCell align="right">{circuit.main.sets}</TableCell>
+                  <TableCell align="right">{ifNoReps(circuit.main.reps)}</TableCell>
+                </TableRow>
+                <TableRow key='3'>
+                  <TableCell component="th" scope="row">
+                    {circuit.core.name}
+                  </TableCell>
+                  <TableCell align="right">{ifNoWeight(circuit.core.weight)}</TableCell>
+                  <TableCell align="right">{circuit.core.sets}</TableCell>
+                  <TableCell align="right">10-20</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </Paper>
+        </Grid>
+      </Grid>
     )
   }
 }

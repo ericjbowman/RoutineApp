@@ -242,7 +242,6 @@ class InputEdit extends Component {
     }
     return (
       <div>
-        <h4>Input your Max/Choose exercises</h4>
         <Form1
           input={input}
           handleChange={handleChange}

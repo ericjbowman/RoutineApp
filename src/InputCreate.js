@@ -96,15 +96,16 @@ class InputCreate extends Component {
       autoFill: true
     }
   }
-
+  // handleSelect = (obj) => {
+  //   const updatedField = {
+  //     oblique6: {obj.value}
+  //   }
+  // }
   handleChange = event => {
-    // create an object with updated field
     const updatedField = {
       [event.target.name]: event.target.value
     }
-    // use object to create updated state object
     const editedInput = Object.assign(this.state.input, updatedField)
-    // finally setState with updates object
 
     const ratios = (name) => {
       if (name === 'Front Squat') {
