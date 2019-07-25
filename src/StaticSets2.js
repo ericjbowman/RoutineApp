@@ -25,10 +25,17 @@ const useStyles = makeStyles(theme => ({
 export default function SimpleTable (props) {
   const { circuit } = props.sets
   const ifNoWeight = function (num) {
-    if (num === 0) {
+    if ((num === 0) || isNaN(num)) {
       return 'n/a'
     } else {
       return num + ' lb'
+    }
+  }
+  const ifNoReps = function (num) {
+    if ((num === 0) || isNaN(num)) {
+      return 'n/a'
+    } else {
+      return num
     }
   }
   const classes = useStyles()
@@ -53,7 +60,7 @@ export default function SimpleTable (props) {
                 </TableCell>
                 <TableCell align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
                 <TableCell align="right">{circuit.antag.sets}</TableCell>
-                <TableCell align="right">{circuit.antag.reps}</TableCell>
+                <TableCell align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
               </TableRow>
               <TableRow key='2'>
                 <TableCell component="th" scope="row">
@@ -61,7 +68,7 @@ export default function SimpleTable (props) {
                 </TableCell>
                 <TableCell align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
                 <TableCell align="right">{circuit.main.sets}</TableCell>
-                <TableCell align="right">{circuit.main.reps}</TableCell>
+                <TableCell align="right">{ifNoReps(circuit.main.reps)}</TableCell>
               </TableRow>
               <TableRow key='2'>
                 <TableCell component="th" scope="row">
@@ -93,7 +100,7 @@ export default function SimpleTable (props) {
                 </TableCell>
                 <TableCell align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
                 <TableCell align="right">{circuit.antag.sets}</TableCell>
-                <TableCell align="right">{circuit.antag.reps}</TableCell>
+                <TableCell align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
               </TableRow>
               <TableRow key='2'>
                 <TableCell component="th" scope="row">
@@ -101,7 +108,7 @@ export default function SimpleTable (props) {
                 </TableCell>
                 <TableCell align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
                 <TableCell align="right">{circuit.main.sets}</TableCell>
-                <TableCell align="right">{circuit.main.reps}</TableCell>
+                <TableCell align="right">{ifNoReps(circuit.main.reps)}</TableCell>
               </TableRow>
               <TableRow key='3'>
                 <TableCell component="th" scope="row">

@@ -25,10 +25,17 @@ const useStyles = makeStyles(theme => ({
 export default function SimpleTable (props) {
   const { circuit, antagCircuit } = props.sets
   const ifNoWeight = function (num) {
-    if (num === 0) {
+    if ((num === 0) || isNaN(num)) {
       return 'n/a'
     } else {
       return num + ' lb'
+    }
+  }
+  const ifNoReps = function (num) {
+    if ((num === 0) || isNaN(num)) {
+      return 'n/a'
+    } else {
+      return num
     }
   }
   const classes = useStyles()
@@ -51,14 +58,14 @@ export default function SimpleTable (props) {
                   {circuit.antag.name}
                 </TableCell>
                 <TableCell align="right">{ifNoWeight(antagCircuit.antag.weight[0])}</TableCell>
-                <TableCell align="right">{antagCircuit.antag.reps[0]}</TableCell>
+                <TableCell align="right">{ifNoReps(antagCircuit.antag.reps[0])}</TableCell>
               </TableRow>
               <TableRow key='2'>
                 <TableCell component="th" scope="row">
                   {circuit.main.name}
                 </TableCell>
-                <TableCell align="right">{circuit.main.weight[0]} lb</TableCell>
-                <TableCell align="right">{circuit.main.reps[0]}</TableCell>
+                <TableCell align="right">{ifNoWeight(circuit.main.weight[0])}</TableCell>
+                <TableCell align="right">{ifNoReps(circuit.main.reps[0])}</TableCell>
               </TableRow>
               <TableRow key='2'>
                 <TableCell component="th" scope="row">
@@ -87,14 +94,14 @@ export default function SimpleTable (props) {
                   {circuit.antag.name}
                 </TableCell>
                 <TableCell align="right">{ifNoWeight(antagCircuit.antag.weight[1])}</TableCell>
-                <TableCell align="right">{antagCircuit.antag.reps[1]}</TableCell>
+                <TableCell align="right">{ifNoReps(antagCircuit.antag.reps[1])}</TableCell>
               </TableRow>
               <TableRow key='2'>
                 <TableCell component="th" scope="row">
                   {circuit.main.name}
                 </TableCell>
-                <TableCell align="right">{circuit.main.weight[1]} lb</TableCell>
-                <TableCell align="right">{circuit.main.reps[1]}</TableCell>
+                <TableCell align="right">{ifNoWeight(circuit.main.weight[1])}</TableCell>
+                <TableCell align="right">{ifNoReps(circuit.main.reps[1])}</TableCell>
               </TableRow>
               <TableRow key='2'>
                 <TableCell component="th" scope="row">
@@ -123,14 +130,14 @@ export default function SimpleTable (props) {
                   {circuit.antag.name}
                 </TableCell>
                 <TableCell align="right">{ifNoWeight(antagCircuit.antag.weight[2])}</TableCell>
-                <TableCell align="right">{antagCircuit.antag.reps[2]}</TableCell>
+                <TableCell align="right">{ifNoReps(antagCircuit.antag.reps[2])}</TableCell>
               </TableRow>
               <TableRow key='2'>
                 <TableCell component="th" scope="row">
                   {circuit.main.name}
                 </TableCell>
-                <TableCell align="right">{circuit.main.weight[2]} lb</TableCell>
-                <TableCell align="right">{circuit.main.reps[2]}</TableCell>
+                <TableCell align="right">{ifNoWeight(circuit.main.weight[2])}</TableCell>
+                <TableCell align="right">{ifNoReps(circuit.main.reps[2])}</TableCell>
               </TableRow>
               <TableRow key='2'>
                 <TableCell component="th" scope="row">

@@ -44,6 +44,7 @@ class Form1 extends Component {
                     <div className="input-container">
                       <TextField
                         id="outlined-name"
+                        required
                         margin="normal"
                         variant="outlined"
                         label="Routine Name"
