@@ -8,7 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Icon from '@material-ui/core/Icon'
-import TemporaryDrawer from './TemporaryDrawer'
+import TemporaryDrawer from '../TemporaryDrawer'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -49,17 +49,13 @@ const Header = ({ user }) => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <TemporaryDrawer />
+          { user && <TemporaryDrawer user={user}/>}
           <Typography variant="h6" className={classes.title}>
             Lunkedin
           </Typography>
           { user && <span className={classes.menuButton}>Welcome, {user.email}</span>}
           { user ? (
             <React.Fragment>
-              <Button className={classes.menuButton} component={Link} to="/create-input">Create Routine</Button>
-              <Button className={classes.menuButton} component={Link} to="/routines">My Routines</Button>
-              <Button className={classes.menuButton} component={Link} to="/change-password">Change Password</Button>
-              <Button className={classes.menuButton} component={Link} to="/sign-out">Sign Out</Button>
             </React.Fragment>
           ) : (
             <React.Fragment>

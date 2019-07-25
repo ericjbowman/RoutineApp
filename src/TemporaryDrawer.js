@@ -43,47 +43,20 @@ function TemporaryDrawer () {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        <ListItem button key="Create Routine">
-          <ListItemText primary="Create Routine" component={Link} to="/create-input"/>
+        <ListItem button component={Link} to="/create-input">
+          <ListItemText primary="Create Routine" />
         </ListItem>
-        <ListItem button key="My Routines">
-          <ListItemText primary="My Routines" component={Link} to="/routines"/>
-        </ListItem>
-      </List>
-      <Divider />
-      <List>
-        <ListItem button key="Change Password">
-          <ListItemText primary="Change Password" component={Link} to="/change-password"/>
-        </ListItem>
-        <ListItem button key="Sign Out">
-          <ListItemText primary="Sign Out" component={Link} to="/sign-out"/>
-        </ListItem>
-      </List>
-    </div>
-  )
-
-  const fullList = side => (
-    <div
-      className={classes.fullList}
-      role="presentation"
-      onClick={toggleDrawer(side, false)}
-      onKeyDown={toggleDrawer(side, false)}
-    >
-      <List>
-        <ListItem button key="Create Routine">
-          <ListItemText primary="Create Routine" component={Link} to="/create-input"/>
-        </ListItem>
-        <ListItem button key="My Routines">
-          <ListItemText primary="My Routines" component={Link} to="/routines"/>
+        <ListItem button component={Link} to="/routines">
+          <ListItemText primary="My Routines" />
         </ListItem>
       </List>
       <Divider />
       <List>
-        <ListItem button key="Change Password">
-          <ListItemText primary="Change Password" component={Link} to="/change-password"/>
+        <ListItem button component={Link} to="/change-password">
+          <ListItemText primary="Change Password" />
         </ListItem>
-        <ListItem button key="Sign Out">
-          <ListItemText primary="Sign Out" component={Link} to="/sign-out"/>
+        <ListItem button component={Link} to="/sign-out">
+          <ListItemText primary="Sign Out" />
         </ListItem>
       </List>
     </div>
@@ -96,15 +69,6 @@ function TemporaryDrawer () {
       </IconButton>
       <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         {sideList('left')}
-      </Drawer>
-      <Drawer anchor="top" open={state.top} onClose={toggleDrawer('top', false)}>
-        {fullList('top')}
-      </Drawer>
-      <Drawer anchor="bottom" open={state.bottom} onClose={toggleDrawer('bottom', false)}>
-        {fullList('bottom')}
-      </Drawer>
-      <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
-        {sideList('right')}
       </Drawer>
     </div>
   )
