@@ -21,7 +21,6 @@ class Day extends Component {
         <Circuit circuit={fromWave.circuit1} antagCircuit={isWave1().circuit1} name='Primary'/>
         <Circuit circuit={fromWave.circuit2} antagCircuit={isWave1().circuit2} name='Technique'/>
         <Circuit circuit={fromWave.circuit3} antagCircuit={isWave1().circuit3} name='Assistance'/>
-        <button className="btn btn-success">Completed</button>
       </React.Fragment>
     )
   }
