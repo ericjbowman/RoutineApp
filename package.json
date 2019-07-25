@@ -1,6 +1,6 @@
 {
   "name": "routine-app",
-  "homepage": "https://<USERNAME>.github.io/<REPO NAME>",
+  "homepage": "https://ericjbowman.github.io/RoutineApp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
