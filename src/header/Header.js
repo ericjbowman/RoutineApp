@@ -7,9 +7,8 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
 import Icon from '@material-ui/core/Icon'
+import TemporaryDrawer from '../TemporaryDrawer'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -50,19 +49,13 @@ const Header = ({ user }) => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
+          { user && <TemporaryDrawer user={user}/>}
           <Typography variant="h6" className={classes.title}>
             Lunkedin
           </Typography>
           { user && <span className={classes.menuButton}>Welcome, {user.email}</span>}
           { user ? (
             <React.Fragment>
-              <Button className={classes.menuButton} component={Link} to="/create-input">Create Routine</Button>
-              <Button className={classes.menuButton} component={Link} to="/routines">My Routines</Button>
-              <Button className={classes.menuButton} component={Link} to="/change-password">Change Password</Button>
-              <Button className={classes.menuButton} component={Link} to="/sign-out">Sign Out</Button>
             </React.Fragment>
           ) : (
             <React.Fragment>
