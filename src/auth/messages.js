@@ -9,5 +9,7 @@ export default {
   routineDestroySuccess: 'Routine successfully deleted!',
   routineDestroyFailure: 'Unable to delete routine',
   routineEditSuccess: 'Routine successfully edited!',
-  routineEditFailure: 'Unable to edit routine'
+  routineEditFailure: 'Unable to edit routine',
+  emptyField: 'No empty fields here!',
+  numReps: 'Choose rep counts between 1 and 12'
 }

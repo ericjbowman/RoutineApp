@@ -3,6 +3,8 @@ import Form1 from './Form1'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from './apiConfig'
+import { withSnackbar } from 'notistack'
+
 class InputCreate extends Component {
   constructor (props) {
     super(props)
@@ -247,4 +249,4 @@ class InputCreate extends Component {
   }
 }
 
-export default InputCreate
+export default withSnackbar(InputCreate)

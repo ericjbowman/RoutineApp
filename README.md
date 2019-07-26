@@ -27,7 +27,7 @@ Styling
 - HTML
 - CSS
 - Sass
-- Material Ui
+- Material UI
 
 
 Links
@@ -87,7 +87,7 @@ API Paths & Methods
 | PATCH  | `/inputs/:id`
 | DELETE | `/inputs/:id`
 
-Planning
+Planning and Process
 ------
 
 ### Day 1

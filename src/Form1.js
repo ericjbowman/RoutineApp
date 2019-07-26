@@ -3,6 +3,8 @@ import { Link, withRouter } from 'react-router-dom'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Switch from '@material-ui/core/Switch'
+import messages from './auth/messages'
+import { withSnackbar } from 'notistack'
 // import clsx from 'clsx'
 // import { makeStyles } from '@material-ui/core/styles'
 // import MenuItem from '@material-ui/core/MenuItem'
@@ -18,12 +20,42 @@ class Form1 extends Component {
   }
 
   nextStep = () => {
-    if (this.state.step < 6) {
+    if ((this.state.step < 6) && (this.props.input.routineName !== '')) {
       this.setState(prevState => ({
         step: (++prevState.step)
       }))
     } else {
-      this.setState({ step: 0 })
+      this.props.enqueueSnackbar(messages.emptyField, { variant: 'error', autoHideDuration: 2000 })
+    }
+  }
+
+  nextStep2 = () => {
+    console.log('squat weight', this.props.input.squatWeight)
+    if ((this.state.step < 6) &&
+    (this.props.input.squatWeight !== null) &&
+    (this.props.input.squatReps !== null) &&
+    (this.props.input.ohpWeight !== null) &&
+    (this.props.input.ohpReps !== null) &&
+    (this.props.input.deadliftWeight !== null) &&
+    (this.props.input.deadliftReps !== null) &&
+    (this.props.input.ohpWeight !== null) &&
+    (this.props.input.ohpReps !== null)) {
+      this.setState(prevState => ({
+        step: (++prevState.step)
+      }))
+    } else {
+      this.props.enqueueSnackbar(messages.emptyField, { variant: 'error', autoHideDuration: 2000 })
+    }
+  }
+
+  isLessThan13 = () => {
+    if ((this.props.input.squatReps < 13 && this.props.input.squatReps > 0) &&
+    (this.props.input.ohpReps < 13 && this.props.input.ohpReps > 0) &&
+    (this.props.input.deadliftReps < 13 && this.props.input.deadliftReps > 0) &&
+    (this.props.input.benchReps < 13 && this.props.input.benchReps > 0)) {
+      this.nextStep2()
+    } else {
+      this.props.enqueueSnackbar(messages.numReps, { variant: 'error', autoHideDuration: 2000 })
     }
   }
 
@@ -81,7 +113,7 @@ class Form1 extends Component {
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
                     <Typography component="h1" variant="h5">
-                      Input Your Maximums
+                      Input Your Maximum weight in lb. and Reps between 1 and 12
                     </Typography>
                     <div className="input-row">
                       <TextField
@@ -94,7 +126,9 @@ class Form1 extends Component {
                         name="squatWeight"
                         onChange={handleChange}
                         type="number"
+                        inputProps={{ maxLength: '4' }}
                         min="0"
+                        max="12"
                         className="half-form"
                         style={{
                           marginTop: '14px',
@@ -235,7 +269,7 @@ class Form1 extends Component {
                         }}
                       />
                     </div>
-                    <Button onClick={this.nextStep} variant="contained" color="primary" style={{
+                    <Button onClick={this.isLessThan13} variant="contained" color="primary" style={{
                       marginLeft: '7px',
                       marginRight: '7px'
                     }}>
@@ -262,7 +296,7 @@ class Form1 extends Component {
                     <Typography component="h1" variant="h5">
                       Squat Variations
                     </Typography>
-                    <span>Toggle Auto-Complete</span>
+                    <span>Toggle Auto-Complete Weight/Reps (Default: on)</span>
                     <Switch
                       onChange={toggleAutoFill}
                       label="Toggle Auto-complete"
@@ -1163,4 +1197,4 @@ class Form1 extends Component {
   }
 }
 
-export default withRouter(Form1)
+export default withSnackbar(withRouter(Form1))
