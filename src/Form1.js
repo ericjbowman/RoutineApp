@@ -442,6 +442,11 @@ class Form1 extends Component {
                     <Typography component="h1" variant="h5">
                       Bench Press Variations
                     </Typography>
+                    <span>Toggle Auto-Complete Weight/Reps (Default: on)</span>
+                    <Switch
+                      onChange={toggleAutoFill}
+                      label="Toggle Auto-complete"
+                    />
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
@@ -667,6 +672,11 @@ class Form1 extends Component {
                     <Typography component="h1" variant="h5">
                       Deadlift Variations
                     </Typography>
+                    <span>Toggle Auto-Complete Weight/Reps (Default: on)</span>
+                    <Switch
+                      onChange={toggleAutoFill}
+                      label="Toggle Auto-complete"
+                    />
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
@@ -807,6 +817,11 @@ class Form1 extends Component {
                     <Typography component="h1" variant="h5">
                       Over-head Variations
                     </Typography>
+                    <span>Toggle Auto-Complete Weight/Reps (Default: on)</span>
+                    <Switch
+                      onChange={toggleAutoFill}
+                      label="Toggle Auto-complete"
+                    />
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
