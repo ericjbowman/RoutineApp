@@ -8,7 +8,8 @@ class Circuit extends Component {
       return (
         <React.Fragment>
           <div className="flex-center">
-            <h3 className="routine-header">{this.props.name}</h3>
+            <h3 className="routine-header">{this.props.name} Circuit-</h3>
+            <h3 className="routine-header">{this.props.circuit.intensity}</h3>
           </div>
           <StaticSets2 sets={this.props}/>
         </React.Fragment>
@@ -17,7 +18,8 @@ class Circuit extends Component {
       return (
         <React.Fragment>
           <div className="flex-center">
-            <h3 className="routine-header">{this.props.name}</h3>
+            <h3 className="routine-header">{this.props.name} Circuit-</h3>
+            <h3 className="routine-header">{this.props.circuit.intensity}</h3>
           </div>
           <ThreeSets2 sets={this.props}/>
         </React.Fragment>

@@ -33,19 +33,17 @@ export default function SimpleExpansionPanel (props) {
         <Typography className={classes.heading}>{props.routine.title}</Typography>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
-        <div style={{ padding: '1em' }}>
+        <div>
           <div className="routine-header-container">
-            <div className="center-element">
-              <Button component={Link} to={{
-                pathname: '/edit-input',
-                state: {
-                  id: id
-                }
-              }} variant="contained" color="primary">
-                Edit
-              </Button>
-              <Button onClick={deleteRoutine} variant="contained" color="secondary">Delete</Button>
-            </div>
+            <Button style={{ marginRight: '1em' }} component={Link} to={{
+              pathname: '/edit-input',
+              state: {
+                id: id
+              }
+            }} variant="contained" color="primary">
+              Edit
+            </Button>
+            <Button onClick={deleteRoutine} variant="contained" color="secondary">Delete</Button>
           </div>
           <div className="waves">
             <div className="wave-container">
