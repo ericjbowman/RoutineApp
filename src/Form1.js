@@ -30,7 +30,6 @@ class Form1 extends Component {
   }
 
   nextStep2 = () => {
-    console.log('squat weight', this.props.input.squatWeight)
     if ((this.state.step < 6) &&
     (this.props.input.squatWeight !== null) &&
     (this.props.input.squatReps !== null) &&
