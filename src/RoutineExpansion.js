@@ -47,13 +47,17 @@ export default function SimpleExpansionPanel (props) {
               <Button onClick={deleteRoutine} variant="contained" color="secondary">Delete</Button>
             </div>
           </div>
-          <div className="wave-container">
-            <SimpleTable wave={routine.wave1} number='1' wave1={routine.wave1}/>
-            <SimpleTable wave={routine.wave2} number='2'wave1={routine.wave1}/>
+          <div className="waves">
+            <div className="wave-container">
+              <SimpleTable wave={routine.wave1} number='1' wave1={routine.wave1}/>
+              <SimpleTable wave={routine.wave2} number='2'wave1={routine.wave1}/>
+            </div>
           </div>
-          <div className="wave-container">
-            <SimpleTable wave={routine.wave3} number='3'wave1={routine.wave1}/>
-            <SimpleTable wave={routine.wave4} number='4'wave1={routine.wave1}/>
+          <div className="waves">
+            <div className="wave-container">
+              <SimpleTable wave={routine.wave3} number='3'wave1={routine.wave1}/>
+              <SimpleTable wave={routine.wave4} number='4'wave1={routine.wave1}/>
+            </div>
           </div>
         </div>
       </ExpansionPanelDetails>

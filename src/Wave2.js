@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: 100
   },
   head: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: '#4054b2',
     color: theme.palette.common.white
   }
 }))
@@ -29,9 +29,13 @@ function SimpleTable (props) {
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
-        <TableHead>
-          <TableRow>
-            <TableCell align="center">Wave{props.number}</TableCell>
+        <TableHead className={classes.head}>
+          <TableRow className={classes.head}>
+            <TableCell className={classes.head} align="center">Wave{props.number}</TableCell>
+            <TableCell className={classes.head} align="center"></TableCell>
+            <TableCell className={classes.head} align="center"></TableCell>
+            <TableCell className={classes.head} align="center"></TableCell>
+            <TableCell className={classes.head} align="center"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

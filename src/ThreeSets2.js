@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: 100
   },
   head: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: '#4054b2',
     color: theme.palette.common.white
   }
 }))
@@ -46,11 +46,11 @@ export default function SimpleTable (props) {
         <Grid direction="row" justify="center" item xs={12} md={4}>
           <Paper className={classes.root}>
             <Table className={classes.table}>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Exercise</TableCell>
-                  <TableCell align="right">Weight</TableCell>
-                  <TableCell align="right">Reps</TableCell>
+              <TableHead className={classes.head}>
+                <TableRow className={classes.head}>
+                  <TableCell className={classes.head}>Exercise</TableCell>
+                  <TableCell className={classes.head} align="right">Weight</TableCell>
+                  <TableCell className={classes.head} align="right">Reps</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -82,11 +82,11 @@ export default function SimpleTable (props) {
         <Grid direction="row" justify="center" item xs={12} md={4}>
           <Paper className={classes.root}>
             <Table className={classes.table}>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Exercise</TableCell>
-                  <TableCell align="right">Weight</TableCell>
-                  <TableCell align="right">Reps</TableCell>
+              <TableHead className={classes.head}>
+                <TableRow className={classes.head}>
+                  <TableCell className={classes.head}>Exercise</TableCell>
+                  <TableCell className={classes.head} align="right">Weight</TableCell>
+                  <TableCell className={classes.head} align="right">Reps</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -118,11 +118,11 @@ export default function SimpleTable (props) {
         <Grid direction="row" justify="center" item xs={12} md={4}>
           <Paper className={classes.root}>
             <Table className={classes.table}>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Exercise</TableCell>
-                  <TableCell align="right">Weight</TableCell>
-                  <TableCell align="right">Reps</TableCell>
+              <TableHead className={classes.head}>
+                <TableRow className={classes.head}>
+                  <TableCell className={classes.head}>Exercise</TableCell>
+                  <TableCell className={classes.head} align="right">Weight</TableCell>
+                  <TableCell className={classes.head} align="right">Reps</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>

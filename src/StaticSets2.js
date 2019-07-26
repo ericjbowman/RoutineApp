@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: 50
   },
   head: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: '#B29E40',
     color: theme.palette.common.white
   }
 }))
@@ -46,12 +46,12 @@ export default function SimpleTable (props) {
         <Grid container direction="row" justify="center" item xs={12} lg={8}>
           <Paper className={classes.root}>
             <Table className={classes.table}>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Exercise</TableCell>
-                  <TableCell align="right">Weight</TableCell>
-                  <TableCell align="right">Sets</TableCell>
-                  <TableCell align="right">Reps</TableCell>
+              <TableHead className={classes.head}>
+                <TableRow className={classes.head}>
+                  <TableCell className={classes.head}>Exercise</TableCell>
+                  <TableCell className={classes.head} align="right">Weight</TableCell>
+                  <TableCell className={classes.head} align="right">Sets</TableCell>
+                  <TableCell className={classes.head} align="right">Reps</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -88,12 +88,12 @@ export default function SimpleTable (props) {
         <Grid container direction="row" justify="center" item xs={12} lg={8}>
           <Paper className={classes.root}>
             <Table className={classes.table}>
-              <TableHead>
-                <TableRow>
-                  <TableCell>Exercise</TableCell>
-                  <TableCell align="right">Weight</TableCell>
-                  <TableCell align="right">Sets</TableCell>
-                  <TableCell align="right">Reps</TableCell>
+              <TableHead className={classes.head}>
+                <TableRow className={classes.head}>
+                  <TableCell className={classes.head}>Exercise</TableCell>
+                  <TableCell className={classes.head} align="right">Weight</TableCell>
+                  <TableCell className={classes.head} align="right">Sets</TableCell>
+                  <TableCell className={classes.head} align="right">Reps</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
