@@ -118,6 +118,15 @@ Planning
 * Styled front end with Material UI
 * Tested features
 
+Installation Instructions
+------
+
+1. Fork and clone this repository.
+2. Install dependencies with `npm install`.
+3. Install Material UI with `npm install @material-ui/core`
+4. Git add and git commit your initial changes.
+5. View changes live by running local server `npm start`.
+
 Problem-Solving Strategy
 ------
 
