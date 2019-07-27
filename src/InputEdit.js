@@ -99,6 +99,18 @@ class InputEdit extends Component {
     }
   }
 
+  componentDidMount () {
+    axios({
+      url: (`${apiUrl}/inputs/${this.props.location.state.id}`),
+      method: 'GET',
+      headers: {
+        'Authorization': `Token token=${this.props.user.token}`
+      }
+    })
+      .then(res => this.setState({ input: res.data.input }))
+      .catch(err => console.log(err))
+  }
+
   handleChange = event => {
     // create an object with updated field
     const updatedField = {
