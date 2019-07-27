@@ -155,11 +155,9 @@ p {
   width: 100%;
 }
 
-// .routine-header-container {
-//   display: flex;
-//   justify-content: center;
-//   margin-top: 1em;
-// }
+.routine-header-container {
+  margin-bottom: 1em;
+}
 
 .auth-container {
   margin: 1em;
@@ -176,4 +174,9 @@ span, {
 
 .white {
   color: white;
+}
+
+.MuiExpansionPanelDetails-root {
+  display: flex;
+  justify-content: center;
 }

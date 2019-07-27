@@ -9,6 +9,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Button from '@material-ui/core/Button'
 import { Link } from 'react-router-dom'
 import SimpleTable from './Wave2'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,7 +36,7 @@ export default function SimpleExpansionPanel (props) {
       <ExpansionPanelDetails>
         <div>
           <div className="routine-header-container">
-            <Button style={{ marginRight: '1em' }} component={Link} to={{
+            <Button style={{ marginRight: '0.5em' }} component={Link} to={{
               pathname: '/edit-input',
               state: {
                 id: id
@@ -43,20 +44,22 @@ export default function SimpleExpansionPanel (props) {
             }} variant="contained" color="primary">
               Edit
             </Button>
-            <Button onClick={deleteRoutine} variant="contained" color="secondary">Delete</Button>
+            <Button style={{ marginLeft: '0.5em' }} onClick={deleteRoutine} variant="contained" color="secondary">Delete</Button>
           </div>
-          <div className="waves">
-            <div className="wave-container">
+          <Grid container direction="row" justify="center" spacing={1}>
+            <Grid style={{ display: 'flex', justifyContent: 'center' }} direction="row" justify="center" item xs={12} md={6}>
               <SimpleTable wave={routine.wave1} number='1' wave1={routine.wave1}/>
+            </Grid>
+            <Grid style={{ display: 'flex', justifyContent: 'center' }} direction="row" justify="center" item xs={12} md={6}>
               <SimpleTable wave={routine.wave2} number='2'wave1={routine.wave1}/>
-            </div>
-          </div>
-          <div className="waves">
-            <div className="wave-container">
+            </Grid>
+            <Grid style={{ display: 'flex', justifyContent: 'center' }} direction="row" justify="center" item xs={12} md={6}>
               <SimpleTable wave={routine.wave3} number='3'wave1={routine.wave1}/>
+            </Grid>
+            <Grid style={{ display: 'flex', justifyContent: 'center' }} direction="row" justify="center" item xs={12} md={6}>
               <SimpleTable wave={routine.wave4} number='4'wave1={routine.wave1}/>
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </div>
       </ExpansionPanelDetails>
     </ExpansionPanel>
