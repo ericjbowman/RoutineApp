@@ -140,7 +140,7 @@ class Form1 extends Component {
                         margin="normal"
                         required
                         variant="outlined"
-                        label="Squat reps"
+                        label="Reps"
                         value={input.squatReps}
                         name="squatReps"
                         onChange={handleChange}
@@ -178,7 +178,7 @@ class Form1 extends Component {
                         margin="normal"
                         required
                         variant="outlined"
-                        label="Over-head Press Reps"
+                        label="Reps"
                         value={input.ohpReps}
                         name="ohpReps"
                         onChange={handleChange}
@@ -216,7 +216,7 @@ class Form1 extends Component {
                         margin="normal"
                         required
                         variant="outlined"
-                        label="Deadlift Reps"
+                        label="Reps"
                         value={input.deadliftReps}
                         name="deadliftReps"
                         onChange={handleChange}
@@ -254,7 +254,7 @@ class Form1 extends Component {
                         margin="normal"
                         required
                         variant="outlined"
-                        label="Bench-Press Reps"
+                        label="Reps"
                         value={input.benchReps}
                         name="benchReps"
                         onChange={handleChange}

@@ -18,6 +18,9 @@ const useStyles = makeStyles(theme => ({
   heading: {
     fontSize: theme.typography.pxToRem(18),
     fontWeight: theme.typography.fontWeightRegular
+  },
+  icon: {
+    color: 'white'
   }
 }))
 
@@ -27,7 +30,7 @@ export default function SimpleExpansionPanel (props) {
   return (
     <ExpansionPanel style={{ background: 'rgba(0, 0, 0, 0.8)', color: 'white' }}>
       <ExpansionPanelSummary
-        expandIcon={<ExpandMoreIcon />}
+        expandIcon={<ExpandMoreIcon className={classes.icon}/>}
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
