@@ -48,7 +48,7 @@ export default function SimpleTable (props) {
             <Table className={classes.table}>
               <TableHead className={classes.head}>
                 <TableRow className={classes.head}>
-                  <TableCell className={classes.head}>Exercise</TableCell>
+                  <TableCell className={classes.head}>Set 1: Exercise</TableCell>
                   <TableCell className={classes.head} align="right">Weight</TableCell>
                   <TableCell className={classes.head} align="right">Reps</TableCell>
                 </TableRow>
@@ -75,6 +75,11 @@ export default function SimpleTable (props) {
                   <TableCell align="right">n/a</TableCell>
                   <TableCell align="right">10-20</TableCell>
                 </TableRow>
+                <TableRow key='2'>
+                  <TableCell component="th" scope="row">
+                    90 Seconds Rest
+                  </TableCell>
+                </TableRow>
               </TableBody>
             </Table>
           </Paper>
@@ -84,7 +89,7 @@ export default function SimpleTable (props) {
             <Table className={classes.table}>
               <TableHead className={classes.head}>
                 <TableRow className={classes.head}>
-                  <TableCell className={classes.head}>Exercise</TableCell>
+                  <TableCell className={classes.head}>Set 2: Exercise</TableCell>
                   <TableCell className={classes.head} align="right">Weight</TableCell>
                   <TableCell className={classes.head} align="right">Reps</TableCell>
                 </TableRow>
@@ -111,6 +116,11 @@ export default function SimpleTable (props) {
                   <TableCell align="right">n/a</TableCell>
                   <TableCell align="right">10-20</TableCell>
                 </TableRow>
+                <TableRow key='2'>
+                  <TableCell component="th" scope="row">
+                    90 Seconds Rest
+                  </TableCell>
+                </TableRow>
               </TableBody>
             </Table>
           </Paper>
@@ -120,7 +130,7 @@ export default function SimpleTable (props) {
             <Table className={classes.table}>
               <TableHead className={classes.head}>
                 <TableRow className={classes.head}>
-                  <TableCell className={classes.head}>Exercise</TableCell>
+                  <TableCell className={classes.head}>Set 3: Exercise</TableCell>
                   <TableCell className={classes.head} align="right">Weight</TableCell>
                   <TableCell className={classes.head} align="right">Reps</TableCell>
                 </TableRow>
@@ -146,6 +156,11 @@ export default function SimpleTable (props) {
                   </TableCell>
                   <TableCell align="right">n/a</TableCell>
                   <TableCell align="right">10-20</TableCell>
+                </TableRow>
+                <TableRow key='2'>
+                  <TableCell component="th" scope="row">
+                    90 Seconds Rest
+                  </TableCell>
                 </TableRow>
               </TableBody>
             </Table>

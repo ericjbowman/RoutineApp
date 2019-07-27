@@ -23,9 +23,9 @@ class Day extends Component {
           <Paper style={{ padding: '1em', background: 'rgba(0, 0, 0, 0.8)' }}>
             <Grid container direction="row" justify="center">
               <Grid container direction="row" justify="center" item xs={12} md={10} lg={8}>
-                <h1 className="routine-header">
+                <h2 className="routine-header" style={{ margin: 0 }}>
                   {this.props.location.state.fromWave.name}
-                </h1>
+                </h2>
               </Grid>
             </Grid>
             <Circuit circuit={fromWave.circuit1} antagCircuit={isWave1().circuit1} name='Primary'/>
