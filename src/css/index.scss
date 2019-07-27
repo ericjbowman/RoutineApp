@@ -180,3 +180,26 @@ span, {
   display: flex;
   justify-content: center;
 }
+
+.routine-expansion-container {
+  margin: 0.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  .routine-expansion-container {
+    margin: 0 0 0.5em 0;
+  }
+
+  .form-container {
+    margin: auto;
+    width: 100%;
+  }
+
+  .form-body {
+    margin: 0;
+  }
+
+  .form-padding {
+    padding: 1em;
+  }
+}

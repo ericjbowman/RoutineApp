@@ -41,7 +41,7 @@ class Routine extends Component {
     } if (!deleted) {
       return (
         <React.Fragment>
-          <div style={{ margin: '0.5em' }}>
+          <div className="routine-expansion-container">
             <RoutineExpansion routine={routine} deleteRoutine={this.deleteRoutine} id={id} />
           </div>
         </React.Fragment>
