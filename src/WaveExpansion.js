@@ -29,7 +29,7 @@ export default function WaveExpansion (props) {
   const classes = useStyles()
   const { wave, wave1, number } = props
   return (
-    <ExpansionPanel>
+    <ExpansionPanel className={classes.root}>
       <ExpansionPanelSummary
         expandIcon={<ExpandMoreIcon className={classes.icon}/>}
         aria-controls="panel1a-content"
@@ -39,9 +39,7 @@ export default function WaveExpansion (props) {
         <Typography className={classes.heading}>Wave {props.number}</Typography>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className={classes.details}>
-        <div>
-          <SimpleTable wave={wave} number={number} wave1={wave1}/>
-        </div>
+        <SimpleTable wave={wave} number={number} wave1={wave1}/>
       </ExpansionPanelDetails>
     </ExpansionPanel>
   )

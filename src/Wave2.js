@@ -14,11 +14,11 @@ const useStyles = makeStyles(theme => ({
     // marginLeft: theme.spacing(1.5),
     // marginRight: theme.spacing(1.5),
     // maxWidth: 300,
+    width: '100%',
     overflowX: 'auto',
     backgroundColor: '#4054b2'
   },
   table: {
-    maxWidth: 700
     // display: 'flex',
     // justifyContent: 'center'
   },

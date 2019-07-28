@@ -36,7 +36,7 @@ export default function SimpleExpansionPanel (props) {
         <Typography className={classes.heading}>{props.routine.title}</Typography>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
-        <div>
+        <div style={{ width: '100%' }}>
           <div className="routine-header-container">
             <Button style={{ marginRight: '0.5em' }} component={Link} to={{
               pathname: '/edit-input',
