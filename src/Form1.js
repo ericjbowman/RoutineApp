@@ -126,17 +126,22 @@ class Form1 extends Component {
               <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <Typography component="h1" variant="h5">
+                    <Typography component="h1" variant="subtitle1" style={{ marginBottom: '1em' }}>
                       Input Your Maximum weight in lb. and Reps between 1 and 12
                     </Typography>
                     <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="left" item xs={12}>
+                        <Typography component="h1" variant="h5">
+                          Squat
+                        </Typography>
+                      </Grid>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <TextField
                           id="outlined-name"
                           margin="normal"
                           required
                           variant="outlined"
-                          label="Squat Weight"
+                          label="Weight"
                           value={input.squatWeight}
                           name="squatWeight"
                           onChange={handleChange}
@@ -144,7 +149,6 @@ class Form1 extends Component {
                           inputProps={{ maxLength: '4' }}
                           min="0"
                           max="12"
-                          className="half-form"
                           style={{
                             marginTop: '14px',
                             marginBottom: '7px',
@@ -165,7 +169,6 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
-                          className="half-form"
                           style={{
                             marginTop: '14px',
                             marginBottom: '7px',
@@ -175,19 +178,23 @@ class Form1 extends Component {
                       </Grid>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="left" item xs={12}>
+                        <Typography component="h1" variant="h5">
+                          Over-head Press
+                        </Typography>
+                      </Grid>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <TextField
                           id="outlined-name"
                           margin="normal"
                           required
                           variant="outlined"
-                          label="Over-head Press Weight"
+                          label="Weight"
                           value={input.ohpWeight}
                           name="ohpWeight"
                           onChange={handleChange}
                           type="number"
                           min="0"
-                          className="half-form"
                           style={{
                             marginTop: '7px',
                             marginBottom: '7px',
@@ -208,7 +215,6 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
-                          className="half-form"
                           style={{
                             marginTop: '7px',
                             marginBottom: '7px',
@@ -218,19 +224,23 @@ class Form1 extends Component {
                       </Grid>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="left" item xs={12}>
+                        <Typography component="h1" variant="h5">
+                          Deadlift
+                        </Typography>
+                      </Grid>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <TextField
                           id="outlined-name"
                           margin="normal"
                           required
                           variant="outlined"
-                          label="Deadlift Weight"
+                          label="Weight"
                           value={input.deadliftWeight}
                           name="deadliftWeight"
                           onChange={handleChange}
                           type="number"
                           min="0"
-                          className="half-form"
                           style={{
                             marginTop: '7px',
                             marginBottom: '7px',
@@ -251,7 +261,6 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
-                          className="half-form"
                           style={{
                             marginTop: '7px',
                             marginBottom: '7px',
@@ -261,19 +270,23 @@ class Form1 extends Component {
                       </Grid>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="left" item xs={12}>
+                        <Typography component="h1" variant="h5">
+                          Bench Press
+                        </Typography>
+                      </Grid>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <TextField
                           id="outlined-name"
                           margin="normal"
                           required
                           variant="outlined"
-                          label="Bench-press Weight"
+                          label="Weight"
                           value={input.benchWeight}
                           name="benchWeight"
                           onChange={handleChange}
                           type="number"
                           min="0"
-                          className="half-form"
                           style={{
                             marginTop: '7px',
                             marginBottom: '14px',
@@ -294,7 +307,6 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
-                          className="half-form"
                           style={{
                             marginTop: '7px',
                             marginBottom: '14px',
@@ -361,12 +373,11 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-                          variant="outlined"
+
                           label="Squat Primer"
                           value={input.antagSquatName}
                           name="antagSquatName"
                           onChange={handleChange}
-                          className="third-form"
                           style={{
                             width: '100%'
                           }}
@@ -376,13 +387,12 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-                          variant="outlined"
+
                           label="Squat Primer 2"
                           value={input.antagSquat2Name}
                           name="antagSquat2Name"
                           onChange={handleChange}
                           type="text"
-                          className="third-form"
                           style={{
                             width: '100%'
                           }}
@@ -392,13 +402,12 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-                          variant="outlined"
+
                           label="Squat Primer 3"
                           value={input.antagSquat3Name}
                           name="antagSquat3Name"
                           onChange={handleChange}
                           type="text"
-                          className="third-form"
                           style={{
                             width: '100%'
                           }}
@@ -410,13 +419,12 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-                          variant="outlined"
+
                           label="Squat 2"
                           value={input.squat2Name}
                           name="squat2Name"
                           onChange={handleChange}
                           type="text"
-                          className="name-form"
                           style={{
                             width: '100%'
                           }}
@@ -426,14 +434,13 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-                          variant="outlined"
+
                           label="Weight"
                           value={input.squat2Weight}
                           name="squat2Weight"
                           onChange={handleChange}
                           type="number"
                           min="0"
-                          className="num-form"
                           style={{
                             width: '100%'
                           }}
@@ -443,7 +450,7 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-                          variant="outlined"
+
                           label="Reps"
                           value={input.squat2Reps}
                           name="squat2Reps"
@@ -451,7 +458,6 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
-                          className="num-form"
                           style={{
                             width: '100%'
                           }}
@@ -463,13 +469,12 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-                          variant="outlined"
+
                           label="Squat 3"
                           value={input.squat3Name}
                           name="squat3Name"
                           onChange={handleChange}
                           type="text"
-                          className="name-form"
                           style={{
                             width: '100%'
                           }}
@@ -479,14 +484,13 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-                          variant="outlined"
+
                           label="Weight"
                           value={input.squat3Weight}
                           name="squat3Weight"
                           onChange={handleChange}
                           type="number"
                           min="0"
-                          className="num-form"
                           style={{
                             width: '100%'
                           }}
@@ -496,7 +500,7 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-                          variant="outlined"
+
                           label="Reps"
                           value={input.squat3Reps}
                           name="squat3Reps"
@@ -504,7 +508,6 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
-                          className="num-form"
                           style={{
                             width: '100%'
                           }}
@@ -544,221 +547,292 @@ class Form1 extends Component {
               <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <Typography component="h1" variant="h5">
-                      Bench Press Variations
-                    </Typography>
-                    <span>Toggle Auto-Complete Weight/Reps (Default: on)</span>
-                    <Switch
-                      onChange={toggleAutoFill}
-                      label="Toggle Auto-complete"
-                    />
-                    <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Bench Press 2"
-                        value={input.bench2Name}
-                        name="bench2Name"
-                        onChange={handleChange}
-                        type="text"
-                        className="name-form"
-                      />
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
+                        <Typography component="h1" variant="h5">
+                          Bench Press Variations
+                        </Typography>
+                      </Grid>
+                      <Grid container direction="row" justify="right" item xs={12}>
+                        <span>Toggle Auto-Complete Weight/Reps</span>
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="right" item xs={12}>
+                        <span>On</span>
+                        <Switch
+                          onChange={toggleAutoFill}
+                          label="Toggle Auto-complete"
+                        />
+                        <span>Off</span>
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Weight"
-                        value={input.bench2Weight}
-                        name="bench2Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                      />
+                          label="Bench Press 2"
+                          value={input.bench2Name}
+                          name="bench2Name"
+                          onChange={handleChange}
+                          type="text"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="standard-number"
+                          label="Weight"
+                          value={input.bench2Weight}
+                          name="bench2Weight"
+                          onChange={handleChange}
+                          type="number"
+                          margin="normal"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
+                          label="Reps"
+                          value={input.bench2Reps}
+                          name="bench2Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Reps"
-                        value={input.bench2Reps}
-                        name="bench2Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                      />
-                    </div>
-                    <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Bench Press 3"
-                        value={input.bench3Name}
-                        name="bench3Name"
-                        onChange={handleChange}
-                        type="text"
-                        min="0"
-                        className="name-form"
-                      />
+                          label="Bench Press 3"
+                          value={input.bench3Name}
+                          name="bench3Name"
+                          onChange={handleChange}
+                          type="text"
+                          min="0"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Weight"
-                        value={input.bench3Weight}
-                        name="bench3Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                      />
+                          label="Weight"
+                          value={input.bench3Weight}
+                          name="bench3Weight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Reps"
-                        value={input.bench3Reps}
-                        name="bench3Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                      />
-                    </div>
-                    <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Pull"
-                        value={input.antagBenchName}
-                        name="antagBenchName"
-                        onChange={handleChange}
-                        type="text"
-                        className="name-form"
-                      />
+                          label="Reps"
+                          value={input.bench3Reps}
+                          name="bench3Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Weight"
-                        value={input.antagBenchWeight}
-                        name="antagBenchWeight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                      />
+                          label="Pull"
+                          value={input.antagBenchName}
+                          name="antagBenchName"
+                          onChange={handleChange}
+                          type="text"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Reps"
-                        value={input.antagBenchReps}
-                        name="antagBenchReps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                      />
-                    </div>
-                    <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Pull 2"
-                        value={input.antagBench2Name}
-                        name="antagBench2Name"
-                        onChange={handleChange}
-                        type="text"
-                        className="name-form"
-                      />
+                          label="Weight"
+                          value={input.antagBenchWeight}
+                          name="antagBenchWeight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Weight"
-                        value={input.antagBench2Weight}
-                        name="antagBench2Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                      />
+                          label="Reps"
+                          value={input.antagBenchReps}
+                          name="antagBenchReps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Reps"
-                        value={input.antagBench2Reps}
-                        name="antagBench2Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                      />
-                    </div>
-                    <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Pull 3"
-                        value={input.antagBench3Name}
-                        name="antagBench3Name"
-                        onChange={handleChange}
-                        type="text"
-                        className="name-form"
-                      />
+                          label="Pull 2"
+                          value={input.antagBench2Name}
+                          name="antagBench2Name"
+                          onChange={handleChange}
+                          type="text"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Weight"
-                        value={input.antagBench3Weight}
-                        name="antagBench3Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                      />
+                          label="Weight"
+                          value={input.antagBench2Weight}
+                          name="antagBench2Weight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Reps"
-                        value={input.antagBench3Reps}
-                        name="antagBench3Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                      />
-                    </div>
-                    <Button onClick={this.nextStep} variant="contained" color="primary">
-                      Next Step
-                    </Button>
-                    <Button component={Link} to={cancelPath} variant="contained" color="secondary">
-                      Cancel
-                    </Button>
+                          label="Reps"
+                          value={input.antagBench2Reps}
+                          name="antagBench2Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
+
+                          label="Pull 3"
+                          value={input.antagBench3Name}
+                          name="antagBench3Name"
+                          onChange={handleChange}
+                          type="text"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
+
+                          label="Weight"
+                          value={input.antagBench3Weight}
+                          name="antagBench3Weight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          id="outlined-name"
+                          margin="normal"
+
+                          label="Reps"
+                          value={input.antagBench3Reps}
+                          name="antagBench3Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          style={{
+                            width: '100%'
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
+                        <Button onClick={this.isLessThan13} variant="contained" color="primary"
+                          style={{
+                            width: '100%'
+                          }}
+                        >Next Step
+                        </Button>
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
+                        <Button component={Link} to={cancelPath} variant="contained" color="secondary"
+                          style={{
+                            width: '100%'
+                          }}
+                        >Cancel
+                        </Button>
+                      </Grid>
+                    </Grid>
                   </form>
                 </div>
               </Paper>
@@ -774,20 +848,22 @@ class Form1 extends Component {
               <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <Typography component="h1" variant="h5">
-                      Deadlift Variations
-                    </Typography>
-                    <span>Toggle Auto-Complete Weight/Reps (Default: on)</span>
-                    <Switch
-                      onChange={toggleAutoFill}
-                      label="Toggle Auto-complete"
-                    />
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
+                        <Typography component="h1" variant="h5">
+                          Deadlift Variations
+                        </Typography>
+                      </Grid>
+                      <Grid container direction="row" justify="right" item xs={12}>
+                        <span>Toggle Auto-Complete Weight/Reps</span>
+                      </Grid>
+                    </Grid>
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
-                        label="Deadlift Primer"
+
+                        label="Primer"
                         value={input.antagDeadliftName}
                         name="antagDeadliftName"
                         onChange={handleChange}
@@ -797,8 +873,8 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
-                        label="Deadlift Primer 2"
+
+                        label="Primer 2"
                         value={input.antagDeadlift2Name}
                         name="antagDeadlift2Name"
                         onChange={handleChange}
@@ -809,8 +885,8 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
-                        label="Deadlift Primer 3"
+
+                        label="Primer 3"
                         value={input.antagDeadlift3Name}
                         name="antagDeadlift3Name"
                         onChange={handleChange}
@@ -822,7 +898,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Deadlift 2"
                         value={input.deadlift2Name}
                         name="deadlift2Name"
@@ -834,7 +910,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Weight"
                         value={input.deadlift2Weight}
                         name="deadlift2Weight"
@@ -847,7 +923,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Weight"
                         value={input.deadlift2Reps}
                         name="deadlift2Reps"
@@ -862,7 +938,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Deadlift 3"
                         value={input.deadlift3Name}
                         name="deadlift3Name"
@@ -874,7 +950,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Weight"
                         value={input.deadlift3Weight}
                         name="deadlift3Weight"
@@ -887,7 +963,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Reps"
                         value={input.deadlift3Reps}
                         name="deadlift3Reps"
@@ -898,12 +974,24 @@ class Form1 extends Component {
                         className="num-form"
                       />
                     </div>
-                    <Button onClick={this.nextStep} variant="contained" color="primary">
-                      Next Step
-                    </Button>
-                    <Button component={Link} to={cancelPath} variant="contained" color="secondary">
-                      Cancel
-                    </Button>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
+                        <Button onClick={this.isLessThan13} variant="contained" color="primary"
+                          style={{
+                            width: '100%'
+                          }}
+                        >Next Step
+                        </Button>
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
+                        <Button component={Link} to={cancelPath} variant="contained" color="secondary"
+                          style={{
+                            width: '100%'
+                          }}
+                        >Cancel
+                        </Button>
+                      </Grid>
+                    </Grid>
                   </form>
                 </div>
               </Paper>
@@ -919,19 +1007,21 @@ class Form1 extends Component {
               <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <Typography component="h1" variant="h5">
-                      Over-head Variations
-                    </Typography>
-                    <span>Toggle Auto-Complete Weight/Reps (Default: on)</span>
-                    <Switch
-                      onChange={toggleAutoFill}
-                      label="Toggle Auto-complete"
-                    />
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
+                        <Typography component="h1" variant="h5">
+                          Over-head Variations
+                        </Typography>
+                      </Grid>
+                      <Grid container direction="row" justify="right" item xs={12}>
+                        <span>Toggle Auto-Complete Weight/Reps</span>
+                      </Grid>
+                    </Grid>
                     <div className="input-row">
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="O.H.P. 2"
                         value={input.ohp2Name}
                         name="ohp2Name"
@@ -943,7 +1033,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Weight"
                         value={input.ohp2Weight}
                         name="ohp2Weight"
@@ -956,7 +1046,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Reps"
                         value={input.ohp2Reps}
                         name="ohp2Reps"
@@ -971,7 +1061,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="O.H.P. 3"
                         value={input.ohp3Name}
                         name="antagOhp3Name"
@@ -983,7 +1073,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Weight"
                         value={input.antagOhp3Weight}
                         name="antagOhp3Weight"
@@ -996,7 +1086,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Reps"
                         value={input.antagOhp3Reps}
                         name="antagOhp3Reps"
@@ -1011,7 +1101,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Pull-down"
                         value={input.antagOhpName}
                         name="antagOhpName"
@@ -1023,7 +1113,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Weight"
                         value={input.antagOhpWeight}
                         name="antagOhpWeight"
@@ -1036,7 +1126,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Reps"
                         value={input.antagOhpReps}
                         name="antagOhpReps"
@@ -1051,7 +1141,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Pull-down 2"
                         value={input.antagOhp2Name}
                         name="antagOhp2Name"
@@ -1063,7 +1153,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Weight"
                         value={input.antagOhp2Weight}
                         name="antagOhp2Weight"
@@ -1076,7 +1166,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Reps"
                         value={input.antagOhp2Reps}
                         name="antagOhp2Reps"
@@ -1091,7 +1181,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Pull-down 3"
                         value={input.antagOhp3Name}
                         name="antagOhp3Name"
@@ -1103,7 +1193,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Weight"
                         value={input.antagOhp3Weight}
                         name="antagOhp3Weight"
@@ -1116,7 +1206,7 @@ class Form1 extends Component {
                       <TextField
                         id="outlined-name"
                         margin="normal"
-                        variant="outlined"
+
                         label="Reps"
                         value={input.antagOhp3Reps}
                         name="antagOhp3Reps"
@@ -1127,12 +1217,24 @@ class Form1 extends Component {
                         className="num-form"
                       />
                     </div>
-                    <Button onClick={this.nextStep} variant="contained" color="primary">
-                      Next Step
-                    </Button>
-                    <Button component={Link} to={cancelPath} variant="contained" color="secondary">
-                      Cancel
-                    </Button>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
+                        <Button onClick={this.isLessThan13} variant="contained" color="primary"
+                          style={{
+                            width: '100%'
+                          }}
+                        >Next Step
+                        </Button>
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
+                        <Button component={Link} to={cancelPath} variant="contained" color="secondary"
+                          style={{
+                            width: '100%'
+                          }}
+                        >Cancel
+                        </Button>
+                      </Grid>
+                    </Grid>
                   </form>
                 </div>
               </Paper>
@@ -1299,12 +1401,24 @@ class Form1 extends Component {
                         className="third-form"
                       />
                     </div>
-                    <Button type="submit" variant="contained" color="primary">
-                      Submit
-                    </Button>
-                    <Button component={Link} to={cancelPath} variant="contained" color="secondary">
-                      Cancel
-                    </Button>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
+                        <Button type="submit" variant="contained" color="primary"
+                          style={{
+                            width: '100%'
+                          }}
+                        >Submit
+                        </Button>
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
+                        <Button component={Link} to={cancelPath} variant="contained" color="secondary"
+                          style={{
+                            width: '100%'
+                          }}
+                        >Cancel
+                        </Button>
+                      </Grid>
+                    </Grid>
                   </form>
                 </div>
               </Paper>
