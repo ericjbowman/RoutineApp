@@ -19,7 +19,7 @@ class Day extends Component {
     }
     return (
       <React.Fragment>
-        <div style={{ paddingTop: '1em' }}>
+        <div style={{ paddingBottom: '1em' }}>
           <Paper style={{ padding: '1em', background: 'rgba(0, 0, 0, 0.8)' }}>
             <Grid container direction="row" justify="center">
               <Grid container direction="row" justify="center" item xs={12} md={10} lg={8}>

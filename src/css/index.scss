@@ -182,14 +182,10 @@ span, {
 }
 
 .routine-expansion-container {
-  margin: 0.5em;
+  margin: 0 0 0.5em 0;
 }
 
 @media only screen and (max-width: 600px) {
-
-  .routine-expansion-container {
-    margin: 0 0 0.5em 0;
-  }
 
   .form-container {
     margin: auto;
@@ -204,10 +200,10 @@ span, {
     padding: 1em;
   }
 
-  .routine-header-container {
-    display: flex;
-    justify-content: center;
-  }
+  // .routine-header-container {
+  //   display: flex;
+  //   justify-content: center;
+  // }
 
   body {
     background-image: url('../mobile.jpg');
