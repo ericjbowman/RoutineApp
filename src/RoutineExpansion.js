@@ -8,8 +8,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 // import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
 import { Link } from 'react-router-dom'
-import SimpleTable from './Wave2'
-import Grid from '@material-ui/core/Grid'
+import WaveExpansion from './WaveExpansion'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -49,20 +48,10 @@ export default function SimpleExpansionPanel (props) {
             </Button>
             <Button style={{ marginLeft: '0.5em' }} onClick={deleteRoutine} variant="contained" color="secondary">Delete</Button>
           </div>
-          <Grid container direction="row" justify="center" spacing={1}>
-            <Grid style={{ display: 'flex', justifyContent: 'center' }} direction="row" justify="center" item xs={12} md={6}>
-              <SimpleTable wave={routine.wave1} number='1' wave1={routine.wave1}/>
-            </Grid>
-            <Grid style={{ display: 'flex', justifyContent: 'center' }} direction="row" justify="center" item xs={12} md={6}>
-              <SimpleTable wave={routine.wave2} number='2'wave1={routine.wave1}/>
-            </Grid>
-            <Grid style={{ display: 'flex', justifyContent: 'center' }} direction="row" justify="center" item xs={12} md={6}>
-              <SimpleTable wave={routine.wave3} number='3'wave1={routine.wave1}/>
-            </Grid>
-            <Grid style={{ display: 'flex', justifyContent: 'center' }} direction="row" justify="center" item xs={12} md={6}>
-              <SimpleTable wave={routine.wave4} number='4'wave1={routine.wave1}/>
-            </Grid>
-          </Grid>
+          <WaveExpansion wave={routine.wave1} number='1' wave1={routine.wave1}/>
+          <WaveExpansion wave={routine.wave2} number='2'wave1={routine.wave1}/>
+          <WaveExpansion wave={routine.wave3} number='3'wave1={routine.wave1}/>
+          <WaveExpansion wave={routine.wave4} number='4'wave1={routine.wave1}/>
         </div>
       </ExpansionPanelDetails>
     </ExpansionPanel>

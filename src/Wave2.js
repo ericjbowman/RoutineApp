@@ -10,7 +10,7 @@ import { withRouter, Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: theme.spacing(3),
+    // marginTop: theme.spacing(3),
     // marginLeft: theme.spacing(1.5),
     // marginRight: theme.spacing(1.5),
     // maxWidth: 300,
@@ -42,14 +42,7 @@ function SimpleTable (props) {
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
-        <TableHead className={classes.head}>
-          <TableRow className={classes.head}>
-            <TableCell className={classes.head} align="left">Wave {props.number}</TableCell>
-            <TableCell className={classes.head} align="center"></TableCell>
-            <TableCell className={classes.head} align="center"></TableCell>
-            <TableCell className={classes.head} align="center"></TableCell>
-            <TableCell className={classes.head} align="center"></TableCell>
-          </TableRow>
+        <TableHead>
         </TableHead>
         <TableBody className={classes.body}>
           <TableRow key='1'>
