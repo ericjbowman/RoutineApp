@@ -54,7 +54,7 @@ const Header = ({ user }) => {
           <Typography variant="h6" className={classes.title}>
             Lunkedin
           </Typography>
-          { user && <span className={classes.menuButton}>Welcome, {user.email}</span>}
+          { user && (user.email.length < 15) && <span className={classes.menuButton}>Welcome, {user.email}</span>}
           { user ? (
             <React.Fragment>
             </React.Fragment>
