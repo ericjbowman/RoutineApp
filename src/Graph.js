@@ -35,7 +35,7 @@ class Graph extends Component {
     const data = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [{
-        label: 'My First dataset',
+        label: 'Squat',
         borderColor: 'red',
         backgroundColor: 'red',
         fill: false,
@@ -50,7 +50,37 @@ class Graph extends Component {
         ],
         yAxisID: 'y-axis-1'
       }, {
-        label: 'My Second dataset',
+        label: 'Over-head Press',
+        borderColor: 'green',
+        backgroundColor: 'green',
+        fill: false,
+        data: [
+          5,
+          4,
+          3,
+          2,
+          8,
+          3,
+          9
+        ],
+        yAxisID: 'y-axis-1'
+      }, {
+        label: 'Deadlift',
+        borderColor: 'purple',
+        backgroundColor: 'purple',
+        fill: false,
+        data: [
+          1,
+          6,
+          2,
+          8,
+          7,
+          0,
+          4
+        ],
+        yAxisID: 'y-axis-1'
+      }, {
+        label: 'Bench Press',
         borderColor: 'blue',
         backgroundColor: 'blue',
         fill: false,
@@ -63,7 +93,7 @@ class Graph extends Component {
           3,
           2
         ],
-        yAxisID: 'y-axis-2'
+        yAxisID: 'y-axis-1'
       }]
     }
     const options = {
@@ -80,16 +110,18 @@ class Graph extends Component {
           display: true,
           position: 'left',
           id: 'y-axis-1'
-        }, {
-          type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-          display: true,
-          position: 'right',
-          id: 'y-axis-2',
-          // grid line settings
-          gridLines: {
-            drawOnChartArea: false // only want the grid lines for one axis to show up
-          }
-        }]
+        }
+        // {
+        //   type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+        //   display: true,
+        //   position: 'right',
+        //   id: 'y-axis-2',
+        //   // grid line settings
+        //   gridLines: {
+        //     drawOnChartArea: false // only want the grid lines for one axis to show up
+        //   }
+        // }]
+        ]
       }
     }
     return this.state.inputs.map((input, index) => (

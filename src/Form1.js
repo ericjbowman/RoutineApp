@@ -11,6 +11,7 @@ import Grid from '@material-ui/core/Grid'
 // import MenuItem from '@material-ui/core/MenuItem'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import Date from './Date'
 
 class Form1 extends Component {
   constructor (props) {
@@ -61,7 +62,7 @@ class Form1 extends Component {
 
   render () {
     const { step } = this.state
-    const { input, handleSubmit, handleChange, cancelPath, toggleAutoFill } = this.props
+    const { input, handleSubmit, handleDate, handleChange, cancelPath, toggleAutoFill } = this.props
     if (step === 0) {
       return (
         <Fragment>
@@ -89,6 +90,18 @@ class Form1 extends Component {
                           onChange={handleChange}
                           name="routineName"
                           className="title-form"
+                          style={{
+                            marginBottom: '1em'
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={12} lg={12}>
+                        <Date
+                          label="Created"
+                          value={input.created}
+                          onChange={handleChange}
+                          handleDate={handleDate}
+                          name="created"
                           style={{
                             marginBottom: '1em'
                           }}
