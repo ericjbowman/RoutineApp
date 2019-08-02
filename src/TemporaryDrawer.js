@@ -49,6 +49,9 @@ function TemporaryDrawer () {
         <ListItem button component={Link} to="/routines">
           <ListItemText primary="My Routines" />
         </ListItem>
+        <ListItem button component={Link} to="/progress">
+          <ListItemText primary="Progress" />
+        </ListItem>
       </List>
       <Divider />
       <List>
