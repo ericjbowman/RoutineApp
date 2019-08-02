@@ -12,6 +12,7 @@ import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Date from './Date'
+import SelectExample from './Dropdown'
 
 class Form1 extends Component {
   constructor (props) {
@@ -62,7 +63,7 @@ class Form1 extends Component {
 
   render () {
     const { step } = this.state
-    const { input, handleSubmit, handleDate, handleChange, cancelPath, toggleAutoFill } = this.props
+    const { input, handleSubmit, handleDate, handleChange, handleSelect, cancelPath, toggleAutoFill } = this.props
     if (step === 0) {
       return (
         <Fragment>
@@ -383,6 +384,13 @@ class Form1 extends Component {
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={4}>
+                        <SelectExample
+                          label="Squat Primer"
+                          value={input.antagSquatName}
+                          name="antagSquatName"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                        />
                         <TextField
                           id="outlined-name"
                           margin="normal"

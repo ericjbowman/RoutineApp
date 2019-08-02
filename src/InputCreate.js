@@ -213,6 +213,16 @@ class InputCreate extends Component {
     console.log(this.state)
   }
 
+  handleSelect = (key, value) => {
+    const updatedField = {
+      [key]: value
+    }
+    console.log('handleSelect updated field', updatedField)
+    const editedInput = Object.assign(this.state.input, updatedField)
+    this.setState({ input: editedInput })
+    console.log(this.state)
+  }
+
   handleSubmit = event => {
     event.preventDefault()
 
@@ -239,7 +249,7 @@ class InputCreate extends Component {
   }
 
   render () {
-    const { handleChange, handleDate, handleSubmit, toggleAutoFill } = this
+    const { handleChange, handleSelect, handleDate, handleSubmit, toggleAutoFill } = this
     const { input, isRoutineCreated } = this.state
 
     if (isRoutineCreated) {
@@ -251,6 +261,7 @@ class InputCreate extends Component {
           input={input}
           handleChange={handleChange}
           handleDate={handleDate}
+          handleSelect={handleSelect}
           handleSubmit={handleSubmit}
           toggleAutoFill={toggleAutoFill}
           cancelPath="/"
