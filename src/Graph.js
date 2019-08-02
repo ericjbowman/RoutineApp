@@ -71,50 +71,46 @@ class Graph extends Component {
     let data = {}
     if (this.state.loaded) {
       data = {
-        labels: [inputs[0].created, inputs[1].created, inputs[2].created],
+        labels: this.state.inputs.map(input => (input.created)),
         datasets: [{
           label: 'Squat',
           borderColor: 'red',
           backgroundColor: 'red',
           fill: false,
-          data: [
-            oneRepMax(inputs[0].squatWeight, inputs[0].squatReps),
-            oneRepMax(inputs[1].squatWeight, inputs[1].squatReps),
-            oneRepMax(inputs[2].squatWeight, inputs[2].squatReps)
-          ],
+          data:
+            this.state.inputs.map(input => (
+              oneRepMax(input.squatWeight, input.squatReps)
+            )),
           yAxisID: 'y-axis-1'
         }, {
           label: 'Over-head Press',
           borderColor: 'green',
           backgroundColor: 'green',
           fill: false,
-          data: [
-            oneRepMax(inputs[0].ohpWeight, inputs[0].ohpReps),
-            oneRepMax(inputs[1].ohpWeight, inputs[1].ohpReps),
-            oneRepMax(inputs[2].ohpWeight, inputs[2].ohpReps)
-          ],
+          data:
+            this.state.inputs.map(input => (
+              oneRepMax(input.ohpWeight, input.ohpReps)
+            )),
           yAxisID: 'y-axis-1'
         }, {
           label: 'Deadlift',
           borderColor: 'purple',
           backgroundColor: 'purple',
           fill: false,
-          data: [
-            oneRepMax(inputs[0].deadliftWeight, inputs[0].deadliftReps),
-            oneRepMax(inputs[1].deadliftWeight, inputs[1].deadliftReps),
-            oneRepMax(inputs[2].deadliftWeight, inputs[2].deadliftReps)
-          ],
+          data:
+            this.state.inputs.map(input => (
+              oneRepMax(input.deadliftWeight, input.deadliftReps)
+            )),
           yAxisID: 'y-axis-1'
         }, {
           label: 'Bench Press',
           borderColor: 'blue',
           backgroundColor: 'blue',
           fill: false,
-          data: [
-            oneRepMax(inputs[0].benchWeight, inputs[0].benchReps),
-            oneRepMax(inputs[1].benchWeight, inputs[1].benchReps),
-            oneRepMax(inputs[2].benchWeight, inputs[2].benchReps)
-          ],
+          data:
+            this.state.inputs.map(input => (
+              oneRepMax(input.benchWeight, input.benchReps)
+            )),
           yAxisID: 'y-axis-1'
         }]
       }
@@ -191,7 +187,7 @@ class Graph extends Component {
       stacked: false,
       title: {
         display: true,
-        text: 'Chart.js Line Chart - Multi Axis'
+        text: 'One Rep Max'
       },
       scales: {
         yAxes: [{
@@ -216,18 +212,18 @@ class Graph extends Component {
     if (!this.state.loaded) {
       return <h1>Nope</h1>
     }
-    return this.state.inputs.map((input, index) => (
-      <React.Fragment key = {index}>
-        <Paper>
-          <Line
-            key = {index}
-            data = {data}
-            options = {options}
-          />
-          <h4 key = {index}>{input.created}</h4>
-        </Paper>
+    return (
+      <React.Fragment style={{ padding: '20px' }}>
+        <div style={{ marginTop: '2em' }}>
+          <Paper style={{ maxWidth: '800px', margin: '0 auto', padding: '2em' }}>
+            <Line
+              data = {data}
+              options = {options}
+            />
+          </Paper>
+        </div>
       </React.Fragment>
-    ))
+    )
   }
 }
 
