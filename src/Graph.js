@@ -68,17 +68,19 @@ class Graph extends Component {
     console.log(this.state)
     const { inputs } = this.state
     console.log(inputs)
+    // const sortedInputs = inputs.sort((a, b) => (a.id > b.id) ? 1 : -1)
     let data = {}
     if (this.state.loaded) {
+      const sortedInputs = inputs.sort((a, b) => (a.id > b.id) ? 1 : -1)
       data = {
-        labels: this.state.inputs.map(input => (input.created)),
+        labels: sortedInputs.map(input => (input.created)),
         datasets: [{
           label: 'Squat',
           borderColor: 'red',
           backgroundColor: 'red',
           fill: false,
           data:
-            this.state.inputs.map(input => (
+            sortedInputs.map(input => (
               oneRepMax(input.squatWeight, input.squatReps)
             )),
           yAxisID: 'y-axis-1'
@@ -88,7 +90,7 @@ class Graph extends Component {
           backgroundColor: 'green',
           fill: false,
           data:
-            this.state.inputs.map(input => (
+            sortedInputs.map(input => (
               oneRepMax(input.ohpWeight, input.ohpReps)
             )),
           yAxisID: 'y-axis-1'
@@ -98,7 +100,7 @@ class Graph extends Component {
           backgroundColor: 'purple',
           fill: false,
           data:
-            this.state.inputs.map(input => (
+            sortedInputs.map(input => (
               oneRepMax(input.deadliftWeight, input.deadliftReps)
             )),
           yAxisID: 'y-axis-1'
@@ -108,7 +110,7 @@ class Graph extends Component {
           backgroundColor: 'blue',
           fill: false,
           data:
-            this.state.inputs.map(input => (
+            sortedInputs.map(input => (
               oneRepMax(input.benchWeight, input.benchReps)
             )),
           yAxisID: 'y-axis-1'

@@ -92,7 +92,9 @@ class InputEdit extends Component {
         oblique3: 'Barbell Twist',
         oblique4: 'Woodchopper',
         oblique5: 'Single-arm Farmer\'s Walk',
-        oblique6: 'Windshield Wipers'
+        oblique6: 'Windshield Wipers',
+        day1: 'completed',
+        created: '2019-08-01'
       },
       isRoutineEdited: false,
       autoFill: true
@@ -107,7 +109,6 @@ class InputEdit extends Component {
         'Authorization': `Token token=${this.props.user.token}`
       }
     })
-      .then(res => console.log(res))
       .then(res => this.setState({ input: res.data.input }))
       .catch(err => console.log(err))
   }
@@ -214,6 +215,15 @@ class InputEdit extends Component {
     }
   }
 
+  handleDate = date => {
+    const updatedField = {
+      created: date
+    }
+    const editedInput = Object.assign(this.state.input, updatedField)
+    this.setState({ input: editedInput })
+    console.log(this.state)
+  }
+
   handleSubmit = event => {
     event.preventDefault()
 
@@ -242,7 +252,7 @@ class InputEdit extends Component {
   }
 
   render () {
-    const { handleChange, handleSubmit, toggleAutoFill } = this
+    const { handleChange, handleDate, handleSubmit, toggleAutoFill } = this
     const { input, isRoutineEdited } = this.state
 
     if (isRoutineEdited) {
@@ -253,6 +263,7 @@ class InputEdit extends Component {
         <Form1
           input={input}
           handleChange={handleChange}
+          handleDate={handleDate}
           handleSubmit={handleSubmit}
           toggleAutoFill={toggleAutoFill}
           cancelPath="/"
