@@ -14,6 +14,7 @@ import InputCreate from './InputCreate'
 import { SnackbarProvider } from 'notistack'
 import InputEdit from './InputEdit'
 import Welcome from './Welcome'
+import Graph from './Graph'
 
 class App extends Component {
   constructor () {
@@ -30,6 +31,8 @@ class App extends Component {
   clearUser = () => this.setState({ user: null })
 
   render () {
+    // const https = require('https')
+    // https.get('https://lit-forest-46875.herokuapp.com')
     const { user } = this.state
 
     return (
@@ -65,6 +68,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/edit-input' render={() => (
             <InputEdit user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/progress' render={() => (
+            <Graph user={user} />
           )} />
         </main>
       </SnackbarProvider>

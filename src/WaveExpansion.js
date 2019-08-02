@@ -11,6 +11,7 @@ import SimpleTable from './Wave2'
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%'
+    // maxWidth: '700px'
   },
   heading: {
     fontSize: theme.typography.pxToRem(18),

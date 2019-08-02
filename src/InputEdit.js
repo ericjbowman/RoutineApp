@@ -107,6 +107,7 @@ class InputEdit extends Component {
         'Authorization': `Token token=${this.props.user.token}`
       }
     })
+      .then(res => console.log(res))
       .then(res => this.setState({ input: res.data.input }))
       .catch(err => console.log(err))
   }

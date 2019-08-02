@@ -92,7 +92,9 @@ class InputCreate extends Component {
         oblique3: 'Barbell Twist',
         oblique4: 'Woodchopper',
         oblique5: 'Single-arm Farmer\'s Walk',
-        oblique6: 'Windshield Wipers'
+        oblique6: 'Windshield Wipers',
+        day1: 'completed',
+        created: '2019-08-01'
       },
       isRoutineCreated: false,
       autoFill: true
