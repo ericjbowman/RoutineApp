@@ -90,12 +90,12 @@ class Form1 extends Component {
                           onChange={handleChange}
                           name="routineName"
                           className="title-form"
-                          style={{
-                            marginBottom: '1em'
-                          }}
+                          // style={{
+                          //   marginBottom: '1em'
+                          // }}
                         />
                       </Grid>
-                      <Grid container direction="row" justify="center" item xs={12} lg={12}>
+                      <Grid container direction="row" item xs={12} lg={12} style={{ marginBottom: '2em' }}>
                         <Date
                           label="Created"
                           value={input.created}

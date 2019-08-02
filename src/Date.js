@@ -10,7 +10,7 @@ import {
 
 const useStyles = makeStyles({
   grid: {
-    width: '60%'
+    width: '50%'
   }
 })
 
@@ -27,7 +27,7 @@ export default function MaterialUIPickers (props) {
 
   return (
     <MuiPickersUtilsProvider utils={DateFnsUtils}>
-      <Grid container className={classes.grid} justify="space-around">
+      <Grid container className={classes.grid}>
         <KeyboardDatePicker
           margin="normal"
           id="mui-pickers-date"
