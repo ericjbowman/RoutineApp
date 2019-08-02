@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from './apiConfig'
-import { Bar } from 'react-chartjs-2'
+import { Line } from 'react-chartjs-2'
+import Paper from '@material-ui/core/Paper'
 
 class Graph extends Component {
   constructor (props) {
@@ -21,42 +22,86 @@ class Graph extends Component {
         'Authorization': `Token token=${this.props.user.token}`
       }
     })
-      .then(res => this.setState({ inputs: res.data.inputs, loaded: true }))
-      .catch(err => this.setState({ error: err.message }))
+      .then(res => this.setState({
+        inputs: res.data.inputs,
+        loaded: true
+      }))
+      .catch(err => this.setState({
+        error: err.message
+      }))
   }
 
   render () {
     const data = {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)'
+        label: 'My First dataset',
+        borderColor: 'red',
+        backgroundColor: 'red',
+        fill: false,
+        data: [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
         ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)'
+        yAxisID: 'y-axis-1'
+      }, {
+        label: 'My Second dataset',
+        borderColor: 'blue',
+        backgroundColor: 'blue',
+        fill: false,
+        data: [
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2
         ],
-        borderWidth: 1
+        yAxisID: 'y-axis-2'
       }]
     }
+    const options = {
+      responsive: true,
+      hoverMode: 'index',
+      stacked: false,
+      title: {
+        display: true,
+        text: 'Chart.js Line Chart - Multi Axis'
+      },
+      scales: {
+        yAxes: [{
+          type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+          display: true,
+          position: 'left',
+          id: 'y-axis-1'
+        }, {
+          type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+          display: true,
+          position: 'right',
+          id: 'y-axis-2',
+          // grid line settings
+          gridLines: {
+            drawOnChartArea: false // only want the grid lines for one axis to show up
+          }
+        }]
+      }
+    }
     return this.state.inputs.map((input, index) => (
-      <React.Fragment key={index}>
-        <Bar
-          key={index}
-          data={data}
-        />
-        <h4 key={index}>{input.created}</h4>
+      <React.Fragment key = {index}>
+        <Paper>
+          <Line
+            key = {index}
+            data = {data}
+            options = {options}
+          />
+          <h4 key = {index}>{input.created}</h4>
+        </Paper>
       </React.Fragment>
     ))
   }
