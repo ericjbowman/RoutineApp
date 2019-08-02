@@ -3,13 +3,13 @@ import React, { Component, Fragment } from 'react'
 import CreatableSelect from 'react-select/creatable'
 
 const exerciseOptions = [
-  { value: 'antagSquatName', label: 'Box Jumps', color: '#5243AA' },
-  { value: 'antagSquatName', label: 'Kettle-bell Swings', color: '#FF8B00' },
-  { value: 'antagSquatName', label: 'Squat Jumps', color: '#FFC400' },
-  { value: 'antagSquatName', label: 'Dumbbell Snatch', color: '#36B37E' },
-  { value: 'antagSquatName', label: 'Burpees', color: '#00875A' },
-  { value: 'antagSquatName', label: 'Long jumps', color: '#253858' },
-  { value: 'antagSquatName', label: 'Prisoner Squats', color: '#666666' }
+  { value: 'antagSquatName', label: 'Box Jumps' },
+  { value: 'antagSquatName', label: 'Kettle-bell Swings' },
+  { value: 'antagSquatName', label: 'Squat Jumps' },
+  { value: 'antagSquatName', label: 'Dumbbell Snatch' },
+  { value: 'antagSquatName', label: 'Burpees' },
+  { value: 'antagSquatName', label: 'Long jumps' },
+  { value: 'antagSquatName', label: 'Prisoner Squats' }
 ]
 
 class SelectExample extends Component {
