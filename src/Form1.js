@@ -63,7 +63,7 @@ class Form1 extends Component {
 
   render () {
     const { step } = this.state
-    const { input, handleSubmit, handleDate, handleChange, handleSelect, cancelPath, toggleAutoFill } = this.props
+    const { input, handleSubmit, handleClick, handleDate, handleChange, handleSelect, cancelPath, toggleAutoFill } = this.props
     if (step === 0) {
       return (
         <Fragment>
@@ -391,71 +391,43 @@ class Form1 extends Component {
                           onChange={handleChange}
                           handleSelect={handleSelect}
                         />
-                        <TextField
-                          id="outlined-name"
-                          margin="normal"
-
-                          label="Squat Primer"
-                          value={input.antagSquatName}
-                          name="antagSquatName"
-                          onChange={handleChange}
-                          style={{
-                            width: '100%'
-                          }}
-                        />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={4}>
-                        <TextField
-                          id="outlined-name"
-                          margin="normal"
-
+                        <SelectExample
                           label="Squat Primer 2"
                           value={input.antagSquat2Name}
                           name="antagSquat2Name"
                           onChange={handleChange}
-                          type="text"
-                          style={{
-                            width: '100%'
-                          }}
+                          handleSelect={handleSelect}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={4}>
-                        <TextField
+                        <SelectExample
+                          placeholder="Squat Primer 3"
                           id="outlined-name"
-                          margin="normal"
-
                           label="Squat Primer 3"
                           value={input.antagSquat3Name}
                           name="antagSquat3Name"
                           onChange={handleChange}
-                          type="text"
-                          style={{
-                            width: '100%'
-                          }}
+                          handleSelect={handleSelect}
                         />
                       </Grid>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="center" item xs={6}>
-                        <TextField
-                          id="outlined-name"
-                          margin="normal"
-
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
+                        <SelectExample
                           label="Squat 2"
                           value={input.squat2Name}
                           name="squat2Name"
                           onChange={handleChange}
-                          type="text"
-                          style={{
-                            width: '100%'
-                          }}
+                          handleSelect={handleSelect}
+                          onClick={handleClick}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
                           id="outlined-name"
                           margin="normal"
-
                           label="Weight"
                           value={input.squat2Weight}
                           name="squat2Weight"
@@ -471,7 +443,6 @@ class Form1 extends Component {
                         <TextField
                           id="outlined-name"
                           margin="normal"
-
                           label="Reps"
                           value={input.squat2Reps}
                           name="squat2Reps"
@@ -486,26 +457,19 @@ class Form1 extends Component {
                       </Grid>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="center" item xs={6}>
-                        <TextField
-                          id="outlined-name"
-                          margin="normal"
-
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
+                        <SelectExample
                           label="Squat 3"
                           value={input.squat3Name}
                           name="squat3Name"
                           onChange={handleChange}
-                          type="text"
-                          style={{
-                            width: '100%'
-                          }}
+                          handleSelect={handleSelect}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
                           id="outlined-name"
                           margin="normal"
-
                           label="Weight"
                           value={input.squat3Weight}
                           name="squat3Weight"
