@@ -11,20 +11,20 @@ class InputCreate extends Component {
     this.state = {
       updated: true,
       autofilled: {
-        antagOhpName: false,
-        antagBenchName: false,
-        squat2Name: false,
-        antagOhp2Name: false,
-        ohp2Name: false,
-        deadlift2Name: false,
-        antagBench2Name: false,
-        bench2Name: false,
-        squat3Name: false,
-        antagOhp3Name: false,
-        ohp3Name: false,
-        deadlift3Name: false,
-        antagBench3Name: false,
-        bench3Name: false
+        antagOhpWeight: false,
+        antagBenchWeight: false,
+        squat2Weight: false,
+        antagOhp2Weight: false,
+        ohp2Weight: false,
+        deadlift2Weight: false,
+        antagBench2Weight: false,
+        bench2Weight: false,
+        squat3Weight: false,
+        antagOhp3Weight: false,
+        ohp3Weight: false,
+        deadlift3Weight: false,
+        antagBench3Weight: false,
+        bench3Weight: false
       },
       input: {
         routineName: '',
@@ -205,9 +205,9 @@ class InputCreate extends Component {
     const { input } = this.state
     // Put squat2Weight as 3rd argument for ratios, check to see if 3rd argument is 0
     const autoMax = {
-      squat2Weight: ratios(input.squat2Name, input.squat2Weight, 'squat2Name'),
+      squat2Weight: ratios(input.squat2Name, input.squat2Weight, 'squat2Weight'),
       squat2Reps: isName(input.squat2Name, input.squatReps),
-      squat3Weight: ratios(input.squat3Name, input.squat3Weight, 'squat3Name'),
+      squat3Weight: ratios(input.squat3Name, input.squat3Weight, 'squat3Weight'),
       squat3Reps: isName(input.squat3Name, input.squatReps),
       bench2Weight: ratios(input.bench2Name, input.bench2Weight),
       bench2Reps: input.benchReps,
@@ -246,7 +246,7 @@ class InputCreate extends Component {
       [event.target.name]: event.target.value
     }
     const updatedAutofilled = {
-      [event.target.name]: false
+      [event.target.name]: true
     }
     console.log('updatedAutofilled from handlechange', updatedAutofilled)
     const editedInput = Object.assign(this.state.input, updatedField)
