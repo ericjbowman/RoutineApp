@@ -185,6 +185,7 @@ class Graph extends Component {
     }
     const options = {
       responsive: true,
+      maintainAspectRatio: false,
       hoverMode: 'index',
       stacked: false,
       title: {
@@ -215,12 +216,14 @@ class Graph extends Component {
       return <h1>Nope</h1>
     }
     return (
-      <React.Fragment style={{ padding: '20px' }}>
-        <div style={{ marginTop: '2em' }}>
-          <Paper style={{ maxWidth: '800px', margin: '0 auto', padding: '2em' }}>
+      <React.Fragment>
+        <div style={{ margin: '1em' }}>
+          <Paper>
             <Line
               data = {data}
               options = {options}
+              height = {500}
+              // style={{ height: 800 }}
             />
           </Paper>
         </div>

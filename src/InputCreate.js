@@ -9,92 +9,93 @@ class InputCreate extends Component {
   constructor (props) {
     super(props)
     this.state = {
+      updated: true,
       input: {
         routineName: '',
 
-        antagSquatName: 'Squat-jumps',
+        antagSquatName: '',
         squatWeight: null,
         squatReps: null,
 
-        antagOhpName: 'Wide-grip Pull-up',
+        antagOhpName: '',
         antagOhpWeight: null,
         antagOhpReps: null,
         ohpWeight: null,
         ohpReps: null,
 
-        antagDeadliftName: 'Kettle-bell Swings',
+        antagDeadliftName: '',
         deadliftWeight: null,
         deadliftReps: null,
 
-        antagBenchName: 'Barbell Row',
+        antagBenchName: '',
         antagBenchWeight: null,
         antagBenchReps: null,
         benchWeight: null,
         benchReps: null,
 
-        antagSquat2Name: 'Box-jumps',
-        squat2Name: 'Bulgarian Split Squat',
+        antagSquat2Name: '',
+        squat2Name: '',
         squat2Weight: null,
         squat2Reps: null,
 
-        antagOhp2Name: 'Supinated Chin-up',
+        antagOhp2Name: '',
         antagOhp2Weight: null,
         antagOhp2Reps: null,
-        ohp2Name: 'Landmine Single-arm Press',
+        ohp2Name: '',
         ohp2Weight: null,
         ohp2Reps: null,
 
-        antagDeadlift2Name: 'Squat Jumps',
-        deadlift2Name: 'Snatch-grip Deadlift',
+        antagDeadlift2Name: '',
+        deadlift2Name: '',
         deadlift2Weight: null,
         deadlift2Reps: null,
 
-        antagBench2Name: 'Dumbbell Row',
+        antagBench2Name: '',
         antagBench2Weight: null,
         antagBench2Reps: null,
-        bench2Name: 'Weighted Dip',
+        bench2Name: '',
         bench2Weight: null,
         bench2Reps: null,
 
-        antagSquat3Name: 'Lunge hops',
-        squat3Name: 'Bulgarian Split Squat',
+        antagSquat3Name: '',
+        squat3Name: '',
         squat3Weight: null,
         squat3Reps: null,
 
-        antagOhp3Name: 'Face Pull',
+        antagOhp3Name: '',
         antagOhp3Weight: null,
         antagOhp3Reps: null,
-        ohp3Name: 'Z Press',
+        ohp3Name: '',
         ohp3Weight: null,
         ohp3Reps: null,
 
-        antagDeadlift3Name: 'Burpee',
-        deadlift3Name: 'Romanian Deadlift',
+        antagDeadlift3Name: '',
+        deadlift3Name: '',
         deadlift3Weight: null,
         deadlift3Reps: null,
 
-        antagBench3Name: 'Seated Cable Row',
+        antagBench3Name: '',
         antagBench3Weight: null,
         antagBench3Reps: null,
-        bench3Name: 'Close-grip Bench Press',
+        bench3Name: '',
         bench3Weight: null,
         bench3Reps: null,
 
-        core1: 'Plank w/ Hip Extension',
-        core2: 'Toe-touch Crunches',
-        core3: 'Decline Situps',
-        core4: 'Hanging Leg-raises',
-        core5: 'V-up',
-        core6: 'Dragon Flags',
+        core1: '',
+        core2: '',
+        core3: '',
+        core4: '',
+        core5: '',
+        core6: '',
 
-        oblique1: 'Side Plank',
-        oblique2: 'Air Bicycle',
-        oblique3: 'Barbell Twist',
-        oblique4: 'Woodchopper',
-        oblique5: 'Single-arm Farmer\'s Walk',
-        oblique6: 'Windshield Wipers',
-        day1: 'completed',
-        created: '2019-08-01'
+        oblique1: '',
+        oblique2: '',
+        oblique3: '',
+        oblique4: '',
+        oblique5: '',
+        oblique6: '',
+        day1: '',
+        created: ''
       },
       isRoutineCreated: false,
       autoFill: true
@@ -105,6 +106,112 @@ class InputCreate extends Component {
   //     oblique6: {obj.value}
   //   }
   // }
+  componentDidUpdate () {
+    console.log('from cdidupdate', this.state)
+    const ratios = (name, weight) => {
+      if (!weight && !this.state.updated) {
+        console.log('name', name, 'weight', weight)
+        if (name === 'Front Squat') {
+          return Math.floor(this.state.input.squatWeight * 0.85)
+        } else if (name === 'Barbell Lunge') {
+          return Math.floor(this.state.input.squatWeight * 0.60)
+        } else if (name === 'Box Squat') {
+          return this.state.input.squatWeight
+        } else if (name === 'Pause Squat') {
+          return Math.floor(this.state.input.squatWeight * 0.70)
+        } else if (name === 'Bulgarian Split Squat') {
+          return Math.floor(this.state.input.squatWeight * 0.50)
+        } else if (name === 'Incline Bench Press') {
+          return Math.floor(this.state.input.benchWeight * 0.8)
+        } else if (name === 'Weighted Dip') {
+          return Math.floor(this.state.input.benchWeight * 1.05)
+        } else if (name === 'Close-grip Bench Press') {
+          return Math.floor(this.state.input.benchWeight * 0.9)
+        } else if (name === 'Dumbbell Fly') {
+          return Math.floor(this.state.input.benchWeight * 0.25)
+        } else if (name === 'Snatch-grip Deadlift') {
+          return Math.floor(this.state.input.deadliftWeight * 0.75)
+        } else if (name === 'Hex-bar Deadlift') {
+          return Math.floor(this.state.input.deadliftWeight * 1.10)
+        } else if (name === 'Romanian Deadlift') {
+          return Math.floor(this.state.input.deadliftWeight * 0.75)
+        } else if (name === 'Pause Deadlift') {
+          return Math.floor(this.state.input.deadliftWeight * 0.6)
+        } else if (name === 'Dumbbell Shoulder Press') {
+          return Math.floor(this.state.input.ohpWeight * 0.5)
+        } else if (name === 'Landmine Single-arm Press') {
+          return Math.floor(this.state.input.ohpWeight * 0.6)
+        } else if (name === 'Z Press') {
+          return Math.floor(this.state.input.ohpWeight * 0.5)
+        } else if (name === 'Trap-bar Press') {
+          return Math.floor(this.state.input.ohpWeight * 0.9)
+        } else if (name === 'Supinated Chin-up') {
+          return Math.floor(this.state.input.benchWeight * 0.9)
+        } else if (name === 'Wide-grip Pull-up') {
+          return Math.floor(this.state.input.benchWeight * 0.85)
+        } else if (name === 'Face Pull') {
+          return Math.floor(this.state.input.benchWeight * 0.4)
+        } else if (name === 'Lat Pull-down') {
+          return Math.floor(this.state.input.benchWeight * 0.8)
+        } else if (name === 'Barbell Row') {
+          return Math.floor(this.state.input.benchWeight * 0.7)
+        } else if (name === 'Dumbbell Row') {
+          return Math.floor(this.state.input.benchWeight * 0.35)
+        } else if (name === 'Seated Cable Row') {
+          return Math.floor(this.state.input.benchWeight * 0.7)
+        } else if (name === 'Pendlay Row') {
+          return Math.floor(this.state.input.benchWeight * 0.7)
+        }
+      } else {
+        return weight
+      }
+    }
+    const isName = (name, reps) => {
+      if (name && name !== '') {
+        return reps
+      } else {
+        return null
+      }
+    }
+    const { input } = this.state
+    // Put squat2Weight as 3rd argument for ratios, check to see if 3rd argument is 0
+    const autoMax = {
+      squat2Weight: ratios(input.squat2Name, input.squat2Weight),
+      squat2Reps: isName(input.squat2Name, input.squatReps),
+      squat3Weight: ratios(input.squat3Name, input.squat3Weight),
+      squat3Reps: isName(input.squat3Name, input.squatReps),
+      bench2Weight: ratios(input.bench2Name, input.bench2Weight),
+      bench2Reps: input.benchReps,
+      bench3Weight: ratios(input.bench3Name, input.bench3Weight),
+      bench3Reps: input.benchReps,
+      deadlift2Weight: ratios(input.deadlift2Name, input.deadlift2Weight),
+      deadlift2Reps: input.deadliftReps,
+      deadlift3Weight: ratios(input.deadlift3Name, input.deadlift3Weight),
+      deadlift3Reps: input.deadliftReps,
+      ohp2Weight: ratios(input.ohp2Name, input.ohp2Weight),
+      ohp2Reps: input.ohpReps,
+      ohp3Weight: ratios(input.ohp3Name, input.ohp3Weight),
+      ohp3Reps: input.ohpReps,
+      antagBenchWeight: ratios(input.antagBenchName, input.antagBenchWeight),
+      antagBenchReps: input.benchReps,
+      antagBench2Weight: ratios(input.antagBench2Name, input.antagBench2Weight),
+      antagBench2Reps: input.benchReps,
+      antagBench3Weight: ratios(input.antagBench3Name, input.antagBench3Weight),
+      antagBench3Reps: input.benchReps,
+      antagOhpWeight: ratios(input.antagOhpName, input.antagOhpWeight),
+      antagOhpReps: input.benchReps,
+      antagOhp2Weight: ratios(input.antagOhp2Name, input.antagOhp2Weight),
+      antagOhp2Reps: input.benchReps,
+      antagOhp3Weight: ratios(input.antagOhp3Name, input.antagOhp3Weight),
+      antagOhp3Reps: input.benchReps
+
+    }
+    if (this.state.autoFill && !this.state.updated) {
+      console.log('state will be updated to automax')
+      const autoMaxInput = Object.assign(this.state.input, autoMax)
+      this.setState({ input: autoMaxInput, updated: true })
+    }
+  }
 
   handleChange = event => {
     const updatedField = {
@@ -123,115 +230,13 @@ class InputCreate extends Component {
     console.log(this.state)
   }
 
-  handleClick = (event) => {
-    console.log('click handler active')
-    const ratios = (name) => {
-      if (name === 'Front Squat') {
-        return Math.floor(this.state.input.squatWeight * 0.85)
-      } if (name === 'Barbell Lunge') {
-        return Math.floor(this.state.input.squatWeight * 0.60)
-      } if (name === 'Box Squat') {
-        return this.state.input.squatWeight
-      } if (name === 'Pause Squat') {
-        return Math.floor(this.state.input.squatWeight * 0.70)
-      } if (name === 'Bulgarian Split Squat') {
-        return Math.floor(this.state.input.squatWeight * 0.50)
-      } if (name === 'Incline Bench Press') {
-        return Math.floor(this.state.input.benchWeight * 0.8)
-      } if (name === 'Weighted Dip') {
-        return Math.floor(this.state.input.benchWeight * 1.05)
-      } if (name === 'Close-grip Bench Press') {
-        return Math.floor(this.state.input.benchWeight * 0.9)
-      } if (name === 'Dumbbell Fly') {
-        return Math.floor(this.state.input.benchWeight * 0.25)
-      } if (name === 'Snatch-grip Deadlift') {
-        return Math.floor(this.state.input.deadliftWeight * 0.75)
-      } if (name === 'Hex-bar Deadlift') {
-        return Math.floor(this.state.input.deadliftWeight * 1.10)
-      } if (name === 'Romanian Deadlift') {
-        return Math.floor(this.state.input.deadliftWeight * 0.75)
-      } if (name === 'Pause Deadlift') {
-        return Math.floor(this.state.input.deadliftWeight * 0.6)
-      } if (name === 'Dumbbell Shoulder Press') {
-        return Math.floor(this.state.input.ohpWeight * 0.5)
-      } if (name === 'Landmine Single-arm Press') {
-        return Math.floor(this.state.input.ohpWeight * 0.6)
-      } if (name === 'Z Press') {
-        return Math.floor(this.state.input.ohpWeight * 0.5)
-      } if (name === 'Trap-bar Press') {
-        return Math.floor(this.state.input.ohpWeight * 0.9)
-      } if (name === 'Supinated Chin-up') {
-        return Math.floor(this.state.input.benchWeight * 0.9)
-      } if (name === 'Wide-grip Pull-up') {
-        return Math.floor(this.state.input.benchWeight * 0.85)
-      } if (name === 'Face Pull') {
-        return Math.floor(this.state.input.benchWeight * 0.4)
-      } if (name === 'Lat Pull-down') {
-        return Math.floor(this.state.input.benchWeight * 0.8)
-      } if (name === 'Barbell Row') {
-        return Math.floor(this.state.input.benchWeight * 0.7)
-      } if (name === 'Dumbbell Row') {
-        return Math.floor(this.state.input.benchWeight * 0.35)
-      } if (name === 'Seated Cable Row') {
-        return Math.floor(this.state.input.benchWeight * 0.7)
-      } if (name === 'Pendlay Row') {
-        return Math.floor(this.state.input.benchWeight * 0.7)
-      } else {
-        console.log('no matches')
-      }
-    }
-    // Put squat2Weight as 3rd argument for ratios, check to see if 3rd argument is 0
-    const autoMax = {
-      squat2Weight: ratios(this.state.input.squat2Name),
-      squat2Reps: this.state.input.squatReps,
-      squat3Weight: ratios(this.state.input.squat3Name),
-      squat3Reps: this.state.input.squatReps,
-      bench2Weight: ratios(this.state.input.bench2Name),
-      bench2Reps: this.state.input.benchReps,
-      bench3Weight: ratios(this.state.input.bench3Name),
-      bench3Reps: this.state.input.benchReps,
-      deadlift2Weight: ratios(this.state.input.deadlift2Name),
-      deadlift2Reps: this.state.input.deadliftReps,
-      deadlift3Weight: ratios(this.state.input.deadlift3Name),
-      deadlift3Reps: this.state.input.deadliftReps,
-      ohp2Weight: ratios(this.state.input.ohp2Name),
-      ohp2Reps: this.state.input.ohpReps,
-      ohp3Weight: ratios(this.state.input.ohp3Name),
-      ohp3Reps: this.state.input.ohpReps,
-      antagBenchWeight: ratios(this.state.input.antagBenchName),
-      antagBenchReps: this.state.input.benchReps,
-      antagBench2Weight: ratios(this.state.input.antagBench2Name),
-      antagBench2Reps: this.state.input.benchReps,
-      antagBench3Weight: ratios(this.state.input.antagBench3Name),
-      antagBench3Reps: this.state.input.benchReps,
-      antagOhpWeight: ratios(this.state.input.antagOhpName),
-      antagOhpReps: this.state.input.benchReps,
-      antagOhp2Weight: ratios(this.state.input.antagOhp2Name),
-      antagOhp2Reps: this.state.input.benchReps,
-      antagOhp3Weight: ratios(this.state.input.antagOhp3Name),
-      antagOhp3Reps: this.state.input.benchReps
-
-    }
-    if (this.state.autoFill === true) {
-      const autoMaxInput = Object.assign(this.state.input, autoMax)
-      this.setState({ input: autoMaxInput })
-      console.log('state after clickHandler', this.state)
-    }
-  }
-
   handleSelect = (key, value) => {
     const updatedField = {
       [key]: value
     }
     console.log('handleSelect updated field', updatedField)
     const editedInput = Object.assign(this.state.input, updatedField)
-    this.setState({ input: editedInput }, () => {
-    })
-    // if (this.state.autoFill === true) {
-    //   const autoMaxInput = Object.assign(this.state.input, autoMax)
-    //   this.setState({ input: autoMaxInput })
-    // }
-    console.log(this.state)
+    this.setState({ input: editedInput, updated: false })
   }
 
   handleSubmit = event => {
@@ -260,7 +265,7 @@ class InputCreate extends Component {
   }
 
   render () {
-    const { handleChange, handleClick, handleSelect, handleDate, handleSubmit, toggleAutoFill } = this
+    const { handleChange, handleSelect, handleDate, handleSubmit, toggleAutoFill } = this
     const { input, isRoutineCreated } = this.state
 
     if (isRoutineCreated) {
@@ -271,7 +276,6 @@ class InputCreate extends Component {
         <Form1
           input={input}
           handleChange={handleChange}
-          handleClick={handleClick}
           handleDate={handleDate}
           handleSelect={handleSelect}
           handleSubmit={handleSubmit}

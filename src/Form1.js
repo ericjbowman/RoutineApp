@@ -63,7 +63,7 @@ class Form1 extends Component {
 
   render () {
     const { step } = this.state
-    const { input, handleSubmit, handleClick, handleDate, handleChange, handleSelect, cancelPath, toggleAutoFill } = this.props
+    const { input, handleSubmit, handleDate, handleChange, handleSelect, cancelPath, toggleAutoFill } = this.props
     if (step === 0) {
       return (
         <Fragment>
@@ -421,7 +421,6 @@ class Form1 extends Component {
                           name="squat2Name"
                           onChange={handleChange}
                           handleSelect={handleSelect}
-                          onClick={handleClick}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
