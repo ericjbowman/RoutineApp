@@ -10,6 +10,22 @@ class InputCreate extends Component {
     super(props)
     this.state = {
       updated: true,
+      autofilled: {
+        antagOhpName: false,
+        antagBenchName: false,
+        squat2Name: false,
+        antagOhp2Name: false,
+        ohp2Name: false,
+        deadlift2Name: false,
+        antagBench2Name: false,
+        bench2Name: false,
+        squat3Name: false,
+        antagOhp3Name: false,
+        ohp3Name: false,
+        deadlift3Name: false,
+        antagBench3Name: false,
+        bench3Name: false
+      },
       input: {
         routineName: '',
 
@@ -106,20 +122,33 @@ class InputCreate extends Component {
   //     oblique6: {obj.value}
   //   }
   // }
+  updateAutofilled = (key) => {
+    const updatedField = {
+      [key]: true
+    }
+    const editedInput = Object.assign(this.state.autofilled, updatedField)
+    this.setState({ autofilled: editedInput })
+  }
+
   componentDidUpdate () {
     console.log('from cdidupdate', this.state)
-    const ratios = (name, weight) => {
-      if (!weight && !this.state.updated) {
-        console.log('name', name, 'weight', weight)
+    const ratios = (name, weight, key) => {
+      if (!this.state.autofilled[name] && !this.state.updated) {
+        // console.log('name', name, 'weight', weight)
         if (name === 'Front Squat') {
+          this.updateAutofilled(key)
           return Math.floor(this.state.input.squatWeight * 0.85)
         } else if (name === 'Barbell Lunge') {
+          this.updateAutofilled(key)
           return Math.floor(this.state.input.squatWeight * 0.60)
         } else if (name === 'Box Squat') {
+          this.updateAutofilled(key)
           return this.state.input.squatWeight
         } else if (name === 'Pause Squat') {
+          this.updateAutofilled(key)
           return Math.floor(this.state.input.squatWeight * 0.70)
         } else if (name === 'Bulgarian Split Squat') {
+          this.updateAutofilled(key)
           return Math.floor(this.state.input.squatWeight * 0.50)
         } else if (name === 'Incline Bench Press') {
           return Math.floor(this.state.input.benchWeight * 0.8)
@@ -176,9 +205,9 @@ class InputCreate extends Component {
     const { input } = this.state
     // Put squat2Weight as 3rd argument for ratios, check to see if 3rd argument is 0
     const autoMax = {
-      squat2Weight: ratios(input.squat2Name, input.squat2Weight),
+      squat2Weight: ratios(input.squat2Name, input.squat2Weight, 'squat2Name'),
       squat2Reps: isName(input.squat2Name, input.squatReps),
-      squat3Weight: ratios(input.squat3Name, input.squat3Weight),
+      squat3Weight: ratios(input.squat3Name, input.squat3Weight, 'squat3Name'),
       squat3Reps: isName(input.squat3Name, input.squatReps),
       bench2Weight: ratios(input.bench2Name, input.bench2Weight),
       bench2Reps: input.benchReps,
@@ -207,7 +236,6 @@ class InputCreate extends Component {
 
     }
     if (this.state.autoFill && !this.state.updated) {
-      console.log('state will be updated to automax')
       const autoMaxInput = Object.assign(this.state.input, autoMax)
       this.setState({ input: autoMaxInput, updated: true })
     }
@@ -217,8 +245,13 @@ class InputCreate extends Component {
     const updatedField = {
       [event.target.name]: event.target.value
     }
+    const updatedAutofilled = {
+      [event.target.name]: false
+    }
+    console.log('updatedAutofilled from handlechange', updatedAutofilled)
     const editedInput = Object.assign(this.state.input, updatedField)
-    this.setState({ input: editedInput })
+    const editedAutofilled = Object.assign(this.state.autofilled, updatedAutofilled)
+    this.setState({ input: editedInput, autofilled: editedAutofilled })
   }
 
   handleDate = date => {
@@ -227,16 +260,21 @@ class InputCreate extends Component {
     }
     const editedInput = Object.assign(this.state.input, updatedField)
     this.setState({ input: editedInput })
-    console.log(this.state)
+    // console.log(this.state)
   }
 
   handleSelect = (key, value) => {
     const updatedField = {
       [key]: value
     }
-    console.log('handleSelect updated field', updatedField)
+    const updatedAutofilled = {
+      [key]: false
+    }
+    console.log('handleSelect updated autofilled', updatedAutofilled)
     const editedInput = Object.assign(this.state.input, updatedField)
-    this.setState({ input: editedInput, updated: false })
+    const editedAutofilled = Object.assign(this.state.autofilled, updatedAutofilled)
+    console.log('editedAutofilled from handleselect', editedAutofilled)
+    this.setState({ input: editedInput, updated: false, autofilled: editedAutofilled })
   }
 
   handleSubmit = event => {
