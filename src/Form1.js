@@ -81,10 +81,8 @@ class Form1 extends Component {
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={12} lg={12}>
                         <TextField
-                          id="outlined-name"
                           required
                           margin="normal"
-                          variant="outlined"
                           label="Routine Name"
                           value={input.routineName}
                           onChange={handleChange}
@@ -153,7 +151,6 @@ class Form1 extends Component {
                           id="outlined-name"
                           margin="normal"
                           required
-                          variant="outlined"
                           label="Weight"
                           value={input.squatWeight}
                           name="squatWeight"
@@ -174,7 +171,6 @@ class Form1 extends Component {
                           id="outlined-name"
                           margin="normal"
                           required
-                          variant="outlined"
                           label="Reps"
                           value={input.squatReps}
                           name="squatReps"
@@ -201,7 +197,6 @@ class Form1 extends Component {
                           id="outlined-name"
                           margin="normal"
                           required
-                          variant="outlined"
                           label="Weight"
                           value={input.ohpWeight}
                           name="ohpWeight"
@@ -220,7 +215,6 @@ class Form1 extends Component {
                           id="outlined-name"
                           margin="normal"
                           required
-                          variant="outlined"
                           label="Reps"
                           value={input.ohpReps}
                           name="ohpReps"
@@ -247,7 +241,6 @@ class Form1 extends Component {
                           id="outlined-name"
                           margin="normal"
                           required
-                          variant="outlined"
                           label="Weight"
                           value={input.deadliftWeight}
                           name="deadliftWeight"
@@ -266,7 +259,6 @@ class Form1 extends Component {
                           id="outlined-name"
                           margin="normal"
                           required
-                          variant="outlined"
                           label="Reps"
                           value={input.deadliftReps}
                           name="deadliftReps"
@@ -293,7 +285,6 @@ class Form1 extends Component {
                           id="outlined-name"
                           margin="normal"
                           required
-                          variant="outlined"
                           label="Weight"
                           value={input.benchWeight}
                           name="benchWeight"
@@ -312,7 +303,6 @@ class Form1 extends Component {
                           id="outlined-name"
                           margin="normal"
                           required
-                          variant="outlined"
                           label="Reps"
                           value={input.benchReps}
                           name="benchReps"

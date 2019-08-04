@@ -22,7 +22,9 @@ export default function MaterialUIPickers (props) {
 
   function handleDateChange (date) {
     setSelectedDate(date)
-    props.handleDate(date.toJSON().slice(0, 10))
+    if (date && date.toJSON()) {
+      props.handleDate(date.toJSON().slice(0, 10))
+    }
   }
 
   return (
