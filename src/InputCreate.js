@@ -168,55 +168,38 @@ class InputCreate extends Component {
         } else if (inputName === 'Close-grip Bench Press') {
           return Math.floor(this.state.input.benchWeight * 0.9)
         } else if (inputName === 'Dumbbell Fly') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.benchWeight * 0.25)
         } else if (inputName === 'Snatch-grip Deadlift') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.deadliftWeight * 0.75)
         } else if (inputName === 'Hex-bar Deadlift') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.deadliftWeight * 1.10)
         } else if (inputName === 'Romanian Deadlift') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.deadliftWeight * 0.75)
         } else if (inputName === 'Pause Deadlift') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.deadliftWeight * 0.6)
         } else if (inputName === 'Dumbbell Shoulder Press') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.ohpWeight * 0.5)
         } else if (inputName === 'Landmine Single-arm Press') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.ohpWeight * 0.6)
         } else if (inputName === 'Z Press') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.ohpWeight * 0.5)
         } else if (inputName === 'Trap-bar Press') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.ohpWeight * 0.9)
         } else if (inputName === 'Supinated Chin-up') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.benchWeight * 0.9)
         } else if (inputName === 'Wide-grip Pull-up') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.benchWeight * 0.85)
         } else if (inputName === 'Face Pull') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.benchWeight * 0.4)
         } else if (inputName === 'Lat Pull-down') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.benchWeight * 0.8)
         } else if (inputName === 'Barbell Row') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.benchWeight * 0.7)
         } else if (inputName === 'Dumbbell Row') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.benchWeight * 0.35)
         } else if (inputName === 'Seated Cable Row') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.benchWeight * 0.7)
         } else if (inputName === 'Pendlay Row') {
-          this.updateAutofilled(name, weight)
           return Math.floor(this.state.input.benchWeight * 0.7)
         }
       } else {
@@ -243,25 +226,25 @@ class InputCreate extends Component {
       bench3Weight: ratios(input.bench3Name, input.bench3Weight, 'bench3Name', 'bench3Weight'),
       bench3Reps: isName(input.bench3Name, input.benchReps, 'bench3Name', 'bench3Weight'),
       deadlift2Weight: ratios(input.deadlift2Name, input.deadlift2Weight, 'deadlift2Name', 'deadlift2Weight'),
-      deadlift2Reps: input.deadliftReps,
+      deadlift2Reps: isName(input.deadlift2Name, input.deadliftReps, 'deadlift2Name', 'deadlift2Weight'),
       deadlift3Weight: ratios(input.deadlift3Name, input.deadlift3Weight, 'deadlift3Name', 'deadlift3Weight'),
-      deadlift3Reps: input.deadliftReps,
-      ohp2Weight: ratios(input.ohp2Name, input.ohp2Weight),
-      ohp2Reps: input.ohpReps,
-      ohp3Weight: ratios(input.ohp3Name, input.ohp3Weight),
-      ohp3Reps: input.ohpReps,
+      deadlift3Reps: isName(input.deadlift3Name, input.deadliftReps, 'deadlift3Name', 'deadlift3Weight'),
+      ohp2Weight: ratios(input.ohp2Name, input.ohp2Weight, 'ohp2Name', 'ohp2Weight'),
+      ohp2Reps: isName(input.ohp2Name, input.ohpReps, 'ohp2Name', 'ohp2Weight'),
+      ohp3Weight: ratios(input.ohp3Name, input.ohp3Weight, 'ohp3Name', 'ohp3Weight'),
+      ohp3Reps: isName(input.ohp3Name, input.ohpReps, 'ohp3Name', 'ohp3Weight'),
       antagBenchWeight: ratios(input.antagBenchName, input.antagBenchWeight, 'antagBenchName', 'antagBenchWeight'),
-      antagBenchReps: input.benchReps,
+      antagBenchReps: isName(input.antagBenchName, input.benchReps, 'antagBenchName', 'antagBenchWeight'),
       antagBench2Weight: ratios(input.antagBench2Name, input.antagBench2Weight, 'antagBench2Name', 'antagBench2Weight'),
-      antagBench2Reps: input.benchReps,
+      antagBench2Reps: isName(input.antagBench2Name, input.benchReps, 'antagBench2Name', 'antagBench2Weight'),
       antagBench3Weight: ratios(input.antagBench3Name, input.antagBench3Weight, 'antagBench3Name', 'antagBench3Weight'),
-      antagBench3Reps: input.benchReps,
-      antagOhpWeight: ratios(input.antagOhpName, input.antagOhpWeight),
-      antagOhpReps: input.benchReps,
-      antagOhp2Weight: ratios(input.antagOhp2Name, input.antagOhp2Weight),
-      antagOhp2Reps: input.benchReps,
-      antagOhp3Weight: ratios(input.antagOhp3Name, input.antagOhp3Weight),
-      antagOhp3Reps: input.benchReps
+      antagBench3Reps: isName(input.antagBench3Name, input.benchReps, 'antagBench3Name', 'antagBench3Weight'),
+      antagOhpWeight: ratios(input.antagOhpName, input.antagOhpWeight, 'antagOhpName', 'antagOhpWeight'),
+      antagOhpReps: isName(input.antagOhpName, input.benchReps, 'antagOhpName', 'antagOhpWeight'),
+      antagOhp2Weight: ratios(input.antagOhp2Name, input.antagOhp2Weight, 'antagOhp2Name', 'antagOhp2Weight'),
+      antagOhp2Reps: isName(input.antagOhp2Name, input.benchReps, 'antagOhp2Name', 'antagOhp2Weight'),
+      antagOhp3Weight: ratios(input.antagOhp3Name, input.antagOhp3Weight, 'antagOhp3Name', 'antagOhp3Weight'),
+      antagOhp3Reps: isName(input.antagOhp3Name, input.benchReps, 'antagOhp3Name', 'antagOhp3Weight')
 
     }
     if (this.state.autoFill && !this.state.updated) {

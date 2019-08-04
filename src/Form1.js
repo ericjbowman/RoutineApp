@@ -875,7 +875,7 @@ class Form1 extends Component {
                     </Grid>
                     <div className="input-row">
                       <Dropdown
-                        key='11'
+                        key='25'
                         label="Primer"
                         value={input.antagDeadliftName}
                         name="antagDeadliftName"
@@ -885,6 +885,7 @@ class Form1 extends Component {
                       />
 
                       <Dropdown
+                        key='26'
                         label="Primer 2"
                         value={input.antagDeadlift2Name}
                         name="antagDeadlift2Name"
@@ -894,6 +895,7 @@ class Form1 extends Component {
                       />
 
                       <Dropdown
+                        key='27'
                         label="Primer 3"
                         value={input.antagDeadlift3Name}
                         name="antagDeadlift3Name"
@@ -904,6 +906,7 @@ class Form1 extends Component {
                     </div>
                     <div className="input-row">
                       <Dropdown
+                        key='28'
                         label="Deadlift 2"
                         value={input.deadlift2Name}
                         name="deadlift2Name"
@@ -915,6 +918,7 @@ class Form1 extends Component {
                       />
 
                       <TextField
+                        key='29'
                         id="outlined-name"
                         margin="normal"
 
@@ -931,6 +935,7 @@ class Form1 extends Component {
                       />
 
                       <TextField
+                        key='30'
                         id="outlined-name"
                         margin="normal"
 
@@ -949,6 +954,7 @@ class Form1 extends Component {
                     </div>
                     <div className="input-row">
                       <Dropdown
+                        key='31'
                         label="Deadlift 3"
                         value={input.deadlift3Name}
                         name="deadlift3Name"
@@ -959,6 +965,7 @@ class Form1 extends Component {
                       />
 
                       <TextField
+                        key='32'
                         id="outlined-name"
                         margin="normal"
 
@@ -975,6 +982,7 @@ class Form1 extends Component {
                       />
 
                       <TextField
+                        key='33'
                         id="outlined-name"
                         margin="normal"
 
@@ -1035,19 +1043,19 @@ class Form1 extends Component {
                       </Grid>
                     </Grid>
                     <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
+                        key='34'
                         label="O.H.P. 2"
                         value={input.ohp2Name}
                         name="ohp2Name"
+                        weight='ohp2Weight'
                         onChange={handleChange}
-                        type="text"
+                        handleSelect={handleSelect}
                         className="name-form"
                       />
 
                       <TextField
+                        key='35'
                         id="outlined-name"
                         margin="normal"
 
@@ -1058,9 +1066,13 @@ class Form1 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
+                        key='36'
                         id="outlined-name"
                         margin="normal"
 
@@ -1072,62 +1084,73 @@ class Form1 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
+                        key='37'
                         label="O.H.P. 3"
                         value={input.ohp3Name}
-                        name="antagOhp3Name"
+                        name="ohp3Name"
+                        weight='ohp3Weight'
                         onChange={handleChange}
+                        handleSelect={handleSelect}
                         type="text"
                         className="name-form"
                       />
 
                       <TextField
+                        key='38'
                         id="outlined-name"
                         margin="normal"
 
                         label="Weight"
-                        value={input.antagOhp3Weight}
-                        name="antagOhp3Weight"
+                        value={input.ohp3Weight}
+                        name="ohp3Weight"
                         onChange={handleChange}
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
+                        key='39'
                         id="outlined-name"
                         margin="normal"
 
                         label="Reps"
-                        value={input.antagOhp3Reps}
-                        name="antagOhp3Reps"
+                        value={input.ohp3Reps}
+                        name="ohp3Reps"
                         onChange={handleChange}
                         type="number"
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
+                        key='40'
                         label="Pull-down"
                         value={input.antagOhpName}
                         name="antagOhpName"
+                        weight="antagOhpWeight"
                         onChange={handleChange}
-                        type="text"
+                        handleSelect={handleSelect}
                         className="name-form"
                       />
 
                       <TextField
+                        key='41'
                         id="outlined-name"
                         margin="normal"
 
@@ -1138,9 +1161,13 @@ class Form1 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
+                        key='42'
                         id="outlined-name"
                         margin="normal"
 
@@ -1152,25 +1179,27 @@ class Form1 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
+                        key='43'
                         label="Pull-down 2"
                         value={input.antagOhp2Name}
                         name="antagOhp2Name"
+                        weight="antagOhp2Weight"
                         onChange={handleChange}
-                        type="text"
+                        handleSelect={handleSelect}
                         className="name-form"
                       />
 
                       <TextField
+                        key='44'
                         id="outlined-name"
                         margin="normal"
-
                         label="Weight"
                         value={input.antagOhp2Weight}
                         name="antagOhp2Weight"
@@ -1178,12 +1207,15 @@ class Form1 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
+                        key='45'
                         id="outlined-name"
                         margin="normal"
-
                         label="Reps"
                         value={input.antagOhp2Reps}
                         name="antagOhp2Reps"
@@ -1192,25 +1224,27 @@ class Form1 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
+                        key='46'
                         label="Pull-down 3"
                         value={input.antagOhp3Name}
                         name="antagOhp3Name"
+                        weight="antagOhp3Weight"
                         onChange={handleChange}
-                        type="text"
+                        handleSelect={handleSelect}
                         className="name-form"
                       />
 
                       <TextField
+                        key='47'
                         id="outlined-name"
                         margin="normal"
-
                         label="Weight"
                         value={input.antagOhp3Weight}
                         name="antagOhp3Weight"
@@ -1218,12 +1252,15 @@ class Form1 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
+                        key='48'
                         id="outlined-name"
                         margin="normal"
-
                         label="Reps"
                         value={input.antagOhp3Reps}
                         name="antagOhp3Reps"
@@ -1232,6 +1269,9 @@ class Form1 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <Grid container direction="row" justify="center" spacing={1}>

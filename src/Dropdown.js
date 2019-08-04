@@ -72,7 +72,7 @@ class Dropdown extends Component {
     } else if (ohps.includes(name)) {
       exerciseOptions = [
         { value: name, label: 'Landmine Single-arm Press' },
-        { value: name, label: 'Z press' },
+        { value: name, label: 'Z Press' },
         { value: name, label: 'Dumbbell Shoulder Press' },
         { value: name, label: 'Trap-bar Press' }
       ]
