@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
-import Switch from '@material-ui/core/Switch'
 import messages from './auth/messages'
 import { withSnackbar } from 'notistack'
 import Grid from '@material-ui/core/Grid'
@@ -63,7 +62,7 @@ class Form1 extends Component {
 
   render () {
     const { step } = this.state
-    const { input, handleSubmit, handleDate, handleChange, handleSelect, cancelPath, toggleAutoFill } = this.props
+    const { input, handleSubmit, handleDate, handleChange, handleSelect, cancelPath } = this.props
     if (step === 0) {
       return (
         <Fragment>
@@ -362,27 +361,12 @@ class Form1 extends Component {
               <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
-                        <Typography component="h1" variant="h5">
-                          Squat Variations
-                        </Typography>
-                      </Grid>
-                      <Grid container direction="row" justify="right" item xs={12}>
-                        <span>Toggle Auto-Complete Weight/Reps</span>
-                      </Grid>
+                    <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
+                      <Typography component="h1" variant="h5">
+                        Squat Primers
+                      </Typography>
                     </Grid>
-                    <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="right" item xs={12}>
-                        <span>On</span>
-                        <Switch
-                          onChange={toggleAutoFill}
-                          label="Toggle Auto-complete"
-                        />
-                        <span>Off</span>
-                      </Grid>
-                    </Grid>
-                    <Grid container direction="row" justify="center" spacing={1}>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ margin: '16px 0' }}>
                       <Grid container direction="row" justify="center" item xs={4}>
                         <Dropdown
                           key='1'
@@ -415,6 +399,11 @@ class Form1 extends Component {
                           handleSelect={handleSelect}
                         />
                       </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
+                      <Typography component="h1" variant="h5">
+                        Squat Variations
+                      </Typography>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
@@ -522,7 +511,7 @@ class Form1 extends Component {
                         />
                       </Grid>
                     </Grid>
-                    <Grid container direction="row" justify="center" spacing={1}>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ margin: '27px 0 0' }}>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <Button onClick={this.isLessThan13} variant="contained" color="primary"
                           style={{
@@ -561,22 +550,9 @@ class Form1 extends Component {
                           Bench Press Variations
                         </Typography>
                       </Grid>
-                      <Grid container direction="row" justify="right" item xs={12}>
-                        <span>Toggle Auto-Complete Weight/Reps</span>
-                      </Grid>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="right" item xs={12}>
-                        <span>On</span>
-                        <Switch
-                          onChange={toggleAutoFill}
-                          label="Toggle Auto-complete"
-                        />
-                        <span>Off</span>
-                      </Grid>
-                    </Grid>
-                    <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="center" item xs={6}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
                         <Dropdown
                           key='10'
                           label="Bench Press 2"
@@ -628,7 +604,7 @@ class Form1 extends Component {
                       </Grid>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="center" item xs={6}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
                         <Dropdown
                           key='13'
                           label="Bench Press 3"
@@ -643,6 +619,8 @@ class Form1 extends Component {
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
                           key='14'
+                          id="outlined-name"
+                          margin="normal"
                           label="Weight"
                           value={input.bench3Weight}
                           name="bench3Weight"
@@ -678,8 +656,13 @@ class Form1 extends Component {
                         />
                       </Grid>
                     </Grid>
+                    <Grid container direction="row" justify="left" item xs={12} md={6} lg={6} style={{ marginTop: '27px' }}>
+                      <Typography component="h1" variant="h5">
+                        Horizontal Pull Variations
+                      </Typography>
+                    </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="center" item xs={6}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
                         <Dropdown
                           key='16'
                           label="Pull"
@@ -732,7 +715,7 @@ class Form1 extends Component {
                       </Grid>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="center" item xs={6}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
                         <Dropdown
                           key='19'
                           label="Pull 2"
@@ -785,7 +768,7 @@ class Form1 extends Component {
                       </Grid>
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
-                      <Grid container direction="row" justify="center" item xs={6}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
                         <Dropdown
                           key='22'
                           label="Pull 3"
@@ -837,7 +820,7 @@ class Form1 extends Component {
                         />
                       </Grid>
                     </Grid>
-                    <Grid container direction="row" justify="center" spacing={1}>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ margin: '27px 0 0' }}>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <Button onClick={this.isLessThan13} variant="contained" color="primary"
                           style={{
@@ -873,142 +856,147 @@ class Form1 extends Component {
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
                         <Typography component="h1" variant="h5">
-                          Deadlift Variations
+                          Deadlift Primers
                         </Typography>
                       </Grid>
-                      <Grid container direction="row" justify="right" item xs={12}>
-                        <span>Toggle Auto-Complete Weight/Reps</span>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ margin: '16px 0' }}>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='25'
+                          label="Primer"
+                          value={input.antagDeadliftName}
+                          name="antagDeadliftName"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='26'
+                          label="Primer 2"
+                          value={input.antagDeadlift2Name}
+                          name="antagDeadlift2Name"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='27'
+                          label="Primer 3"
+                          value={input.antagDeadlift3Name}
+                          name="antagDeadlift3Name"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                        />
                       </Grid>
                     </Grid>
-                    <div className="input-row">
-                      <Dropdown
-                        key='25'
-                        label="Primer"
-                        value={input.antagDeadliftName}
-                        name="antagDeadliftName"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        className="third-form"
-                      />
-
-                      <Dropdown
-                        key='26'
-                        label="Primer 2"
-                        value={input.antagDeadlift2Name}
-                        name="antagDeadlift2Name"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        className="third-form"
-                      />
-
-                      <Dropdown
-                        key='27'
-                        label="Primer 3"
-                        value={input.antagDeadlift3Name}
-                        name="antagDeadlift3Name"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        className="third-form"
-                      />
-                    </div>
-                    <div className="input-row">
-                      <Dropdown
-                        key='28'
-                        label="Deadlift 2"
-                        value={input.deadlift2Name}
-                        name="deadlift2Name"
-                        weight="deadlift2Weight"
-                        reps="deadlift2Reps"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        type="text"
-                        className="name-form"
-                      />
-
-                      <TextField
-                        key='29'
-                        id="outlined-name"
-                        margin="normal"
-
-                        label="Weight"
-                        value={input.deadlift2Weight}
-                        name="deadlift2Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-
-                      <TextField
-                        key='30'
-                        id="outlined-name"
-                        margin="normal"
-
-                        label="Weight"
-                        value={input.deadlift2Reps}
-                        name="deadlift2Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-                    </div>
-                    <div className="input-row">
-                      <Dropdown
-                        key='31'
-                        label="Deadlift 3"
-                        value={input.deadlift3Name}
-                        name="deadlift3Name"
-                        weight="deadlift3Weight"
-                        reps="deadlift3Reps"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        className="name-form"
-                      />
-
-                      <TextField
-                        key='32'
-                        id="outlined-name"
-                        margin="normal"
-
-                        label="Weight"
-                        value={input.deadlift3Weight}
-                        name="deadlift3Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-
-                      <TextField
-                        key='33'
-                        id="outlined-name"
-                        margin="normal"
-
-                        label="Reps"
-                        value={input.deadlift3Reps}
-                        name="deadlift3Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-                    </div>
+                    <Grid container direction="row" justify="left" item xs={12} md={6} lg={6} style={{ marginTop: '27px' }}>
+                      <Typography component="h1" variant="h5">
+                        Deadlift Variations
+                      </Typography>
+                    </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
+                        <Dropdown
+                          key='28'
+                          label="Deadlift 2"
+                          value={input.deadlift2Name}
+                          name="deadlift2Name"
+                          weight="deadlift2Weight"
+                          reps="deadlift2Reps"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='29'
+                          id="outlined-name"
+                          margin="normal"
+
+                          label="Weight"
+                          value={input.deadlift2Weight}
+                          name="deadlift2Weight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='30'
+                          id="outlined-name"
+                          margin="normal"
+
+                          label="Reps"
+                          value={input.deadlift2Reps}
+                          name="deadlift2Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
+                        <Dropdown
+                          key='31'
+                          label="Deadlift 3"
+                          value={input.deadlift3Name}
+                          name="deadlift3Name"
+                          weight="deadlift3Weight"
+                          reps="deadlift3Reps"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='32'
+                          id="outlined-name"
+                          margin="normal"
+
+                          label="Weight"
+                          value={input.deadlift3Weight}
+                          name="deadlift3Weight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='33'
+                          id="outlined-name"
+                          margin="normal"
+
+                          label="Reps"
+                          value={input.deadlift3Reps}
+                          name="deadlift3Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ margin: '27px 0 0' }}>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <Button onClick={this.isLessThan13} variant="contained" color="primary"
                           style={{
@@ -1046,9 +1034,6 @@ class Form1 extends Component {
                         <Typography component="h1" variant="h5">
                           Over-head Variations
                         </Typography>
-                      </Grid>
-                      <Grid container direction="row" justify="right" item xs={12}>
-                        <span>Toggle Auto-Complete Weight/Reps</span>
                       </Grid>
                     </Grid>
                     <div className="input-row">
@@ -1288,7 +1273,7 @@ class Form1 extends Component {
                         }}
                       />
                     </div>
-                    <Grid container direction="row" justify="center" spacing={1}>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ margin: '27px 0 0' }}>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <Button onClick={this.isLessThan13} variant="contained" color="primary"
                           style={{

@@ -226,10 +226,10 @@ class InputCreate extends Component {
     const isName = (inputName, inputReps, name, weight, reps) => {
       if (!this.state.autofilled[name] && !this.state.autofilled[weight] && !this.state.autofilled[reps]) {
         this.updateAutofilled(name, weight, reps)
-        console.log('isName is still running after setting values to true')
+        // console.log('isName is still running after setting values to true')
         return inputReps
       } else {
-        console.log('this.state.input[reps]', this.state.input[reps])
+        // console.log('this.state.input[reps]', this.state.input[reps])
         return this.state.input[reps]
       }
     }
@@ -280,7 +280,7 @@ class InputCreate extends Component {
     const updatedAutofilled = {
       [event.target.name]: false
     }
-    console.log('updatedAutofilled from handlechange', updatedAutofilled)
+    // console.log('updatedAutofilled from handlechange', updatedAutofilled)
     const editedInput = Object.assign(this.state.input, updatedField)
     const editedAutofilled = Object.assign(this.state.autofilled, updatedAutofilled)
     this.setState({ input: editedInput, autofilled: editedAutofilled })
