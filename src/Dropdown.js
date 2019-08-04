@@ -36,8 +36,33 @@ class Dropdown extends Component {
     const ohps = ['ohp2Name', 'ohp3Name']
     const antagBenches = ['antagBenchName', 'antagBench2Name', 'antagBench3Name']
     const antagOhps = ['antagOhpName', 'antagOhp2Name', 'antagOhp3Name']
+    const core = ['core1', 'core2', 'core3', 'core4', 'core5', 'core6']
+    const obliques = ['oblique1', 'oblique2', 'oblique3', 'oblique4', 'oblique5', 'oblique6']
     let exerciseOptions = []
-    if (legPrimers.includes(name)) {
+    if (core.includes(name)) {
+      exerciseOptions = [
+        { value: name, label: 'Plank' },
+        { value: name, label: 'V-up' },
+        { value: name, label: 'Crunch' },
+        { value: name, label: 'Hanging Leg-Raise' },
+        { value: name, label: 'Ab wheel roll-out' },
+        { value: name, label: 'Decline bench-situp' },
+        { value: name, label: 'Dragon Flag' },
+        { value: name, label: 'Flutter Kicks' },
+        { value: name, label: 'Toe-Touch Crunch' }
+      ]
+    } else if (obliques.includes(name)) {
+      exerciseOptions = [
+        { value: name, label: 'Side Plank' },
+        { value: name, label: 'Air Bicycle' },
+        { value: name, label: 'Woodchopper' },
+        { value: name, label: 'Single-arm Farmer Walk' },
+        { value: name, label: 'Roman chair' },
+        { value: name, label: 'Barbell twist' },
+        { value: name, label: 'Landmine twist' },
+        { value: name, label: 'Windshield wiper' }
+      ]
+    } else if (legPrimers.includes(name)) {
       exerciseOptions = [
         { value: name, label: 'Box Jumps' },
         { value: name, label: 'Kettlebell Swings' },

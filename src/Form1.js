@@ -1036,243 +1036,252 @@ class Form1 extends Component {
                         </Typography>
                       </Grid>
                     </Grid>
-                    <div className="input-row">
-                      <Dropdown
-                        key='34'
-                        label="O.H.P. 2"
-                        value={input.ohp2Name}
-                        name="ohp2Name"
-                        weight='ohp2Weight'
-                        reps="ohp2Reps"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        className="name-form"
-                      />
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
+                        <Dropdown
+                          key='34'
+                          label="O.H.P. 2"
+                          value={input.ohp2Name}
+                          name="ohp2Name"
+                          weight='ohp2Weight'
+                          reps="ohp2Reps"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='35'
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        key='35'
-                        id="outlined-name"
-                        margin="normal"
+                          label="Weight"
+                          value={input.ohp2Weight}
+                          name="ohp2Weight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='36'
+                          id="outlined-name"
+                          margin="normal"
 
-                        label="Weight"
-                        value={input.ohp2Weight}
-                        name="ohp2Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
+                          label="Reps"
+                          value={input.ohp2Reps}
+                          name="ohp2Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
+                        <Dropdown
+                          key='37'
+                          label="O.H.P. 3"
+                          value={input.ohp3Name}
+                          name="ohp3Name"
+                          weight='ohp3Weight'
+                          reps="ohp3Reps"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='38'
+                          id="outlined-name"
+                          margin="normal"
+                          label="Weight"
+                          value={input.ohp3Weight}
+                          name="ohp3Weight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='39'
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        key='36'
-                        id="outlined-name"
-                        margin="normal"
+                          label="Reps"
+                          value={input.ohp3Reps}
+                          name="ohp3Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="left" item xs={12} md={6} lg={6} style={{ marginTop: '27px' }}>
+                      <Typography component="h1" variant="h5">
+                        Vertical Pull Variations
+                      </Typography>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
+                        <Dropdown
+                          key='40'
+                          label="Pull-down"
+                          value={input.antagOhpName}
+                          name="antagOhpName"
+                          weight="antagOhpWeight"
+                          reps="antagOhpReps"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='41'
+                          id="outlined-name"
+                          margin="normal"
 
-                        label="Reps"
-                        value={input.ohp2Reps}
-                        name="ohp2Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-                    </div>
-                    <div className="input-row">
-                      <Dropdown
-                        key='37'
-                        label="O.H.P. 3"
-                        value={input.ohp3Name}
-                        name="ohp3Name"
-                        weight='ohp3Weight'
-                        reps="ohp3Reps"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        type="text"
-                        className="name-form"
-                      />
+                          label="Weight"
+                          value={input.antagOhpWeight}
+                          name="antagOhpWeight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='42'
+                          id="outlined-name"
+                          margin="normal"
 
-                      <TextField
-                        key='38'
-                        id="outlined-name"
-                        margin="normal"
-
-                        label="Weight"
-                        value={input.ohp3Weight}
-                        name="ohp3Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-
-                      <TextField
-                        key='39'
-                        id="outlined-name"
-                        margin="normal"
-
-                        label="Reps"
-                        value={input.ohp3Reps}
-                        name="ohp3Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-                    </div>
-                    <div className="input-row">
-                      <Dropdown
-                        key='40'
-                        label="Pull-down"
-                        value={input.antagOhpName}
-                        name="antagOhpName"
-                        weight="antagOhpWeight"
-                        reps="antagOhpReps"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        className="name-form"
-                      />
-
-                      <TextField
-                        key='41'
-                        id="outlined-name"
-                        margin="normal"
-
-                        label="Weight"
-                        value={input.antagOhpWeight}
-                        name="antagOhpWeight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-
-                      <TextField
-                        key='42'
-                        id="outlined-name"
-                        margin="normal"
-
-                        label="Reps"
-                        value={input.antagOhpReps}
-                        name="antagOhpReps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-                    </div>
-                    <div className="input-row">
-                      <Dropdown
-                        key='43'
-                        label="Pull-down 2"
-                        value={input.antagOhp2Name}
-                        name="antagOhp2Name"
-                        weight="antagOhp2Weight"
-                        reps="antagOhp2Reps"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        className="name-form"
-                      />
-
-                      <TextField
-                        key='44'
-                        id="outlined-name"
-                        margin="normal"
-                        label="Weight"
-                        value={input.antagOhp2Weight}
-                        name="antagOhp2Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-
-                      <TextField
-                        key='45'
-                        id="outlined-name"
-                        margin="normal"
-                        label="Reps"
-                        value={input.antagOhp2Reps}
-                        name="antagOhp2Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-                    </div>
-                    <div className="input-row">
-                      <Dropdown
-                        key='46'
-                        label="Pull-down 3"
-                        value={input.antagOhp3Name}
-                        name="antagOhp3Name"
-                        weight="antagOhp3Weight"
-                        reps="antagOhp3Reps"
-                        onChange={handleChange}
-                        handleSelect={handleSelect}
-                        className="name-form"
-                      />
-
-                      <TextField
-                        key='47'
-                        id="outlined-name"
-                        margin="normal"
-                        label="Weight"
-                        value={input.antagOhp3Weight}
-                        name="antagOhp3Weight"
-                        onChange={handleChange}
-                        type="number"
-                        min="0"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-
-                      <TextField
-                        key='48'
-                        id="outlined-name"
-                        margin="normal"
-                        label="Reps"
-                        value={input.antagOhp3Reps}
-                        name="antagOhp3Reps"
-                        onChange={handleChange}
-                        type="number"
-                        min="1"
-                        max="12"
-                        className="num-form"
-                        InputLabelProps={{
-                          shrink: true
-                        }}
-                      />
-                    </div>
+                          label="Reps"
+                          value={input.antagOhpReps}
+                          name="antagOhpReps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
+                        <Dropdown
+                          key='43'
+                          label="Pull-down 2"
+                          value={input.antagOhp2Name}
+                          name="antagOhp2Name"
+                          weight="antagOhp2Weight"
+                          reps="antagOhp2Reps"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='44'
+                          id="outlined-name"
+                          margin="normal"
+                          label="Weight"
+                          value={input.antagOhp2Weight}
+                          name="antagOhp2Weight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='45'
+                          id="outlined-name"
+                          margin="normal"
+                          label="Reps"
+                          value={input.antagOhp2Reps}
+                          name="antagOhp2Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
+                        <Dropdown
+                          key='46'
+                          label="Pull-down 3"
+                          value={input.antagOhp3Name}
+                          name="antagOhp3Name"
+                          weight="antagOhp3Weight"
+                          reps="antagOhp3Reps"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='47'
+                          id="outlined-name"
+                          margin="normal"
+                          label="Weight"
+                          value={input.antagOhp3Weight}
+                          name="antagOhp3Weight"
+                          onChange={handleChange}
+                          type="number"
+                          min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={3}>
+                        <TextField
+                          key='48'
+                          id="outlined-name"
+                          margin="normal"
+                          label="Reps"
+                          value={input.antagOhp3Reps}
+                          name="antagOhp3Reps"
+                          onChange={handleChange}
+                          type="number"
+                          min="1"
+                          max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
+                        />
+                      </Grid>
+                    </Grid>
                     <Grid container direction="row" justify="center" spacing={1} style={{ margin: '27px 0 0' }}>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <Button onClick={this.isLessThan13} variant="contained" color="primary"
@@ -1309,155 +1318,156 @@ class Form1 extends Component {
                     <Typography component="h1" variant="h5">
                       Core Variations
                     </Typography>
-                    <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Core 1"
-                        value={input.core1}
-                        name="core1"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Core 2"
-                        value={input.core2}
-                        name="core2"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Core 3"
-                        value={input.core3}
-                        name="core3"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-                    </div>
-                    <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Core 4"
-                        value={input.core4}
-                        name="core4"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Core 5"
-                        value={input.core5}
-                        name="core5"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Core 6"
-                        value={input.core6}
-                        name="core6"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-                    </div>
-                    <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Obliques 1"
-                        value={input.oblique1}
-                        name="oblique1"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Obliques 2"
-                        value={input.oblique2}
-                        name="oblique2"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Obliques 3"
-                        value={input.oblique3}
-                        name="oblique3"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-                    </div>
-                    <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Obliques 4"
-                        value={input.oblique4}
-                        name="oblique4"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Obliques 5"
-                        value={input.oblique5}
-                        name="oblique5"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-                        variant="outlined"
-                        label="Obliques 6"
-                        value={input.oblique6}
-                        name="oblique6"
-                        onChange={handleChange}
-                        type="text"
-                        className="third-form"
-                      />
-                    </div>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ margin: '16px 0' }}>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='47'
+                          variant="outlined"
+                          label="Core 1"
+                          value={input.core1}
+                          name="core1"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='48'
+                          variant="outlined"
+                          label="Core 2"
+                          value={input.core2}
+                          name="core2"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='49'
+                          variant="outlined"
+                          label="Core 3"
+                          value={input.core3}
+                          name="core3"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ margin: '16px 0' }}>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='50'
+                          variant="outlined"
+                          label="Core 4"
+                          value={input.core4}
+                          name="core4"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='51'
+                          variant="outlined"
+                          label="Core 5"
+                          value={input.core5}
+                          name="core5"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='52'
+                          variant="outlined"
+                          label="Core 6"
+                          value={input.core6}
+                          name="core6"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                    </Grid>
+                    <Typography component="h1" variant="h5">
+                      Oblique Variations
+                    </Typography>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ margin: '16px 0' }}>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='53'
+                          label="Obliques 1"
+                          value={input.oblique1}
+                          name="oblique1"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='54'
+                          label="Obliques 2"
+                          value={input.oblique2}
+                          name="oblique2"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='55'
+                          label="Obliques 3"
+                          value={input.oblique3}
+                          name="oblique3"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                    </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='56'
+                          label="Obliques 4"
+                          value={input.oblique4}
+                          name="oblique4"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='57'
+                          label="Obliques 5"
+                          value={input.oblique5}
+                          name="oblique5"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                      <Grid container direction="row" justify="center" item xs={4}>
+                        <Dropdown
+                          key='58'
+                          label="Obliques 6"
+                          value={input.oblique6}
+                          name="oblique6"
+                          onChange={handleChange}
+                          handleSelect={handleSelect}
+                          type="text"
+                        />
+                      </Grid>
+                    </Grid>
+                    <Grid container direction="row" justify="center" spacing={1} style={{ marginTop: '27px' }}>
                       <Grid container direction="row" justify="center" item xs={6} md={6} lg={6}>
                         <Button type="submit" variant="contained" color="primary"
                           style={{
