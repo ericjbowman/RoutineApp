@@ -423,6 +423,7 @@ class Form1 extends Component {
                           label="Squat 2"
                           value={input.squat2Name}
                           weight='squat2Weight'
+                          reps='squat2Reps'
                           name="squat2Name"
                           onChange={handleChange}
                           handleSelect={handleSelect}
@@ -475,6 +476,7 @@ class Form1 extends Component {
                           label="Squat 3"
                           value={input.squat3Name}
                           weight='squat3Weight'
+                          reps='squat3Reps'
                           name="squat3Name"
                           onChange={handleChange}
                           handleSelect={handleSelect}

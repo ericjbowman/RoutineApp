@@ -39,7 +39,22 @@ class InputCreate extends Component {
         ohp3Weight: false,
         deadlift3Weight: false,
         antagBench3Weight: false,
-        bench3Weight: false
+        bench3Weight: false,
+
+        antagOhpReps: false,
+        antagBenchReps: false,
+        squat2Reps: false,
+        antagOhp2Reps: false,
+        ohp2Reps: false,
+        deadlift2Reps: false,
+        antagBench2Reps: false,
+        bench2Reps: false,
+        squat3Reps: false,
+        antagOhp3Reps: false,
+        ohp3Reps: false,
+        deadlift3Reps: false,
+        antagBench3Reps: false,
+        bench3Reps: false
       },
       input: {
         routineName: '',
@@ -137,10 +152,11 @@ class InputCreate extends Component {
   //     oblique6: {obj.value}
   //   }
   // }
-  updateAutofilled = (name, weight) => {
+  updateAutofilled = (name, weight, reps) => {
     const updatedField = {
       [name]: true,
-      [weight]: true
+      [weight]: true,
+      [reps]: true
     }
     const editedInput = Object.assign(this.state.autofilled, updatedField)
     this.setState({ autofilled: editedInput })
@@ -206,11 +222,13 @@ class InputCreate extends Component {
         return inputWeight
       }
     }
-    const isName = (inputName, inputReps, name, weight) => {
-      if ((!this.state.autofilled[name] && !this.state.autofilled[weight]) && inputName && (inputName !== '')) {
-        this.updateAutofilled(name, weight)
+
+    const isName = (inputName, inputReps, name, weight, reps) => {
+      if (!this.state.autofilled[name] && !this.state.autofilled[weight] && !this.state.autofilled[reps]) {
+        this.updateAutofilled(name, weight, reps)
+        console.log('isName is still running after setting values to true')
         return inputReps
-      } else {
+      } else if (inputName === '') {
         return null
       }
     }
@@ -218,36 +236,37 @@ class InputCreate extends Component {
     // Put squat2Weight as 3rd argument for ratios, check to see if 3rd argument is 0
     const autoMax = {
       squat2Weight: ratios(input.squat2Name, input.squat2Weight, 'squat2Name', 'squat2Weight'),
-      squat2Reps: isName(input.squat2Name, input.squatReps, 'squat2Name', 'squat2Weight'),
+      squat2Reps: isName(input.squat2Name, input.squatReps, 'squat2Name', 'squat2Weight', 'squat2Reps'),
       squat3Weight: ratios(input.squat3Name, input.squat3Weight, 'squat3Name', 'squat3Weight'),
-      squat3Reps: isName(input.squat3Name, input.squatReps, 'squat3Name', 'squat3Weight'),
+      squat3Reps: isName(input.squat3Name, input.squatReps, 'squat3Name', 'squat3Weight', 'squat3Reps'),
       bench2Weight: ratios(input.bench2Name, input.bench2Weight, 'bench2Name', 'bench2Weight'),
-      bench2Reps: isName(input.bench2Name, input.benchReps, 'bench2Name', 'bench2Weight'),
+      bench2Reps: isName(input.bench2Name, input.benchReps, 'bench2Name', 'bench2Weight', 'bench2Reps'),
       bench3Weight: ratios(input.bench3Name, input.bench3Weight, 'bench3Name', 'bench3Weight'),
-      bench3Reps: isName(input.bench3Name, input.benchReps, 'bench3Name', 'bench3Weight'),
+      bench3Reps: isName(input.bench3Name, input.benchReps, 'bench3Name', 'bench3Weight', 'bench3Reps'),
       deadlift2Weight: ratios(input.deadlift2Name, input.deadlift2Weight, 'deadlift2Name', 'deadlift2Weight'),
-      deadlift2Reps: isName(input.deadlift2Name, input.deadliftReps, 'deadlift2Name', 'deadlift2Weight'),
+      deadlift2Reps: isName(input.deadlift2Name, input.deadliftReps, 'deadlift2Name', 'deadlift2Weight', 'deadlift2Reps'),
       deadlift3Weight: ratios(input.deadlift3Name, input.deadlift3Weight, 'deadlift3Name', 'deadlift3Weight'),
-      deadlift3Reps: isName(input.deadlift3Name, input.deadliftReps, 'deadlift3Name', 'deadlift3Weight'),
+      deadlift3Reps: isName(input.deadlift3Name, input.deadliftReps, 'deadlift3Name', 'deadlift3Weight', 'deadlift3Reps'),
       ohp2Weight: ratios(input.ohp2Name, input.ohp2Weight, 'ohp2Name', 'ohp2Weight'),
-      ohp2Reps: isName(input.ohp2Name, input.ohpReps, 'ohp2Name', 'ohp2Weight'),
+      ohp2Reps: isName(input.ohp2Name, input.ohpReps, 'ohp2Name', 'ohp2Weight', 'ohp2Reps'),
       ohp3Weight: ratios(input.ohp3Name, input.ohp3Weight, 'ohp3Name', 'ohp3Weight'),
-      ohp3Reps: isName(input.ohp3Name, input.ohpReps, 'ohp3Name', 'ohp3Weight'),
+      ohp3Reps: isName(input.ohp3Name, input.ohpReps, 'ohp3Name', 'ohp3Weight', 'ohp3Reps'),
       antagBenchWeight: ratios(input.antagBenchName, input.antagBenchWeight, 'antagBenchName', 'antagBenchWeight'),
-      antagBenchReps: isName(input.antagBenchName, input.benchReps, 'antagBenchName', 'antagBenchWeight'),
+      antagBenchReps: isName(input.antagBenchName, input.benchReps, 'antagBenchName', 'antagBenchWeight', 'antagBenchReps'),
       antagBench2Weight: ratios(input.antagBench2Name, input.antagBench2Weight, 'antagBench2Name', 'antagBench2Weight'),
-      antagBench2Reps: isName(input.antagBench2Name, input.benchReps, 'antagBench2Name', 'antagBench2Weight'),
+      antagBench2Reps: isName(input.antagBench2Name, input.benchReps, 'antagBench2Name', 'antagBench2Weight', 'antagBench2Reps'),
       antagBench3Weight: ratios(input.antagBench3Name, input.antagBench3Weight, 'antagBench3Name', 'antagBench3Weight'),
-      antagBench3Reps: isName(input.antagBench3Name, input.benchReps, 'antagBench3Name', 'antagBench3Weight'),
+      antagBench3Reps: isName(input.antagBench3Name, input.benchReps, 'antagBench3Name', 'antagBench3Weight', 'antagBench3Reps'),
       antagOhpWeight: ratios(input.antagOhpName, input.antagOhpWeight, 'antagOhpName', 'antagOhpWeight'),
-      antagOhpReps: isName(input.antagOhpName, input.benchReps, 'antagOhpName', 'antagOhpWeight'),
+      antagOhpReps: isName(input.antagOhpName, input.benchReps, 'antagOhpName', 'antagOhpWeight', 'antagOhpReps'),
       antagOhp2Weight: ratios(input.antagOhp2Name, input.antagOhp2Weight, 'antagOhp2Name', 'antagOhp2Weight'),
-      antagOhp2Reps: isName(input.antagOhp2Name, input.benchReps, 'antagOhp2Name', 'antagOhp2Weight'),
+      antagOhp2Reps: isName(input.antagOhp2Name, input.benchReps, 'antagOhp2Name', 'antagOhp2Weight', 'antagOhp2Reps'),
       antagOhp3Weight: ratios(input.antagOhp3Name, input.antagOhp3Weight, 'antagOhp3Name', 'antagOhp3Weight'),
-      antagOhp3Reps: isName(input.antagOhp3Name, input.benchReps, 'antagOhp3Name', 'antagOhp3Weight')
+      antagOhp3Reps: isName(input.antagOhp3Name, input.benchReps, 'antagOhp3Name', 'antagOhp3Weight', 'antagOhp3Reps')
 
     }
     if (this.state.autoFill && !this.state.updated) {
+      // this.updateAutofilled('squat2Name', 'squat2Weight', 'squat2Reps')
       const autoMaxInput = Object.assign(this.state.input, autoMax)
       this.setState({ input: autoMaxInput, updated: true })
     }
@@ -258,7 +277,7 @@ class InputCreate extends Component {
       [event.target.name]: event.target.value
     }
     const updatedAutofilled = {
-      [event.target.name]: true
+      [event.target.name]: false
     }
     console.log('updatedAutofilled from handlechange', updatedAutofilled)
     const editedInput = Object.assign(this.state.input, updatedField)
@@ -275,13 +294,14 @@ class InputCreate extends Component {
     // console.log(this.state)
   }
 
-  handleSelect = (key, value, weight) => {
+  handleSelect = (key, value, weight, reps) => {
     const updatedField = {
       [key]: value
     }
     const updatedAutofilled = {
       [key]: false,
-      [weight]: false
+      [weight]: false,
+      [reps]: false
     }
     console.log('handleSelect updated autofilled', updatedAutofilled)
     const editedInput = Object.assign(this.state.input, updatedField)
