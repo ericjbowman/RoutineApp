@@ -228,8 +228,9 @@ class InputCreate extends Component {
         this.updateAutofilled(name, weight, reps)
         console.log('isName is still running after setting values to true')
         return inputReps
-      } else if (inputName === '') {
-        return null
+      } else {
+        console.log('this.state.input[reps]', this.state.input[reps])
+        return this.state.input[reps]
       }
     }
     const { input } = this.state
