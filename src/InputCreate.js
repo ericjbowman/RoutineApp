@@ -284,6 +284,7 @@ class InputCreate extends Component {
     const editedInput = Object.assign(this.state.input, updatedField)
     const editedAutofilled = Object.assign(this.state.autofilled, updatedAutofilled)
     this.setState({ input: editedInput, autofilled: editedAutofilled })
+    console.log('state from handle change', this.state)
   }
 
   handleDate = date => {
@@ -309,6 +310,7 @@ class InputCreate extends Component {
     const editedAutofilled = Object.assign(this.state.autofilled, updatedAutofilled)
     console.log('editedAutofilled from handleselect', editedAutofilled)
     this.setState({ input: editedInput, updated: false, autofilled: editedAutofilled })
+    console.log('state from handleSelect', this.state)
   }
 
   handleSubmit = event => {
