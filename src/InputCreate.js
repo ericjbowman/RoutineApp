@@ -222,7 +222,7 @@ class InputCreate extends Component {
         return inputWeight
       }
     }
-
+    // Check to see if name is true/false after creating custom input to see whether handleChange or handleSelect finishes
     const isName = (inputName, inputReps, name, weight, reps) => {
       if (!this.state.autofilled[name] && !this.state.autofilled[weight] && !this.state.autofilled[reps]) {
         this.updateAutofilled(name, weight, reps)
@@ -278,7 +278,7 @@ class InputCreate extends Component {
       [event.target.name]: event.target.value
     }
     const updatedAutofilled = {
-      [event.target.name]: false
+      [event.target.name]: true
     }
     // console.log('updatedAutofilled from handlechange', updatedAutofilled)
     const editedInput = Object.assign(this.state.input, updatedField)
