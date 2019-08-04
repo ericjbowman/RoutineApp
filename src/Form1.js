@@ -582,6 +582,7 @@ class Form1 extends Component {
                           label="Bench Press 2"
                           value={input.bench2Name}
                           weight='bench2Weight'
+                          reps='bench2Reps'
                           name="bench2Name"
                           onChange={handleChange}
                           handleSelect={handleSelect}
@@ -634,6 +635,7 @@ class Form1 extends Component {
                           value={input.bench3Name}
                           name="bench3Name"
                           weight='bench3Weight'
+                          reps='bench3Reps'
                           onChange={handleChange}
                           handleSelect={handleSelect}
                         />
@@ -684,6 +686,7 @@ class Form1 extends Component {
                           value={input.antagBenchName}
                           name="antagBenchName"
                           weight="antagBenchWeight"
+                          reps="antagBenchReps"
                           onChange={handleChange}
                           handleSelect={handleSelect}
                         />
@@ -736,6 +739,7 @@ class Form1 extends Component {
                           value={input.antagBench2Name}
                           name="antagBench2Name"
                           weight="antagBench2Weight"
+                          reps="antagBench2Reps"
                           onChange={handleChange}
                           handleSelect={handleSelect}
                         />
@@ -788,6 +792,7 @@ class Form1 extends Component {
                           value={input.antagBench3Name}
                           name="antagBench3Name"
                           weight="antagBench3Weight"
+                          reps="antagBench3Reps"
                           onChange={handleChange}
                           handleSelect={handleSelect}
                         />
@@ -913,6 +918,7 @@ class Form1 extends Component {
                         value={input.deadlift2Name}
                         name="deadlift2Name"
                         weight="deadlift2Weight"
+                        reps="deadlift2Reps"
                         onChange={handleChange}
                         handleSelect={handleSelect}
                         type="text"
@@ -961,6 +967,7 @@ class Form1 extends Component {
                         value={input.deadlift3Name}
                         name="deadlift3Name"
                         weight="deadlift3Weight"
+                        reps="deadlift3Reps"
                         onChange={handleChange}
                         handleSelect={handleSelect}
                         className="name-form"
@@ -1051,6 +1058,7 @@ class Form1 extends Component {
                         value={input.ohp2Name}
                         name="ohp2Name"
                         weight='ohp2Weight'
+                        reps="ohp2Reps"
                         onChange={handleChange}
                         handleSelect={handleSelect}
                         className="name-form"
@@ -1098,6 +1106,7 @@ class Form1 extends Component {
                         value={input.ohp3Name}
                         name="ohp3Name"
                         weight='ohp3Weight'
+                        reps="ohp3Reps"
                         onChange={handleChange}
                         handleSelect={handleSelect}
                         type="text"
@@ -1146,6 +1155,7 @@ class Form1 extends Component {
                         value={input.antagOhpName}
                         name="antagOhpName"
                         weight="antagOhpWeight"
+                        reps="antagOhpReps"
                         onChange={handleChange}
                         handleSelect={handleSelect}
                         className="name-form"
@@ -1193,6 +1203,7 @@ class Form1 extends Component {
                         value={input.antagOhp2Name}
                         name="antagOhp2Name"
                         weight="antagOhp2Weight"
+                        reps="antagOhp2Reps"
                         onChange={handleChange}
                         handleSelect={handleSelect}
                         className="name-form"
@@ -1238,6 +1249,7 @@ class Form1 extends Component {
                         value={input.antagOhp3Name}
                         name="antagOhp3Name"
                         weight="antagOhp3Weight"
+                        reps="antagOhp3Reps"
                         onChange={handleChange}
                         handleSelect={handleSelect}
                         className="name-form"
