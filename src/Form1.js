@@ -12,7 +12,7 @@ import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Date from './Date'
-import SelectExample from './Dropdown'
+import Dropdown from './Dropdown'
 
 class Form1 extends Component {
   constructor (props) {
@@ -384,7 +384,8 @@ class Form1 extends Component {
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={4}>
-                        <SelectExample
+                        <Dropdown
+                          key='1'
                           label="Squat Primer"
                           value={input.antagSquatName}
                           name="antagSquatName"
@@ -393,7 +394,8 @@ class Form1 extends Component {
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={4}>
-                        <SelectExample
+                        <Dropdown
+                          key='2'
                           label="Squat Primer 2"
                           value={input.antagSquat2Name}
                           name="antagSquat2Name"
@@ -402,7 +404,8 @@ class Form1 extends Component {
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={4}>
-                        <SelectExample
+                        <Dropdown
+                          key='3'
                           placeholder="Squat Primer 3"
                           id="outlined-name"
                           label="Squat Primer 3"
@@ -415,7 +418,8 @@ class Form1 extends Component {
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
-                        <SelectExample
+                        <Dropdown
+                          key='4'
                           label="Squat 2"
                           value={input.squat2Name}
                           weight='squat2Weight'
@@ -426,6 +430,7 @@ class Form1 extends Component {
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='5'
                           id="outlined-name"
                           margin="normal"
                           label="Weight"
@@ -434,6 +439,9 @@ class Form1 extends Component {
                           onChange={handleChange}
                           type="number"
                           min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -441,6 +449,7 @@ class Form1 extends Component {
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='6'
                           id="outlined-name"
                           margin="normal"
                           label="Reps"
@@ -450,6 +459,9 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -458,7 +470,8 @@ class Form1 extends Component {
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={6} style={{ marginTop: '27px' }}>
-                        <SelectExample
+                        <Dropdown
+                          key='7'
                           label="Squat 3"
                           value={input.squat3Name}
                           weight='squat3Weight'
@@ -469,6 +482,7 @@ class Form1 extends Component {
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='8'
                           id="outlined-name"
                           margin="normal"
                           label="Weight"
@@ -477,6 +491,9 @@ class Form1 extends Component {
                           onChange={handleChange}
                           type="number"
                           min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -484,9 +501,9 @@ class Form1 extends Component {
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='9'
                           id="outlined-name"
                           margin="normal"
-
                           label="Reps"
                           value={input.squat3Reps}
                           name="squat3Reps"
@@ -494,6 +511,9 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -555,22 +575,19 @@ class Form1 extends Component {
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={6}>
-                        <TextField
-                          id="outlined-name"
-                          margin="normal"
-
+                        <Dropdown
+                          key='10'
                           label="Bench Press 2"
                           value={input.bench2Name}
+                          weight='bench2Weight'
                           name="bench2Name"
                           onChange={handleChange}
-                          type="text"
-                          style={{
-                            width: '100%'
-                          }}
+                          handleSelect={handleSelect}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='11'
                           id="standard-number"
                           label="Weight"
                           value={input.bench2Weight}
@@ -578,6 +595,9 @@ class Form1 extends Component {
                           onChange={handleChange}
                           type="number"
                           margin="normal"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -585,6 +605,7 @@ class Form1 extends Component {
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='12'
                           id="outlined-name"
                           margin="normal"
                           label="Reps"
@@ -594,6 +615,9 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -602,32 +626,28 @@ class Form1 extends Component {
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={6}>
-                        <TextField
-                          id="outlined-name"
-                          margin="normal"
-
+                        <Dropdown
+                          key='13'
                           label="Bench Press 3"
                           value={input.bench3Name}
                           name="bench3Name"
+                          weight='bench3Weight'
                           onChange={handleChange}
-                          type="text"
-                          min="0"
-                          style={{
-                            width: '100%'
-                          }}
+                          handleSelect={handleSelect}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
-                          id="outlined-name"
-                          margin="normal"
-
+                          key='14'
                           label="Weight"
                           value={input.bench3Weight}
                           name="bench3Weight"
                           onChange={handleChange}
                           type="number"
                           min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -635,9 +655,9 @@ class Form1 extends Component {
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='15'
                           id="outlined-name"
                           margin="normal"
-
                           label="Reps"
                           value={input.bench3Reps}
                           name="bench3Reps"
@@ -645,6 +665,9 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -653,31 +676,30 @@ class Form1 extends Component {
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={6}>
-                        <TextField
-                          id="outlined-name"
-                          margin="normal"
-
+                        <Dropdown
+                          key='16'
                           label="Pull"
                           value={input.antagBenchName}
                           name="antagBenchName"
+                          weight="antagBenchWeight"
                           onChange={handleChange}
-                          type="text"
-                          style={{
-                            width: '100%'
-                          }}
+                          handleSelect={handleSelect}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='17'
                           id="outlined-name"
                           margin="normal"
-
                           label="Weight"
                           value={input.antagBenchWeight}
                           name="antagBenchWeight"
                           onChange={handleChange}
                           type="number"
                           min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -685,9 +707,9 @@ class Form1 extends Component {
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='18'
                           id="outlined-name"
                           margin="normal"
-
                           label="Reps"
                           value={input.antagBenchReps}
                           name="antagBenchReps"
@@ -695,6 +717,9 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -703,31 +728,30 @@ class Form1 extends Component {
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={6}>
-                        <TextField
-                          id="outlined-name"
-                          margin="normal"
-
+                        <Dropdown
+                          key='19'
                           label="Pull 2"
                           value={input.antagBench2Name}
                           name="antagBench2Name"
+                          weight="antagBench2Weight"
                           onChange={handleChange}
-                          type="text"
-                          style={{
-                            width: '100%'
-                          }}
+                          handleSelect={handleSelect}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='20'
                           id="outlined-name"
                           margin="normal"
-
                           label="Weight"
                           value={input.antagBench2Weight}
                           name="antagBench2Weight"
                           onChange={handleChange}
                           type="number"
                           min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -735,9 +759,9 @@ class Form1 extends Component {
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='21'
                           id="outlined-name"
                           margin="normal"
-
                           label="Reps"
                           value={input.antagBench2Reps}
                           name="antagBench2Reps"
@@ -745,6 +769,9 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -753,31 +780,30 @@ class Form1 extends Component {
                     </Grid>
                     <Grid container direction="row" justify="center" spacing={1}>
                       <Grid container direction="row" justify="center" item xs={6}>
-                        <TextField
-                          id="outlined-name"
-                          margin="normal"
-
+                        <Dropdown
+                          key='22'
                           label="Pull 3"
                           value={input.antagBench3Name}
                           name="antagBench3Name"
+                          weight="antagBench3Weight"
                           onChange={handleChange}
-                          type="text"
-                          style={{
-                            width: '100%'
-                          }}
+                          handleSelect={handleSelect}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='23'
                           id="outlined-name"
                           margin="normal"
-
                           label="Weight"
                           value={input.antagBench3Weight}
                           name="antagBench3Weight"
                           onChange={handleChange}
                           type="number"
                           min="0"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -785,9 +811,9 @@ class Form1 extends Component {
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={3}>
                         <TextField
+                          key='24'
                           id="outlined-name"
                           margin="normal"
-
                           label="Reps"
                           value={input.antagBench3Reps}
                           name="antagBench3Reps"
@@ -795,6 +821,9 @@ class Form1 extends Component {
                           type="number"
                           min="1"
                           max="12"
+                          InputLabelProps={{
+                            shrink: true
+                          }}
                           style={{
                             width: '100%'
                           }}
@@ -845,50 +874,42 @@ class Form1 extends Component {
                       </Grid>
                     </Grid>
                     <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
+                        key='11'
                         label="Primer"
                         value={input.antagDeadliftName}
                         name="antagDeadliftName"
                         onChange={handleChange}
+                        handleSelect={handleSelect}
                         className="third-form"
                       />
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
                         label="Primer 2"
                         value={input.antagDeadlift2Name}
                         name="antagDeadlift2Name"
                         onChange={handleChange}
-                        type="text"
+                        handleSelect={handleSelect}
                         className="third-form"
                       />
 
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
                         label="Primer 3"
                         value={input.antagDeadlift3Name}
                         name="antagDeadlift3Name"
                         onChange={handleChange}
-                        type="text"
+                        handleSelect={handleSelect}
                         className="third-form"
                       />
                     </div>
                     <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
                         label="Deadlift 2"
                         value={input.deadlift2Name}
                         name="deadlift2Name"
+                        weight="deadlift2Weight"
                         onChange={handleChange}
+                        handleSelect={handleSelect}
                         type="text"
                         className="name-form"
                       />
@@ -904,6 +925,9 @@ class Form1 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -918,18 +942,19 @@ class Form1 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
-                      <TextField
-                        id="outlined-name"
-                        margin="normal"
-
+                      <Dropdown
                         label="Deadlift 3"
                         value={input.deadlift3Name}
                         name="deadlift3Name"
+                        weight="deadlift3Weight"
                         onChange={handleChange}
-                        type="text"
+                        handleSelect={handleSelect}
                         className="name-form"
                       />
 
@@ -944,6 +969,9 @@ class Form1 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -958,6 +986,9 @@ class Form1 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <Grid container direction="row" justify="center" spacing={1}>

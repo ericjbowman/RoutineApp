@@ -12,7 +12,7 @@ import CreatableSelect from 'react-select/creatable'
 //   { value: this.props.name, label: 'Prisoner Squats' }
 // ]
 
-class SelectExample extends Component {
+class Dropdown extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -94,6 +94,7 @@ class SelectExample extends Component {
     return (
       <Fragment>
         <CreatableSelect
+          key={this.props.key}
           isClearable
           onChange={this.handleChange}
           onInputChange={this.handleChange}
@@ -104,4 +105,4 @@ class SelectExample extends Component {
   }
 }
 
-export default SelectExample
+export default Dropdown
