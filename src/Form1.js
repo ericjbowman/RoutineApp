@@ -535,7 +535,7 @@ class Form1 extends Component {
               <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <Grid container direction="row" justify="center" spacing={1}>
+                    <Grid container direction="row">
                       <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
                         <Typography component="h1" variant="h5">
                           Bench Press Variations
@@ -844,7 +844,7 @@ class Form1 extends Component {
               <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <Grid container direction="row" justify="center" spacing={1}>
+                    <Grid container direction="row">
                       <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
                         <Typography component="h1" variant="h5">
                           Deadlift Primers
@@ -1020,7 +1020,7 @@ class Form1 extends Component {
               <Paper style={{ backgroundColor: '#F1F1F1' }}>
                 <div className="form-padding">
                   <form className="form-class" noValidate autoComplete="off" onSubmit={handleSubmit}>
-                    <Grid container direction="row" justify="center" spacing={1}>
+                    <Grid container direction="row">
                       <Grid container direction="row" justify="left" item xs={12} md={6} lg={6}>
                         <Typography component="h1" variant="h5">
                           Over-head Variations
