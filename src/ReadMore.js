@@ -38,7 +38,7 @@ const ReadMore = () => (
                 <p>
                 The primary circuit is intended to be a variation of the lift-of-the-day that challenges your weakness.
                 For example, if lockout is difficult on deadlift, Romanian deadlift would be an appropriate
-                exercise for the primary circuit of day 3 (deadlift day).
+                exercise for the primary circuit of day 3.
                 </p>
                 <p>
                 The technique set is automatically one of the 4 main lifts. If it is deadlift day, the technique
