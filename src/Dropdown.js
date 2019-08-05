@@ -23,7 +23,7 @@ class Dropdown extends Component {
   handleChange = (newValue) => {
     // console.log(newValue.label, newValue.value)
     if (newValue && newValue.hasOwnProperty('preset')) {
-      console.log('newValue has a label')
+      // console.log('newValue has a label')
       this.props.handleSelect(this.props.name, newValue.label, this.props.weight, this.props.reps)
     } else if (newValue && !newValue.preset) {
       this.props.handleSelect(this.props.name, newValue.label, this.props.weight)

@@ -29,7 +29,6 @@ class Graph extends Component {
         inputs: res.data.inputs,
         loaded: true
       }))
-      .then(() => console.log(this.state.inputs[0].created))
       .catch(err => this.setState({
         error: err.message
       }))
@@ -65,9 +64,7 @@ class Graph extends Component {
         return Math.floor(weightNum * 1.49)
       }
     }
-    console.log(this.state)
     const { inputs } = this.state
-    console.log(inputs)
     // const sortedInputs = inputs.sort((a, b) => (a.id > b.id) ? 1 : -1)
     let data = {}
     if (this.state.loaded) {

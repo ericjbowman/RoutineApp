@@ -110,7 +110,7 @@ class InputEdit extends Component {
       }
     })
       .then(res => this.setState({ input: res.data.input }))
-      .catch(err => console.log(err))
+      // .catch(err => console.log(err))
   }
 
   handleChange = event => {
@@ -221,7 +221,7 @@ class InputEdit extends Component {
     }
     const editedInput = Object.assign(this.state.input, updatedField)
     this.setState({ input: editedInput })
-    console.log(this.state)
+    // console.log(this.state)
   }
 
   handleSubmit = event => {
