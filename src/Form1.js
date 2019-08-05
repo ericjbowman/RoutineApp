@@ -88,6 +88,7 @@ class Form1 extends Component {
                           onChange={handleChange}
                           name="routineName"
                           className="title-form"
+                          maxLength="20"
                           // style={{
                           //   marginBottom: '1em'
                           // }}

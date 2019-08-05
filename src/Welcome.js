@@ -9,7 +9,7 @@ const Welcome = () => (
       <div className="welcome">
         <Grid container direction="column" alignItems="center" spacing={1}>
           <Grid direction="column" alignItems="center" item>
-            <Paper style={{ background: 'rgba(255,255,255,0.8)' }}>
+            <Paper style={{ background: 'rgba(255,255,255,0.9)' }}>
               <div className="welcome-content">
                 <Typography component="h1" variant="h5" className="center">
                   Welcome to Lunkedin!
@@ -20,9 +20,9 @@ const Welcome = () => (
                 maximums will be automatically generated based on your squat, bench press,
                 and deadlift.
                 </p>
-                <p>This routine is ideal for lifters who want to get stronger, build muscle
+                <p className="welcome-p">This routine is ideal for lifters who want to get stronger, build muscle
                 mass, and burn fat. The intensity undulates daily and weekly, and progresses
-                in a linear fashion, monthly.
+                in a linear fashion every three weeks.
                 </p>
               </div>
             </Paper>

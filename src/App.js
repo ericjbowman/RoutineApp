@@ -15,6 +15,7 @@ import { SnackbarProvider } from 'notistack'
 import InputEdit from './InputEdit'
 import Welcome from './Welcome'
 import Graph from './Graph'
+import ReadMore from './ReadMore'
 
 class App extends Component {
   constructor () {
@@ -52,7 +53,10 @@ class App extends Component {
             <ChangePassword user={user} />
           )} />
           <Route exact path='/' render={() => (
-            <Welcome />
+            !this.state.user && <Welcome />
+          )} />
+          <Route exact path='/' render={() => (
+            this.state.user && <ReadMore />
           )} />
           <AuthenticatedRoute user={user} path='/days/:id' render={() => (
             <React.Fragment>

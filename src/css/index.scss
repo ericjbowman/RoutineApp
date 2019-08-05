@@ -42,8 +42,6 @@ select, input {
 .welcome {
   max-width: 500px;
   margin: 1em;
-  background: #7f7f7f;
-  background: rgba(255,255,255,0.5);
 }
 
 .welcome-main {
@@ -55,10 +53,15 @@ select, input {
   padding: 2em;
 }
 
-p {
+.welcome-p {
   font-size: 1rem;
   line-height: 2em;
   text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5em;
 }
 
 .form-container {
@@ -225,8 +228,20 @@ span, {
    padding: 1em;
  }
 
+ .read-more-container {
+   margin: 1em;
+ }
+
  @media only screen and (min-width: 800px) {
    .wave-expansion-container {
-     padding: 1em 7em;
+     padding: 1em 15em;
    }
+}
+
+@media only screen and (min-width: 600px) {
+  .welcome-main, .auth-container {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+  }
 }
