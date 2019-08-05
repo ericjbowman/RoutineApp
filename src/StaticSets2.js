@@ -18,7 +18,11 @@ const useStyles = makeStyles(theme => ({
   },
   head: {
     backgroundColor: '#B29E40',
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
+    paddingRight: '20px'
+  },
+  cell: {
+    paddingRight: '20px'
   }
 }))
 
@@ -59,17 +63,17 @@ export default function SimpleTable (props) {
                   <TableCell component="th" scope="row">
                     {circuit.antag.name}
                   </TableCell>
-                  <TableCell align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
-                  <TableCell align="right">{circuit.antag.sets}</TableCell>
-                  <TableCell align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
+                  <TableCell className={classes.cell} align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
+                  <TableCell className={classes.cell} align="right">{circuit.antag.sets}</TableCell>
+                  <TableCell className={classes.cell} align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
                 </TableRow>
                 <TableRow key='2'>
                   <TableCell component="th" scope="row">
                     {circuit.main.name}
                   </TableCell>
-                  <TableCell align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
-                  <TableCell align="right">{circuit.main.sets}</TableCell>
-                  <TableCell align="right">{ifNoReps(circuit.main.reps)}</TableCell>
+                  <TableCell className={classes.cell} align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
+                  <TableCell className={classes.cell} align="right">{circuit.main.sets}</TableCell>
+                  <TableCell className={classes.cell} align="right">{ifNoReps(circuit.main.reps)}</TableCell>
                 </TableRow>
                 <TableRow key='2'>
                   <TableCell component="th" scope="row">
@@ -98,28 +102,28 @@ export default function SimpleTable (props) {
               </TableHead>
               <TableBody>
                 <TableRow key='1'>
-                  <TableCell component="th" scope="row">
+                  <TableCell className={classes.cell} component="th" scope="row">
                     {circuit.antag.name}
                   </TableCell>
-                  <TableCell align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
-                  <TableCell align="right">{circuit.antag.sets}</TableCell>
-                  <TableCell align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
+                  <TableCell className={classes.cell} align="right">{ifNoWeight(circuit.antag.weight)}</TableCell>
+                  <TableCell className={classes.cell} align="right">{circuit.antag.sets}</TableCell>
+                  <TableCell className={classes.cell} align="right">{ifNoReps(circuit.antag.reps)}</TableCell>
                 </TableRow>
                 <TableRow key='2'>
                   <TableCell component="th" scope="row">
                     {circuit.main.name}
                   </TableCell>
-                  <TableCell align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
-                  <TableCell align="right">{circuit.main.sets}</TableCell>
-                  <TableCell align="right">{ifNoReps(circuit.main.reps)}</TableCell>
+                  <TableCell className={classes.cell} align="right">{ifNoWeight(circuit.main.weight)}</TableCell>
+                  <TableCell className={classes.cell} align="right">{circuit.main.sets}</TableCell>
+                  <TableCell className={classes.cell} align="right">{ifNoReps(circuit.main.reps)}</TableCell>
                 </TableRow>
                 <TableRow key='3'>
-                  <TableCell component="th" scope="row">
+                  <TableCell className={classes.cell} component="th" scope="row">
                     {circuit.core.name}
                   </TableCell>
-                  <TableCell align="right">{ifNoWeight(circuit.core.weight)}</TableCell>
-                  <TableCell align="right">{circuit.core.sets}</TableCell>
-                  <TableCell align="right">10-20</TableCell>
+                  <TableCell className={classes.cell} align="right">{ifNoWeight(circuit.core.weight)}</TableCell>
+                  <TableCell className={classes.cell} align="right">{circuit.core.sets}</TableCell>
+                  <TableCell className={classes.cell} align="right">10-20</TableCell>
                 </TableRow>
               </TableBody>
             </Table>

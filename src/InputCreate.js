@@ -147,11 +147,7 @@ class InputCreate extends Component {
       autoFill: true
     }
   }
-  // handleSelect = (obj) => {
-  //   const updatedField = {
-  //     oblique6: {obj.value}
-  //   }
-  // }
+
   updateAutofilled = (name, weight, reps) => {
     const updatedField = {
       [name]: true,

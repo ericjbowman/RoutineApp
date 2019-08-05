@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form1 from './Form1'
+import Form2 from './Form2'
 import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from './apiConfig'
@@ -97,7 +97,7 @@ class InputEdit extends Component {
         created: '2019-08-01'
       },
       isRoutineEdited: false,
-      autoFill: true
+      autoFill: false
     }
   }
 
@@ -260,7 +260,7 @@ class InputEdit extends Component {
     }
     return (
       <div>
-        <Form1
+        <Form2
           input={input}
           handleChange={handleChange}
           handleDate={handleDate}

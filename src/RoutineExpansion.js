@@ -33,10 +33,10 @@ export default function SimpleExpansionPanel (props) {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography className={classes.heading}>{props.routine.title}</Typography>
+        <Typography style={{ margin: '0 auto' }} className={classes.heading}>{props.routine.title}</Typography>
       </ExpansionPanelSummary>
-      <ExpansionPanelDetails>
-        <div style={{ width: '100%' }}>
+      <ExpansionPanelDetails style={{ padding: 0 }}>
+        <div className="wave-expansion-container" style={{ width: '100%' }}>
           <div className="routine-header-container">
             <Button style={{ marginRight: '0.5em' }} component={Link} to={{
               pathname: '/edit-input',

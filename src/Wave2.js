@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'white'
   },
   cell: {
-    // paddingRight: '0px',
+    paddingRight: '16px'
     // paddingLeft: '0px'
   }
 }))
