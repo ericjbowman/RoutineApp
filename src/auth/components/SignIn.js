@@ -19,7 +19,8 @@ class SignIn extends Component {
 
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      loading: false
     }
   }
 
@@ -29,7 +30,7 @@ class SignIn extends Component {
 
   onSignIn = event => {
     event.preventDefault()
-
+    this.setState({ loading: true })
     const { enqueueSnackbar, history, setUser } = this.props
 
     signIn(this.state)
@@ -43,17 +44,30 @@ class SignIn extends Component {
   }
 
   render () {
-    const { email, password } = this.state
-
+    const { email, password, loading } = this.state
+    // if (loading) {
+    //   return (
+    //     <h1>Loading</h1>
+    //   )
+    // }
     return (
       <Fragment>
         <div className="auth-container">
           <Paper style={{ maxWidth: '500px', margin: 'auto', backgroundColor: '#F1F1F1' }}>
             <CssBaseline />
             <div className="auth-style">
-              <Typography component="h1" variant="h5">
-                Sign In
-              </Typography>
+              <Grid container direction="row" justify="center" spacing={1}>
+                <Grid container direction="row" item xs={6} md={6} lg={6}>
+                  <Typography component="h1" variant="h5" style={{ width: '50%' }}>
+                    Sign In
+                  </Typography>
+                </Grid>
+                <Grid container direction="row" item xs={6} md={6} lg={6}>
+                  {loading && <Typography component="h1" variant="h5" style={{ width: '50%' }}>
+                    Loading...
+                  </Typography>}
+                </Grid>
+              </Grid>
               <form className="form" onSubmit={this.onSignIn}>
                 <Grid container spacing={2}>
                   <Grid item xs={12}>

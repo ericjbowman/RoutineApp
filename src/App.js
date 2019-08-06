@@ -32,8 +32,8 @@ class App extends Component {
   clearUser = () => this.setState({ user: null })
 
   render () {
-    const https = require('https')
-    https.get('https://lit-forest-46875.herokuapp.com')
+    // const https = require('https')
+    // https.get('https://lit-forest-46875.herokuapp.com')
     const { user } = this.state
 
     return (
