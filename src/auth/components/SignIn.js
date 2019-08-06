@@ -46,7 +46,7 @@ class SignIn extends Component {
       .then(() => enqueueSnackbar(messages.signInSuccess, { variant: 'success', autoHideDuration: 2000 }))
       .then(() => history.push('/'))
       .catch(() => {
-        this.setState({ email: '', password: '' })
+        this.setState({ email: '', password: '', loading: false })
         enqueueSnackbar(messages.signInFailure, { variant: 'error', autoHideDuration: 2000 })
       })
   }
