@@ -4,6 +4,13 @@ import axios from 'axios'
 import apiUrl from './apiConfig'
 import { Line } from 'react-chartjs-2'
 import Paper from '@material-ui/core/Paper'
+import { css } from '@emotion/core'
+import { PropagateLoader } from 'react-spinners'
+
+const override = css`
+    display: block;
+    margin: 0 auto;
+`
 
 class Graph extends Component {
   constructor (props) {
@@ -210,7 +217,22 @@ class Graph extends Component {
       }
     }
     if (!this.state.loaded) {
-      return <h1>Nope</h1>
+      return (
+        <div style=
+          {{ display: 'flex',
+            justifyContent: 'center',
+            marginTop: '2em',
+            alignItems: 'center'
+          }}>
+          <PropagateLoader
+            css={override}
+            sizeUnit={'px'}
+            size={20}
+            color={'#54B240'}
+            loading={this.state.loading}
+          />
+        </div>
+      )
     }
     return (
       <React.Fragment>

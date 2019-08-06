@@ -22,6 +22,9 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1
   }
+  // purple: {
+  //   backgroundColor: '#6540B2'
+  // }
 }))
 
 // const authenticatedOptions = (

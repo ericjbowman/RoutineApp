@@ -5,6 +5,13 @@ import axios from 'axios'
 import apiUrl from './apiConfig'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
+import { css } from '@emotion/core'
+import { PropagateLoader } from 'react-spinners'
+
+const override = css`
+    display: block;
+    margin: 0 auto;
+`
 
 class RoutineLogic extends Component {
   constructor (props) {
@@ -396,6 +403,24 @@ class RoutineLogic extends Component {
     }
     inputIds()
     const completedRoutines = routineGenerator()
+    if (!this.state.loaded) {
+      return (
+        <div style=
+          {{ display: 'flex',
+            justifyContent: 'center',
+            marginTop: '2em',
+            alignItems: 'center'
+          }}>
+          <PropagateLoader
+            css={override}
+            sizeUnit={'px'}
+            size={20}
+            color={'#54B240'}
+            loading={this.state.loading}
+          />
+        </div>
+      )
+    }
     if (this.state.loaded && (this.state.inputs.length === 0)) {
       return (
         <React.Fragment>

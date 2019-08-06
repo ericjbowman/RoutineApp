@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import { withSnackbar } from 'notistack'
+import { css } from '@emotion/core'
+import { PulseLoader } from 'react-spinners'
 
 import { signIn } from '../api'
 import messages from '../messages'
@@ -12,6 +14,12 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import Paper from '@material-ui/core/Paper'
+
+const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+`
 
 class SignIn extends Component {
   constructor () {
@@ -57,15 +65,22 @@ class SignIn extends Component {
             <CssBaseline />
             <div className="auth-style">
               <Grid container direction="row" justify="center" spacing={1}>
-                <Grid container direction="row" item xs={6} md={6} lg={6}>
+                <Grid container direction="row" item xs={9} md={9} lg={9}>
                   <Typography component="h1" variant="h5" style={{ width: '50%' }}>
                     Sign In
                   </Typography>
                 </Grid>
-                <Grid container direction="row" item xs={6} md={6} lg={6}>
-                  {loading && <Typography component="h1" variant="h5" style={{ width: '50%' }}>
-                    Loading...
-                  </Typography>}
+                <Grid container direction="row" item xs={3} md={3} lg={3}>
+                  {loading &&
+                    <div className='sweet-loading'>
+                      <PulseLoader
+                        css={override}
+                        sizeUnit={'px'}
+                        size={12}
+                        color={'#54B240'}
+                        loading={this.state.loading}
+                      />
+                    </div> }
                 </Grid>
               </Grid>
               <form className="form" onSubmit={this.onSignIn}>
@@ -107,7 +122,7 @@ class SignIn extends Component {
                 Sign In
                   </Button>
                 </div>
-                <Grid container justify="flex-end">
+                <Grid container justify="flex-end" style={{ marginTop: '0.5em' }}>
                   <Grid item>
                     <Link to="/sign-up" variant="body2">
                   No account? Sign up

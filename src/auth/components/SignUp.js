@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import { withSnackbar } from 'notistack'
+import { css } from '@emotion/core'
+import { PulseLoader } from 'react-spinners'
 
 import { signUp, signIn } from '../api'
 import messages from '../messages'
@@ -13,6 +15,11 @@ import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import Paper from '@material-ui/core/Paper'
 
+const override = css`
+    display: block;
+    margin: 0 auto;
+`
+
 class SignUp extends Component {
   constructor () {
     super()
@@ -20,7 +27,8 @@ class SignUp extends Component {
     this.state = {
       email: '',
       password: '',
-      passwordConfirmation: ''
+      passwordConfirmation: '',
+      loading: false
     }
   }
 
@@ -30,7 +38,7 @@ class SignUp extends Component {
 
   onSignUp = event => {
     event.preventDefault()
-
+    this.setState({ loading: true })
     const { enqueueSnackbar, history, setUser } = this.props
 
     signUp(this.state)
@@ -45,7 +53,7 @@ class SignUp extends Component {
   }
 
   render () {
-    const { email, password, passwordConfirmation } = this.state
+    const { email, password, passwordConfirmation, loading } = this.state
 
     return (
       <Fragment>
@@ -53,9 +61,25 @@ class SignUp extends Component {
           <Paper style={{ maxWidth: '500px', margin: 'auto', backgroundColor: '#F1F1F1' }}>
             <CssBaseline />
             <div className="auth-style">
-              <Typography component="h1" variant="h5">
-                Sign up
-              </Typography>
+              <Grid container direction="row" justify="center" spacing={1}>
+                <Grid container direction="row" item xs={9} md={9} lg={9}>
+                  <Typography component="h1" variant="h5" style={{ width: '50%' }}>
+                    Sign Up
+                  </Typography>
+                </Grid>
+                <Grid container direction="row" item xs={3} md={3} lg={3}>
+                  {loading &&
+                  <div className='sweet-loading'>
+                    <PulseLoader
+                      css={override}
+                      sizeUnit={'px'}
+                      size={12}
+                      color={'#54B240'}
+                      loading={this.state.loading}
+                    />
+                  </div> }
+                </Grid>
+              </Grid>
               <form className="form" onSubmit={this.onSignUp}>
                 <Grid container spacing={2}>
                   <Grid item xs={12}>
@@ -108,7 +132,7 @@ class SignUp extends Component {
                   >Sign Up
                   </Button>
                 </div>
-                <Grid container justify="flex-end">
+                <Grid container justify="flex-end" style={{ marginTop: '0.5em' }}>
                   <Grid item>
                     <Link to="/sign-in" variant="body2">
                       Already have an account? Sign in

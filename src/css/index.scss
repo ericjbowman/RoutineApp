@@ -1,4 +1,8 @@
 $gold: #B29E40;
+$green: #54B240;
+$blue: #4054B2;
+$purple: #6540B2;
+$red: #B24054;
 $lightGold: #F5F3E7;
 $transparent: rgba(255, 255, 255, .3);
 
@@ -212,7 +216,7 @@ span, {
   // }
 
   body {
-    background-image: url('../mobile.jpg');
+    background-image: url('../LI-Mobile-background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -240,7 +244,7 @@ span, {
 
 @media only screen and (min-width: 600px) {
   .welcome-main, .auth-container {
-    height: 88vh;
+    height: 86vh;
     display: flex;
     align-items: center;
   }
