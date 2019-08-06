@@ -294,6 +294,9 @@ class Form2 extends Component {
                         name="antagSquatName"
                         onChange={handleChange}
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -305,6 +308,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -316,6 +322,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -328,6 +337,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                       <TextField
                         id="outlined-name"
@@ -339,6 +351,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -352,6 +367,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -364,6 +382,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -376,6 +397,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -389,6 +413,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <Button onClick={this.nextStep} variant="contained" color="primary" style={{
@@ -428,6 +455,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -440,6 +470,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -453,6 +486,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -466,6 +502,9 @@ class Form2 extends Component {
                         type="text"
                         min="0"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -478,6 +517,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -491,6 +533,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -503,6 +548,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -515,6 +563,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -528,6 +579,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -540,6 +594,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -552,6 +609,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -565,6 +625,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -577,6 +640,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -589,6 +655,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -602,6 +671,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <Button onClick={this.nextStep} variant="contained" color="primary">
@@ -637,6 +709,9 @@ class Form2 extends Component {
                         name="antagDeadliftName"
                         onChange={handleChange}
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -648,6 +723,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -659,6 +737,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -671,6 +752,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -683,6 +767,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -696,6 +783,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -708,6 +798,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -720,6 +813,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -733,6 +829,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <Button onClick={this.nextStep} variant="contained" color="primary">
@@ -769,6 +868,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -781,6 +883,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -794,6 +899,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -806,6 +914,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -818,6 +929,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -831,6 +945,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -843,6 +960,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -855,6 +975,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -868,6 +991,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -880,6 +1006,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -892,6 +1021,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -905,6 +1037,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -917,6 +1052,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="name-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -929,6 +1067,9 @@ class Form2 extends Component {
                         type="number"
                         min="0"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -942,6 +1083,9 @@ class Form2 extends Component {
                         min="1"
                         max="12"
                         className="num-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <Button onClick={this.nextStep} variant="contained" color="primary">
@@ -978,6 +1122,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -989,6 +1136,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -1000,6 +1150,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -1012,6 +1165,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -1023,6 +1179,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -1034,6 +1193,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -1046,6 +1208,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -1057,6 +1222,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -1068,6 +1236,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <div className="input-row">
@@ -1080,6 +1251,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -1091,6 +1265,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
 
                       <TextField
@@ -1102,6 +1279,9 @@ class Form2 extends Component {
                         onChange={handleChange}
                         type="text"
                         className="third-form"
+                        InputLabelProps={{
+                          shrink: true
+                        }}
                       />
                     </div>
                     <Button type="submit" variant="contained" color="primary">
