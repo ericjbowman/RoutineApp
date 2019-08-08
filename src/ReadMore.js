@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 
-const ReadMore = () => (
+const ReadMore = (props) => (
   <React.Fragment>
     <div className="read-more-container">
       <div className="read-more">
@@ -11,9 +11,14 @@ const ReadMore = () => (
           <Grid direction="column" alignItems="center" item>
             <Paper style={{ background: 'rgba(255,255,255,0.9)' }}>
               <div className="welcome-content">
-                <Typography component="h1" variant="h5" className="center">
-                  About the Routine
+                <Typography variant="h5" className="center greeting">
+                  Welcome, {props.user.email}!
                 </Typography>
+                <p>
+                  <Typography variant="h5" className="center">
+                    About the Routine:
+                  </Typography>
+                </p>
                 <p>This template is largely based on a free mass-building template provided
                 by Brian Alsruhe, and my experiene as a NASM Personal Trainer. If you have any exercise-limitations or health-concerns, consult a physician
                 before doing any of these exercises. This app is to be used as a tool, not a personal

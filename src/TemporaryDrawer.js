@@ -42,18 +42,20 @@ function TemporaryDrawer () {
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
-      <List>
-        <ListItem button component={Link} to="/create-input">
-          <ListItemText primary="Create Routine" />
-        </ListItem>
-        <ListItem button component={Link} to="/routines">
-          <ListItemText primary="My Routines" />
-        </ListItem>
-        <ListItem button component={Link} to="/progress">
-          <ListItemText primary="Progress" />
-        </ListItem>
-      </List>
-      <Divider />
+      <div className="non-mobile">
+        <List>
+          <ListItem button component={Link} to="/create-input">
+            <ListItemText primary="Create Routine" />
+          </ListItem>
+          <ListItem button component={Link} to="/routines">
+            <ListItemText primary="My Routines" />
+          </ListItem>
+          <ListItem button component={Link} to="/progress">
+            <ListItemText primary="Progress" />
+          </ListItem>
+        </List>
+        <Divider />
+      </div>
       <List>
         <ListItem button component={Link} to="/change-password">
           <ListItemText primary="Change Password" />

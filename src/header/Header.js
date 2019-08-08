@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Icon from '@material-ui/core/Icon'
 import TemporaryDrawer from '../TemporaryDrawer'
+import SimpleMenu from '../SimpleMenu'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,6 +18,11 @@ const useStyles = makeStyles(theme => ({
   menuButton: {
     marginRight: theme.spacing(1),
     marginLeft: theme.spacing(1),
+    color: 'white'
+  },
+  menuButton2: {
+    marginRight: theme.spacing(2),
+    marginLeft: theme.spacing(2),
     color: 'white'
   },
   title: {
@@ -53,11 +59,17 @@ const Header = ({ user }) => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          { user && <TemporaryDrawer user={user}/>}
+          <div className="mobile-only">
+            { user && <TemporaryDrawer user={user}/>}
+          </div>
           <Typography variant="h6" className={classes.title}>
             Lunkedin
           </Typography>
-          { user && (user.email.length < 20) && <span className={'no-mobile ' + classes.menuButton}>Welcome, {user.email}</span>}
+          <div className="no-mobile">
+            { user && <Button component={Link} to="/create-input" className={'no-mobile ' + classes.menuButton2}>Create Routine</Button> }
+            { user && <Button className={'no-mobile ' + classes.menuButton2} component={Link} to="/routines">My Routines</Button> }
+            { user && <Button className={'no-mobile ' + classes.menuButton2} component={Link} to="/progress">Progress</Button> }
+          </div>
           { user ? (
             <React.Fragment>
             </React.Fragment>
@@ -71,6 +83,7 @@ const Header = ({ user }) => {
             <Button color="inherit" component={Link} to="/">
               <Icon>home</Icon>
             </Button>
+            { user && <SimpleMenu/> }
           </React.Fragment> }
         </Toolbar>
       </AppBar>

@@ -56,7 +56,7 @@ class App extends Component {
             !this.state.user && <Welcome />
           )} />
           <Route exact path='/' render={() => (
-            this.state.user && <ReadMore />
+            this.state.user && <ReadMore user={user}/>
           )} />
           <AuthenticatedRoute user={user} path='/days/:id' render={() => (
             <React.Fragment>

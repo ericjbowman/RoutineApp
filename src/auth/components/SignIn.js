@@ -88,11 +88,10 @@ class SignIn extends Component {
                   <Grid item xs={12}>
                     <TextField
                       variant="outlined"
-                      type="email"
                       required
                       fullWidth
                       id="email"
-                      label="Email Address"
+                      label="Username"
                       name="email"
                       value={email}
                       onChange={this.handleChange}
