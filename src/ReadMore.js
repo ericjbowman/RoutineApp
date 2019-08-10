@@ -63,11 +63,14 @@ const ReadMore = (props) => (
                 -Eric Bowman
                 </p>
                 <div style={{ display: 'flex', justifyContent: 'center', margin: '2em 0' }}>
-                  <img className='picture' src={intensities} alt="Intensity chart" width="90%" height="auto" style={{ width: '90%', height: 'auto' }}/>
+                  <img className='picture' src={intensities} alt="Intensity chart"/>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <img className='picture' src={periodization} alt="Intensity chart" width="90%" height="auto" style={{ width: '90%', height: 'auto' }}/>
+                  <img className='picture' src={periodization} alt="Intensity chart"/>
                 </div>
+                <p>
+                Images courtesy of Brian Alsruhe
+                </p>
               </div>
             </Paper>
           </Grid>
