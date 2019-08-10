@@ -231,6 +231,10 @@ span, {
     padding: 1em;
   }
 
+  .picture {
+    max-height: 500px;
+  }
+
   // .wave-expansion-container {
   //   padding: 0;
   // }
@@ -280,4 +284,9 @@ span, {
 .roboto {
   font-family: 'Roboto', serif;
   font-weight: 400;
+}
+
+.picture {
+  width: 90%;
+  height: auto;
 }
