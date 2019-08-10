@@ -68,7 +68,7 @@ const ReadMore = (props) => (
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                   <img className='picture' src={periodization} alt="Intensity chart"/>
                 </div>
-                <p>
+                <p style={{ textAlign: 'center' }}>
                 Images courtesy of Brian Alsruhe
                 </p>
               </div>
