@@ -8,6 +8,8 @@ export default {
   changePasswordFailure: 'Failed to change passwords. Check your old password and try again.',
   routineDestroySuccess: 'Routine successfully deleted!',
   routineDestroyFailure: 'Unable to delete routine',
+  routineCreateSuccess: 'Routine successfully created!',
+  routineCreateFailure: 'Unable to create routine',
   routineEditSuccess: 'Routine successfully edited!',
   routineEditFailure: 'Unable to edit routine',
   emptyField: 'No empty fields here!',

@@ -12,7 +12,7 @@ import RoutineLogic from './RoutineLogic'
 import Day from './Day.js'
 import InputCreate from './InputCreate'
 import { SnackbarProvider } from 'notistack'
-import InputEdit from './InputEdit'
+// import InputEdit from './InputEdit'
 import Welcome from './Welcome'
 import Graph from './Graph'
 import ReadMore from './ReadMore'
@@ -68,10 +68,10 @@ class App extends Component {
             <RoutineLogic user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/create-input' render={() => (
-            <InputCreate user={user} />
+            <InputCreate user={user} isEdit={false}/>
           )} />
           <AuthenticatedRoute user={user} path='/edit-input' render={() => (
-            <InputEdit user={user} />
+            <InputCreate user={user} isEdit={true}/>
           )} />
           <AuthenticatedRoute user={user} path='/progress' render={() => (
             <Graph user={user} />

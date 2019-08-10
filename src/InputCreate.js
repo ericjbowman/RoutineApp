@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import Form1 from './Form1'
-import { Redirect } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from './apiConfig'
 import { withSnackbar } from 'notistack'
+import messages from './auth/messages'
 
 class InputCreate extends Component {
   constructor (props) {
@@ -156,6 +157,20 @@ class InputCreate extends Component {
     }
     const editedInput = Object.assign(this.state.autofilled, updatedField)
     this.setState({ autofilled: editedInput })
+  }
+
+  componentDidMount () {
+    if (this.props.isEdit) {
+      axios({
+        url: (`${apiUrl}/inputs/${this.props.location.state.id}`),
+        method: 'GET',
+        headers: {
+          'Authorization': `Token token=${this.props.user.token}`
+        }
+      })
+        .then(res => this.setState({ input: res.data.input }))
+        // .catch(err => console.log(err))
+    }
   }
 
   componentDidUpdate () {
@@ -311,21 +326,40 @@ class InputCreate extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-
-    axios({
-      url: (`${apiUrl}/inputs`),
-      method: 'POST',
-      headers: {
-        'Authorization': `Token token=${this.props.user.token}`
-      },
-      data: {
-        input: this.state.input
-      }
-    })
-      .then(res => this.setState({
-        isRoutineCreated: true
-      }))
-      .catch(console.error)
+    if (!this.props.isEdit) {
+      axios({
+        url: (`${apiUrl}/inputs`),
+        method: 'POST',
+        headers: {
+          'Authorization': `Token token=${this.props.user.token}`
+        },
+        data: {
+          input: this.state.input
+        }
+      })
+        .then(res => this.setState({
+          isRoutineCreated: true
+        }))
+        .then(() => this.props.enqueueSnackbar(messages.routineCreateSuccess, { variant: 'success', autoHideDuration: 2000 }))
+        .catch(() => this.props.enqueueSnackbar(messages.routineCreateFailure, { variant: 'error', autoHideDuration: 2000 }))
+    } else if (this.props.isEdit) {
+      axios({
+        url: (`${apiUrl}/inputs/${this.props.location.state.id}`),
+        method: 'PATCH',
+        headers: {
+          'Authorization': `Token token=${this.props.user.token}`
+        },
+        data: {
+          input: this.state.input
+        }
+      })
+        .then(res => this.setState({
+          isRoutineEdited: true
+        }))
+        .then(() => this.props.enqueueSnackbar(messages.routineEditSuccess, { variant: 'success', autoHideDuration: 2000 }))
+        .catch(() => this.props.enqueueSnackbar(messages.routineEditFailure, { variant: 'error', autoHideDuration: 2000 }))
+        .catch(console.error)
+    }
   }
 
   toggleAutoFill = event => {
@@ -336,11 +370,12 @@ class InputCreate extends Component {
 
   render () {
     const { handleChange, handleSelect, handleDate, handleSubmit, toggleAutoFill } = this
-    const { input, isRoutineCreated } = this.state
+    const { input, isRoutineCreated, isRoutineEdited } = this.state
 
-    if (isRoutineCreated) {
+    if (isRoutineCreated || isRoutineEdited) {
       return <Redirect to='/routines'/>
     }
+
     return (
       <div>
         <Form1
@@ -351,11 +386,11 @@ class InputCreate extends Component {
           handleSubmit={handleSubmit}
           toggleAutoFill={toggleAutoFill}
           cancelPath="/"
-          isEdit={false}
+          // isEdit={false}
         />
       </div>
     )
   }
 }
 
-export default withSnackbar(InputCreate)
+export default withSnackbar(withRouter(InputCreate))
