@@ -386,7 +386,7 @@ class InputCreate extends Component {
           handleSubmit={handleSubmit}
           toggleAutoFill={toggleAutoFill}
           cancelPath="/"
-          // isEdit={false}
+          isEdit={this.props.isEdit}
         />
       </div>
     )

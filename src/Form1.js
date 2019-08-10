@@ -366,6 +366,7 @@ class Form1 extends Component {
                           name="antagSquatName"
                           onChange={handleChange}
                           handleSelect={handleSelect}
+                          isEdit={this.props.isEdit}
                         />
                       </Grid>
                       <Grid container direction="row" justify="center" item xs={4}>

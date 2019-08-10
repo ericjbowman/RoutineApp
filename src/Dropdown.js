@@ -2,16 +2,6 @@ import React, { Component, Fragment } from 'react'
 
 import CreatableSelect from 'react-select/creatable'
 
-// const exerciseOptions = [
-//   { value: this.props.name, label: 'Box Jumps' },
-//   { value: this.props.name, label: 'Kettlebell Swings' },
-//   { value: this.props.name, label: 'Squat Jumps' },
-//   { value: this.props.name, label: 'Dumbbell Snatch' },
-//   { value: this.props.name, label: 'Burpees' },
-//   { value: this.props.name, label: 'Long jumps' },
-//   { value: this.props.name, label: 'Prisoner Squats' }
-// ]
-
 class Dropdown extends Component {
   constructor (props) {
     super(props)
@@ -119,6 +109,18 @@ class Dropdown extends Component {
         { value: name, label: 'Face Pull', preset: true }
       ]
     }
+
+    const oldSelection = (props) => {
+      if (props.value !== '') {
+        return { value: props.name, label: props.value, preset: true }
+      } else {
+        console.log('value is', props.value)
+        return null
+      }
+    }
+
+    // const oldSelection2 = { value: this.props.name, label: this.props.value, preset: true }
+
     return (
       <Fragment>
         <CreatableSelect
@@ -128,7 +130,9 @@ class Dropdown extends Component {
           onInputChange={this.handleChange}
           options={exerciseOptions}
           placeholder={this.props.label}
-          defaultInputValue={this.props.value}
+          // defaultInputValue={this.props.value}
+          defaultValue={oldSelection(this.props)}
+          // style={ { control: (styles, { isFocused }) => ({ ...styles, backgroundColor: 'transparent', border: 'none', boxShadow: 'none' }), option: (styles, { isFocused }) => { return { ...styles, backgroundColor: isFocused ? 'rgba(0, 0, 0, 0.9)' : 'black', color: isFocused ? '#FDC42D' : 'white' } }, input: styles => ({ ...styles, color: 'white' }) } }
         />
       </Fragment>
     )
