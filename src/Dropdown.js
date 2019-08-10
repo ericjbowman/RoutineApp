@@ -21,6 +21,14 @@ class Dropdown extends Component {
   }
 
   render () {
+    // const customStyles = {
+    //   control: (base, state) => ({
+    //     ...base,
+    //     boxShadow: 'none'
+    //     // You can also use state.isFocused to conditionally style based on the focus state
+    //   })
+    // }
+
     const { name } = this.props
     const legPrimers = ['antagSquatName', 'antagSquat2Name', 'antagSquat3Name', 'antagDeadliftName', 'antagDeadlift2Name', 'antagDeadlift3Name']
     const squats = ['squat2Name', 'squat3Name']
@@ -132,7 +140,7 @@ class Dropdown extends Component {
           placeholder={this.props.label}
           // defaultInputValue={this.props.value}
           defaultValue={oldSelection(this.props)}
-          // style={ { control: (styles, { isFocused }) => ({ ...styles, backgroundColor: 'transparent', border: 'none', boxShadow: 'none' }), option: (styles, { isFocused }) => { return { ...styles, backgroundColor: isFocused ? 'rgba(0, 0, 0, 0.9)' : 'black', color: isFocused ? '#FDC42D' : 'white' } }, input: styles => ({ ...styles, color: 'white' }) } }
+          // style={customStyles}
         />
       </Fragment>
     )
