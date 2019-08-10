@@ -216,6 +216,10 @@ span, {
   }
 }
 
+.picture {
+  height: auto;
+}
+
 @media only screen and (max-width: 600px) {
 
   .form-container {
@@ -272,6 +276,11 @@ span, {
   // .non-mobile {
   //   display: none;
   // }
+
+  .picture {
+    width: 75%;
+  }
+  
   .welcome-main, .auth-container {
     height: 86vh;
     display: flex;
@@ -286,9 +295,4 @@ span, {
 .roboto {
   font-family: 'Roboto', serif;
   font-weight: 400;
-}
-
-.picture {
-  width: 75%;
-  height: auto;
 }
