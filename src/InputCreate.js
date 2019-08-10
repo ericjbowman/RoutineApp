@@ -60,7 +60,7 @@ class InputCreate extends Component {
       input: {
         routineName: '',
 
-        antagSquatName: '',
+        antagSquatName: 'Box Jumps',
         squatWeight: null,
         squatReps: null,
 
@@ -70,7 +70,7 @@ class InputCreate extends Component {
         ohpWeight: null,
         ohpReps: null,
 
-        antagDeadliftName: '',
+        antagDeadliftName: 'Kettlebell Swings',
         deadliftWeight: null,
         deadliftReps: null,
 
@@ -80,7 +80,7 @@ class InputCreate extends Component {
         benchWeight: null,
         benchReps: null,
 
-        antagSquat2Name: '',
+        antagSquat2Name: 'Squat Jumps',
         squat2Name: '',
         squat2Weight: null,
         squat2Reps: null,
@@ -92,7 +92,7 @@ class InputCreate extends Component {
         ohp2Weight: null,
         ohp2Reps: null,
 
-        antagDeadlift2Name: '',
+        antagDeadlift2Name: 'Dumbbell Snatch',
         deadlift2Name: '',
         deadlift2Weight: null,
         deadlift2Reps: null,
@@ -104,7 +104,7 @@ class InputCreate extends Component {
         bench2Weight: null,
         bench2Reps: null,
 
-        antagSquat3Name: '',
+        antagSquat3Name: 'Lunge Hops',
         squat3Name: '',
         squat3Weight: null,
         squat3Reps: null,
@@ -116,7 +116,7 @@ class InputCreate extends Component {
         ohp3Weight: null,
         ohp3Reps: null,
 
-        antagDeadlift3Name: '',
+        antagDeadlift3Name: 'Burpees',
         deadlift3Name: '',
         deadlift3Weight: null,
         deadlift3Reps: null,
@@ -128,19 +128,19 @@ class InputCreate extends Component {
         bench3Weight: null,
         bench3Reps: null,
 
-        core1: '',
-        core2: '',
-        core3: '',
-        core4: '',
-        core5: '',
-        core6: '',
+        core1: 'Hanging Leg-Raise',
+        core2: 'V-up',
+        core3: 'Plank',
+        core4: 'Ab-wheel Roll-out',
+        core5: 'Toe-touch Crunch',
+        core6: 'Decline-bench Sit-up',
 
-        oblique1: '',
-        oblique2: '',
-        oblique3: '',
-        oblique4: '',
-        oblique5: '',
-        oblique6: '',
+        oblique1: 'Landmine Twist',
+        oblique2: 'Side Plank Hip Dips',
+        oblique3: 'Woodchopper',
+        oblique4: 'Air Bicycle',
+        oblique5: 'Windshield Wipers',
+        oblique6: 'Single-arm Farmer Walk',
         day1: '',
         created: ''
       },

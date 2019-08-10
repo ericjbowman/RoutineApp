@@ -46,22 +46,22 @@ class Dropdown extends Component {
         { value: name, label: 'V-up', preset: true },
         { value: name, label: 'Crunch', preset: true },
         { value: name, label: 'Hanging Leg-Raise', preset: true },
-        { value: name, label: 'Ab wheel roll-out', preset: true },
-        { value: name, label: 'Decline bench-situp', preset: true },
+        { value: name, label: 'Ab-wheel Roll-out', preset: true },
+        { value: name, label: 'Decline-bench Situp', preset: true },
         { value: name, label: 'Dragon Flag', preset: true },
         { value: name, label: 'Flutter Kicks', preset: true },
         { value: name, label: 'Toe-Touch Crunch', preset: true }
       ]
     } else if (obliques.includes(name)) {
       exerciseOptions = [
-        { value: name, label: 'Side Plank', preset: true },
+        { value: name, label: 'Side Plank Hip Dips', preset: true },
         { value: name, label: 'Air Bicycle', preset: true },
         { value: name, label: 'Woodchopper', preset: true },
         { value: name, label: 'Single-arm Farmer Walk', preset: true },
-        { value: name, label: 'Roman chair', preset: true },
-        { value: name, label: 'Barbell twist', preset: true },
-        { value: name, label: 'Landmine twist', preset: true },
-        { value: name, label: 'Windshield wiper', preset: true }
+        { value: name, label: 'Roman Chair', preset: true },
+        { value: name, label: 'Barbell Twist', preset: true },
+        { value: name, label: 'Landmine Twist', preset: true },
+        { value: name, label: 'Windshield Wiper', preset: true }
       ]
     } else if (legPrimers.includes(name)) {
       exerciseOptions = [
@@ -70,7 +70,8 @@ class Dropdown extends Component {
         { value: name, label: 'Squat Jumps', preset: true },
         { value: name, label: 'Dumbbell Snatch', preset: true },
         { value: name, label: 'Burpees', preset: true },
-        { value: name, label: 'Long jumps', preset: true },
+        { value: name, label: 'Long Jumps', preset: true },
+        { value: name, label: 'Lunge Hops', preset: true },
         { value: name, label: 'Prisoner Squats', preset: true }
       ]
     } else if (squats.includes(name)) {

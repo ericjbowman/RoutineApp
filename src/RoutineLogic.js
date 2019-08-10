@@ -202,13 +202,13 @@ class RoutineLogic extends Component {
       antBench2Max, antBench3, antBench3Max, bench, benchMax, bench2, bench2Max, bench3, bench3Max) {
       this.week1 = {
         day1: new DayAStatic2('Day 1', 'Heavy', antSquat2, null, 0.6, 0.7, 0.8, 10, 8, 6, squat2, squat2Max, core1, 'Speed', antDeadlift, 10, null, 0.55, 3, deadlift, deadliftMax, core2, 'Reps', antSquat3, 5, null, 0.7, 5, squat3, squat3Max, core3),
-        day2: new DayA3Sets2('Day 2', 'Medium', antOhp2, antOhp2Max, 0.55, 0.65, 0.75, 12, 9, 7, ohp2, ohp2Max, oblique2, 'Endurance', antBench, 4, antBenchMax, 0.60, 8, bench, benchMax, oblique1, 'Heavy', antOhp3, antOhp3Max, 0.6, 0.7, 0.8, 10, 8, 6, ohp3, ohp3Max, oblique3),
+        day2: new DayA3Sets2('Day 2', 'Medium', antOhp2, antOhp2Max, 0.55, 0.65, 0.75, 12, 9, 7, ohp2, ohp2Max, oblique1, 'Endurance', antBench, 4, antBenchMax, 0.60, 8, bench, benchMax, oblique2, 'Heavy', antOhp3, antOhp3Max, 0.6, 0.7, 0.8, 10, 8, 6, ohp3, ohp3Max, oblique3),
         day3: new DayAStatic2('Day 3', 'Light', antDeadlift2, null, 0.5, 0.6, 0.7, 15, 10, 8, deadlift2, deadlift2Max, core4, 'Reps', antSquat, 5, null, 0.7, 5, squat, squatMax, core5, 'Endurance', antDeadlift3, 4, null, 0.6, 8, deadlift3, deadlift3Max, core6),
         day4: new DayAStatic2('Day 4', 'Heavy', antBench2, antBench2Max, 0.6, 0.7, 0.8, 10, 8, 6, bench2, bench2Max, oblique4, 'Speed', antOhp, 10, antOhpMax, 0.55, 3, ohp, ohpMax, oblique5, 'Reps', antBench3, 5, antBench3Max, 0.7, 5, bench3, bench3Max, oblique6)
       }
       this.week2 = {
-        day1: new DayA3Sets2('Day 1', 'Medium', antSquat2, null, 0.55, 0.65, 0.75, 12, 9, 7, squat2, squat2Max, core2, 'Endurance', antDeadlift, 4, null, 0.60, 8, deadlift, deadliftMax, core1, 'Heavy', antSquat3, null, 0.6, 0.7, 0.8, 10, 8, 6, squat3, squat3Max, core3),
-        day2: new DayAStatic2('Day 2', 'Light', antOhp2, antOhp2Max, 0.5, 0.6, 0.7, 15, 10, 8, ohp2, ohp2Max, oblique2, 'Reps', antBench, 5, antBenchMax, 0.7, 5, bench, benchMax, oblique1, 'Endurance', antOhp3, 4, antOhp3Max, 0.6, 8, ohp3, ohp3Max, oblique3),
+        day1: new DayA3Sets2('Day 1', 'Medium', antSquat2, null, 0.55, 0.65, 0.75, 12, 9, 7, squat2, squat2Max, core1, 'Endurance', antDeadlift, 4, null, 0.60, 8, deadlift, deadliftMax, core2, 'Heavy', antSquat3, null, 0.6, 0.7, 0.8, 10, 8, 6, squat3, squat3Max, core3),
+        day2: new DayAStatic2('Day 2', 'Light', antOhp2, antOhp2Max, 0.5, 0.6, 0.7, 15, 10, 8, ohp2, ohp2Max, oblique1, 'Reps', antBench, 5, antBenchMax, 0.7, 5, bench, benchMax, oblique2, 'Endurance', antOhp3, 4, antOhp3Max, 0.6, 8, ohp3, ohp3Max, oblique3),
         day3: new DayAStatic2('Day 3', 'Heavy', antDeadlift2, null, 0.6, 0.7, 0.8, 10, 8, 6, deadlift2, deadlift2Max, core4, 'Speed', antSquat, 10, null, 0.55, 3, squat, squatMax, core5, 'Reps', antDeadlift3, 5, null, 0.7, 5, deadlift3, deadlift3Max, core6),
         day4: new DayA3Sets2('Day 4', 'Medium', antBench2, antBench2Max, 0.55, 0.65, 0.75, 12, 9, 7, bench2, bench2Max, oblique5, 'Endurance', antOhp, 4, antOhpMax, 0.60, 8, ohp, ohpMax, oblique4, 'Light', antBench3, antBench3Max, 0.5, 0.6, 0.7, 15, 10, 8, bench3, bench3Max, oblique6)
       }
@@ -229,15 +229,15 @@ class RoutineLogic extends Component {
       antBench2Max, antBench3, antBench3Max, bench, benchMax, bench2, bench2Max, bench3, bench3Max) {
       this.week1 = {
         day1: new DayAStatic2('Day 1', 'Heavy', antSquat2, null, 0.65, 0.75, 0.85, 9, 7, 4, squat2, squat2Max, core1, 'Speed', antDeadlift, 10, null, 0.6, 3, deadlift, deadliftMax, core2, 'Reps', antSquat3, 5, null, 0.75, 5, squat3, squat3Max, core3),
-        day2: new DayA3Sets2('Day 2', 'Medium', antOhp2, antOhp2Max, 0.6, 0.7, 0.8, 10, 8, 6, ohp2, ohp2Max, oblique2, 'Endurance', antBench, 4, antBenchMax, 0.65, 8, bench, benchMax, oblique1, 'Heavy', antOhp3, antOhp3Max, 0.65, 0.75, 0.85, 9, 7, 4, ohp3, ohp3Max, oblique3),
+        day2: new DayA3Sets2('Day 2', 'Medium', antOhp2, antOhp2Max, 0.6, 0.7, 0.8, 10, 8, 6, ohp2, ohp2Max, oblique1, 'Endurance', antBench, 4, antBenchMax, 0.65, 8, bench, benchMax, oblique2, 'Heavy', antOhp3, antOhp3Max, 0.65, 0.75, 0.85, 9, 7, 4, ohp3, ohp3Max, oblique3),
         day3: new DayAStatic2('Day 3', 'Light', antDeadlift2, null, 0.55, 0.65, 0.75, 12, 9, 7, deadlift2, deadlift2Max, core4, 'Reps', antSquat, 5, null, 0.75, 5, squat, squatMax, core5, 'Endurance', antDeadlift3, 4, null, 0.65, 8, deadlift3, deadlift3Max, core6),
         day4: new DayAStatic2('Day 4', 'Heavy', antBench2, antBench2Max, 0.65, 0.75, 0.85, 9, 7, 4, bench2, bench2Max, oblique4, 'Speed', antOhp, 10, antOhpMax, 0.6, 3, ohp, ohpMax, oblique5, 'Reps', antBench3, 5, antBench3Max, 0.75, 5, bench3, bench3Max, oblique6)
       }
       this.week2 = {
-        day1: new DayA3Sets2('Day 1', 'Medium', antSquat2, null, 0.6, 0.7, 0.8, 10, 8, 6, squat2, squat2Max, core2, 'Endurance', antDeadlift, 4, null, 0.65, 8, deadlift, deadliftMax, core1, 'Heavy', antSquat3, null, 0.65, 0.75, 0.85, 9, 7, 4, squat3, squat3Max, core3),
-        day2: new DayAStatic2('Day 2', 'Light', antOhp2, antOhp2Max, 0.55, 0.65, 0.75, 12, 9, 7, ohp2, ohp2Max, oblique2, 'Reps', antBench, 5, antBenchMax, 0.75, 5, bench, benchMax, oblique1, 'Endurance', antOhp3, 4, antOhp3Max, 0.65, 8, ohp3, ohp3Max, oblique3),
+        day1: new DayA3Sets2('Day 1', 'Medium', antSquat2, null, 0.6, 0.7, 0.8, 10, 8, 6, squat2, squat2Max, core1, 'Endurance', antDeadlift, 4, null, 0.65, 8, deadlift, deadliftMax, core2, 'Heavy', antSquat3, null, 0.65, 0.75, 0.85, 9, 7, 4, squat3, squat3Max, core3),
+        day2: new DayAStatic2('Day 2', 'Light', antOhp2, antOhp2Max, 0.55, 0.65, 0.75, 12, 9, 7, ohp2, ohp2Max, oblique1, 'Reps', antBench, 5, antBenchMax, 0.75, 5, bench, benchMax, oblique2, 'Endurance', antOhp3, 4, antOhp3Max, 0.65, 8, ohp3, ohp3Max, oblique3),
         day3: new DayAStatic2('Day 3', 'Heavy', antDeadlift2, null, 0.65, 0.75, 0.85, 9, 7, 4, deadlift2, deadlift2Max, core4, 'Speed', antSquat, 10, null, 0.6, 3, squat, squatMax, core5, 'Reps', antDeadlift3, 5, null, 0.75, 5, deadlift3, deadlift3Max, core6),
-        day4: new DayA3Sets2('Day 4', 'Medium', antBench2, antBench2Max, 0.6, 0.7, 0.8, 10, 8, 6, bench2, bench2Max, oblique5, 'Endurance', antOhp, 4, antOhpMax, 0.65, 8, ohp, ohpMax, oblique4, 'Light', antBench3, antBench3Max, 0.55, 0.65, 0.75, 12, 9, 7, bench3, bench3Max, oblique6)
+        day4: new DayA3Sets2('Day 4', 'Medium', antBench2, antBench2Max, 0.6, 0.7, 0.8, 10, 8, 6, bench2, bench2Max, oblique4, 'Endurance', antOhp, 4, antOhpMax, 0.65, 8, ohp, ohpMax, oblique5, 'Light', antBench3, antBench3Max, 0.55, 0.65, 0.75, 12, 9, 7, bench3, bench3Max, oblique6)
       }
 
       this.week3 = {
@@ -256,15 +256,15 @@ class RoutineLogic extends Component {
       antBench2Max, antBench3, antBench3Max, bench, benchMax, bench2, bench2Max, bench3, bench3Max) {
       this.week1 = {
         day1: new DayAStatic2('Day 1', 'Heavy', antSquat2, null, 0.7, 0.8, 0.9, 8, 6, 2, squat2, squat2Max, core1, 'Speed', antDeadlift, 10, null, 0.65, 3, deadlift, deadliftMax, core2, 'Reps', antSquat3, 5, null, 0.8, 5, squat3, squat3Max, core3),
-        day2: new DayA3Sets2('Day 2', 'Medium', antOhp2, antOhp2Max, 0.65, 0.75, 0.85, 9, 7, 4, ohp2, ohp2Max, oblique2, 'Endurance', antBench, 4, antBenchMax, 0.7, 8, bench, benchMax, oblique1, 'Heavy', antOhp3, antOhp3Max, 0.7, 0.8, 0.9, 8, 6, 2, ohp3, ohp3Max, oblique3),
+        day2: new DayA3Sets2('Day 2', 'Medium', antOhp2, antOhp2Max, 0.65, 0.75, 0.85, 9, 7, 4, ohp2, ohp2Max, oblique1, 'Endurance', antBench, 4, antBenchMax, 0.7, 8, bench, benchMax, oblique2, 'Heavy', antOhp3, antOhp3Max, 0.7, 0.8, 0.9, 8, 6, 2, ohp3, ohp3Max, oblique3),
         day3: new DayAStatic2('Day 3', 'Light', antDeadlift2, null, 0.6, 0.7, 0.8, 10, 8, 6, deadlift2, deadlift2Max, core4, 'Reps', antSquat, 5, null, 0.8, 5, squat, squatMax, core5, 'Endurance', antDeadlift3, 4, null, 0.7, 8, deadlift3, deadlift3Max, core6),
         day4: new DayAStatic2('Day 4', 'Heavy', antBench2, antBench2Max, 0.7, 0.8, 0.9, 8, 6, 2, bench2, bench2Max, oblique4, 'Speed', antOhp, 10, antOhpMax, 0.65, 3, ohp, ohpMax, oblique5, 'Reps', antBench3, 5, antBench3Max, 0.8, 5, bench3, bench3Max, oblique6)
       }
       this.week2 = {
-        day1: new DayA3Sets2('Day 1', 'Medium', antSquat2, null, 0.65, 0.75, 0.85, 9, 7, 4, squat2, squat2Max, core2, 'Endurance', antDeadlift, 4, null, 0.7, 8, deadlift, deadliftMax, core1, 'Heavy', antSquat3, null, 0.7, 0.8, 0.9, 8, 6, 2, squat3, squat3Max, core3),
+        day1: new DayA3Sets2('Day 1', 'Medium', antSquat2, null, 0.65, 0.75, 0.85, 9, 7, 4, squat2, squat2Max, core1, 'Endurance', antDeadlift, 4, null, 0.7, 8, deadlift, deadliftMax, core2, 'Heavy', antSquat3, null, 0.7, 0.8, 0.9, 8, 6, 2, squat3, squat3Max, core3),
         day2: new DayAStatic2('Day 2', 'Light', antOhp2, antOhp2Max, 0.6, 0.7, 0.8, 10, 8, 6, ohp2, ohp2Max, oblique2, 'Reps', antBench, 5, antBenchMax, 0.8, 5, bench, benchMax, oblique1, 'Endurance', antOhp3, 4, antOhp3Max, 0.7, 8, ohp3, ohp3Max, oblique3),
         day3: new DayAStatic2('Day 3', 'Heavy', antDeadlift2, null, 0.7, 0.8, 0.9, 8, 6, 2, deadlift2, deadlift2Max, core4, 'Speed', antSquat, 10, null, 0.65, 3, squat, squatMax, core5, 'Reps', antDeadlift3, 5, null, 0.8, 5, deadlift3, deadlift3Max, core6),
-        day4: new DayA3Sets2('Day 4', 'Medium', antBench2, antBench2Max, 0.65, 0.75, 0.85, 9, 7, 4, bench2, bench2Max, oblique5, 'Endurance', antOhp, 4, antOhpMax, 0.7, 8, ohp, ohpMax, oblique4, 'Light', antBench3, antBench3Max, 0.6, 0.7, 0.8, 10, 8, 6, bench3, bench3Max, oblique6)
+        day4: new DayA3Sets2('Day 4', 'Medium', antBench2, antBench2Max, 0.65, 0.75, 0.85, 9, 7, 4, bench2, bench2Max, oblique4, 'Endurance', antOhp, 4, antOhpMax, 0.7, 8, ohp, ohpMax, oblique5, 'Light', antBench3, antBench3Max, 0.6, 0.7, 0.8, 10, 8, 6, bench3, bench3Max, oblique6)
       }
 
       this.week3 = {
@@ -283,15 +283,15 @@ class RoutineLogic extends Component {
       antBench2Max, antBench3, antBench3Max, bench, benchMax, bench2, bench2Max, bench3, bench3Max) {
       this.week1 = {
         day1: new DayAStatic2('Day 1', 'Heavy', antSquat2, null, 0.75, 0.85, 0.95, 7, 4, 1, squat2, squat2Max, core1, 'Speed', antDeadlift, 10, null, 0.7, 3, deadlift, deadliftMax, core2, 'Reps', antSquat3, 5, null, 0.85, 5, squat3, squat3Max, core3),
-        day2: new DayA3Sets2('Day 2', 'Medium', antOhp2, antOhp2Max, 0.7, 0.8, 0.9, 8, 6, 2, ohp2, ohp2Max, oblique2, 'Endurance', antBench, 4, antBenchMax, 0.75, 8, bench, benchMax, oblique1, 'Heavy', antOhp3, antOhp3Max, 0.75, 0.85, 0.95, 7, 4, 1, ohp3, ohp3Max, oblique3),
+        day2: new DayA3Sets2('Day 2', 'Medium', antOhp2, antOhp2Max, 0.7, 0.8, 0.9, 8, 6, 2, ohp2, ohp2Max, oblique1, 'Endurance', antBench, 4, antBenchMax, 0.75, 8, bench, benchMax, oblique2, 'Heavy', antOhp3, antOhp3Max, 0.75, 0.85, 0.95, 7, 4, 1, ohp3, ohp3Max, oblique3),
         day3: new DayAStatic2('Day 3', 'Light', antDeadlift2, null, 0.65, 0.75, 0.85, 9, 7, 4, deadlift2, deadlift2Max, core4, 'Reps', antSquat, 5, null, 0.85, 5, squat, squatMax, core5, 'Endurance', antDeadlift3, 4, null, 0.75, 8, deadlift3, deadlift3Max, core6),
         day4: new DayAStatic2('Day 4', 'Heavy', antBench2, antBench2Max, 0.75, 0.85, 0.95, 7, 4, 1, bench2, bench2Max, oblique4, 'Speed', antOhp, 10, antOhpMax, 0.7, 3, ohp, ohpMax, oblique5, 'Reps', antBench3, 5, antBench3Max, 0.85, 5, bench3, bench3Max, oblique6)
       }
       this.week2 = {
-        day1: new DayA3Sets2('Day 1', 'Medium', antSquat2, null, 0.7, 0.8, 0.9, 8, 6, 2, squat2, squat2Max, core2, 'Endurance', antDeadlift, 4, null, 0.75, 8, deadlift, deadliftMax, core1, 'Heavy', antSquat3, null, 0.75, 0.85, 0.95, 7, 4, 1, squat3, squat3Max, core3),
-        day2: new DayAStatic2('Day 2', 'Light', antOhp2, antOhp2Max, 0.65, 0.75, 0.85, 9, 7, 4, ohp2, ohp2Max, oblique2, 'Reps', antBench, 5, antBenchMax, 0.85, 5, bench, benchMax, oblique1, 'Endurance', antOhp3, 4, antOhp3Max, 0.75, 8, ohp3, ohp3Max, oblique3),
+        day1: new DayA3Sets2('Day 1', 'Medium', antSquat2, null, 0.7, 0.8, 0.9, 8, 6, 2, squat2, squat2Max, core1, 'Endurance', antDeadlift, 4, null, 0.75, 8, deadlift, deadliftMax, core2, 'Heavy', antSquat3, null, 0.75, 0.85, 0.95, 7, 4, 1, squat3, squat3Max, core3),
+        day2: new DayAStatic2('Day 2', 'Light', antOhp2, antOhp2Max, 0.65, 0.75, 0.85, 9, 7, 4, ohp2, ohp2Max, oblique1, 'Reps', antBench, 5, antBenchMax, 0.85, 5, bench, benchMax, oblique2, 'Endurance', antOhp3, 4, antOhp3Max, 0.75, 8, ohp3, ohp3Max, oblique3),
         day3: new DayAStatic2('Day 3', 'Heavy', antDeadlift2, null, 0.75, 0.85, 0.95, 7, 4, 1, deadlift2, deadlift2Max, core4, 'Speed', antSquat, 10, null, 0.7, 3, squat, squatMax, core5, 'Reps', antDeadlift3, 5, null, 0.85, 5, deadlift3, deadlift3Max, core6),
-        day4: new DayA3Sets2('Day 4', 'Medium', antBench2, antBench2Max, 0.7, 0.8, 0.9, 8, 6, 2, bench2, bench2Max, oblique5, 'Endurance', antOhp, 4, antOhpMax, 0.75, 8, ohp, ohpMax, oblique4, 'Light', antBench3, antBench3Max, 0.65, 0.75, 0.85, 9, 7, 4, bench3, bench3Max, oblique6)
+        day4: new DayA3Sets2('Day 4', 'Medium', antBench2, antBench2Max, 0.7, 0.8, 0.9, 8, 6, 2, bench2, bench2Max, oblique4, 'Endurance', antOhp, 4, antOhpMax, 0.75, 8, ohp, ohpMax, oblique5, 'Light', antBench3, antBench3Max, 0.65, 0.75, 0.85, 9, 7, 4, bench3, bench3Max, oblique6)
       }
 
       this.week3 = {
