@@ -128,6 +128,7 @@ class Dropdown extends Component {
           onInputChange={this.handleChange}
           options={exerciseOptions}
           placeholder={this.props.label}
+          defaultInputValue={this.props.value}
         />
       </Fragment>
     )
