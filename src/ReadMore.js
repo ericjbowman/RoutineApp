@@ -2,6 +2,8 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
+import periodization from './periodization.png'
+import intensities from './intensities.png'
 
 const ReadMore = (props) => (
   <React.Fragment>
@@ -60,6 +62,12 @@ const ReadMore = (props) => (
                 <p>
                 -Eric Bowman
                 </p>
+                <div style={{ display: 'flex', justifyContent: 'center', margin: '2em 0' }}>
+                  <img src={intensities} alt="Intensity chart" height="auto" width="90%" />
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <img src={periodization} alt="Intensity chart" height="auto" width="90%" />
+                </div>
               </div>
             </Paper>
           </Grid>

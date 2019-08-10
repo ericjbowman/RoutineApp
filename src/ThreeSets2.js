@@ -148,7 +148,7 @@ export default function SimpleTable (props) {
                     {circuit.main.name}
                   </TableCell>
                   <TableCell align="right">{ifNoWeight(circuit.main.weight[2])}</TableCell>
-                  <TableCell align="right">{ifNoReps(circuit.main.reps[2])}</TableCell>
+                  <TableCell align="right">{ifNoReps(circuit.main.reps[2])}+</TableCell>
                 </TableRow>
                 <TableRow key='2'>
                   <TableCell component="th" scope="row">
