@@ -6,7 +6,7 @@ import apiUrl from './apiConfig'
 import { withSnackbar } from 'notistack'
 import messages from './auth/messages'
 
-class InputCreate extends Component {
+class Input extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -148,6 +148,8 @@ class InputCreate extends Component {
       autoFill: true
     }
   }
+  // Function that sets name, weight, and reps to true, preventing weight/reps
+  // from changing after user has specified a number
 
   updateAutofilled = (name, weight, reps) => {
     const updatedField = {
@@ -174,10 +176,8 @@ class InputCreate extends Component {
   }
 
   componentDidUpdate () {
-    // console.log('from cdidupdate', this.state)
     const ratios = (inputName, inputWeight, name, weight) => {
       if (!this.state.autofilled[name] && !this.state.autofilled[weight] && !this.state.updated) {
-        // console.log('name', name, 'weight', weight)
         if (inputName === 'Front Squat') {
           return Math.floor(this.state.input.squatWeight * 0.85)
         } else if (inputName === 'Barbell Lunge') {
@@ -233,19 +233,16 @@ class InputCreate extends Component {
         return inputWeight
       }
     }
-    // Check to see if name is true/false after creating custom input to see whether handleChange or handleSelect finishes
+
     const isName = (inputName, inputReps, name, weight, reps) => {
       if (!this.state.autofilled[name] && !this.state.autofilled[weight] && !this.state.autofilled[reps]) {
         this.updateAutofilled(name, weight, reps)
-        // console.log('isName is still running after setting values to true')
         return inputReps
       } else {
-        // console.log('this.state.input[reps]', this.state.input[reps])
         return this.state.input[reps]
       }
     }
     const { input } = this.state
-    // Put squat2Weight as 3rd argument for ratios, check to see if 3rd argument is 0
     const autoMax = {
       squat2Weight: ratios(input.squat2Name, input.squat2Weight, 'squat2Name', 'squat2Weight'),
       squat2Reps: isName(input.squat2Name, input.squatReps, 'squat2Name', 'squat2Weight', 'squat2Reps'),
@@ -278,7 +275,6 @@ class InputCreate extends Component {
 
     }
     if (this.state.autoFill && !this.state.updated) {
-      // this.updateAutofilled('squat2Name', 'squat2Weight', 'squat2Reps')
       const autoMaxInput = Object.assign(this.state.input, autoMax)
       this.setState({ input: autoMaxInput, updated: true })
     }
@@ -288,6 +284,8 @@ class InputCreate extends Component {
     const updatedField = {
       [event.target.name]: event.target.value
     }
+    // By setting this property to true, autoMax is prevented from automatically
+    // setting the weight/reps after user has modified them
     const updatedAutofilled = {
       [event.target.name]: true
     }
@@ -307,6 +305,8 @@ class InputCreate extends Component {
     // console.log(this.state)
   }
 
+  // Name, weight, and reps are set to false if user selects a new exercise, triggering
+  // the autoMax function at the end of componentDidUpdate to automatically set weight/reps
   handleSelect = (key, value, weight, reps) => {
     const updatedField = {
       [key]: value
@@ -393,4 +393,4 @@ class InputCreate extends Component {
   }
 }
 
-export default withSnackbar(withRouter(InputCreate))
+export default withSnackbar(withRouter(Input))

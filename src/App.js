@@ -10,7 +10,7 @@ import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import RoutineLogic from './RoutineLogic'
 import Day from './Day.js'
-import InputCreate from './InputCreate'
+import Input from './Input'
 import { SnackbarProvider } from 'notistack'
 // import InputEdit from './InputEdit'
 import Welcome from './Welcome'
@@ -68,10 +68,10 @@ class App extends Component {
             <RoutineLogic user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/create-input' render={() => (
-            <InputCreate user={user} isEdit={false}/>
+            <Input user={user} isEdit={false}/>
           )} />
           <AuthenticatedRoute user={user} path='/edit-input' render={() => (
-            <InputCreate user={user} isEdit={true}/>
+            <Input user={user} isEdit={true}/>
           )} />
           <AuthenticatedRoute user={user} path='/progress' render={() => (
             <Graph user={user} />

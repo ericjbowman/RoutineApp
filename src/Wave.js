@@ -10,30 +10,19 @@ import { withRouter, Link } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    // marginTop: theme.spacing(3),
-    // marginLeft: theme.spacing(1.5),
-    // marginRight: theme.spacing(1.5),
-    // maxWidth: 300,
     width: '100%',
     overflowX: 'auto',
     backgroundColor: '#4054b2'
   },
-  table: {
-    // display: 'flex',
-    // justifyContent: 'center'
-  },
   head: {
     backgroundColor: '#4054b2',
     color: theme.palette.common.white
-    // paddingRight: '0px',
-    // paddingLeft: '0px'
   },
   body: {
     backgroundColor: 'white'
   },
   cell: {
     paddingRight: '16px'
-    // paddingLeft: '0px'
   }
 }))
 

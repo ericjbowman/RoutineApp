@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ThreeSets2 from './ThreeSets2'
-import StaticSets2 from './StaticSets2'
+import ThreeSets from './ThreeSets'
+import StaticSets from './StaticSets'
 
 class Circuit extends Component {
   render () {
@@ -11,7 +11,7 @@ class Circuit extends Component {
             <h3 className="routine-header">{this.props.name} Circuit-</h3>
             <h3 className="routine-header">{this.props.circuit.intensity}</h3>
           </div>
-          <StaticSets2 sets={this.props}/>
+          <StaticSets sets={this.props}/>
         </React.Fragment>
       )
     } else {
@@ -21,7 +21,7 @@ class Circuit extends Component {
             <h3 className="routine-header">{this.props.name} Circuit-</h3>
             <h3 className="routine-header">{this.props.circuit.intensity}</h3>
           </div>
-          <ThreeSets2 sets={this.props}/>
+          <ThreeSets sets={this.props}/>
         </React.Fragment>
       )
     }

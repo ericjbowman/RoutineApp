@@ -7,7 +7,7 @@ $lightGold: #F5F3E7;
 $transparent: rgba(255, 255, 255, .3);
 
 body {
-  background-image: url('../Dumbbells.jpg');
+  background-image: url('../photos/Dumbbells.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -246,7 +246,7 @@ span, {
   // }
 
   body {
-    background-image: url('../LI-Mobile-background.jpg');
+    background-image: url('../photos/LI-Mobile-background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -280,7 +280,7 @@ span, {
   .picture {
     width: 75%;
   }
-  
+
   .welcome-main, .auth-container {
     height: 86vh;
     display: flex;

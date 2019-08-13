@@ -2,8 +2,8 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
-import periodization from './periodization.png'
-import intensities from './intensities.png'
+import periodization from './photos/periodization.png'
+import intensities from './photos/intensities.png'
 
 const ReadMore = (props) => (
   <React.Fragment>
