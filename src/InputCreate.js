@@ -189,9 +189,9 @@ class InputCreate extends Component {
         } else if (inputName === 'Bulgarian Split Squat') {
           return Math.floor(this.state.input.squatWeight * 0.50)
         } else if (inputName === 'Incline Bench Press') {
-          return Math.floor(this.state.input.benchWeight * 0.8)
+          return Math.floor(this.state.input.benchWeight * 0.88)
         } else if (inputName === 'Weighted Dip') {
-          return Math.floor(this.state.input.benchWeight * 1.05)
+          return Math.floor(this.state.input.benchWeight * 1.3)
         } else if (inputName === 'Close-grip Bench Press') {
           return Math.floor(this.state.input.benchWeight * 0.9)
         } else if (inputName === 'Dumbbell Fly') {
@@ -219,15 +219,15 @@ class InputCreate extends Component {
         } else if (inputName === 'Face Pull') {
           return Math.floor(this.state.input.benchWeight * 0.4)
         } else if (inputName === 'Lat Pull-down') {
-          return Math.floor(this.state.input.benchWeight * 0.8)
+          return Math.floor(this.state.input.benchWeight * 0.83)
         } else if (inputName === 'Barbell Row') {
-          return Math.floor(this.state.input.benchWeight * 0.7)
+          return Math.floor(this.state.input.benchWeight * 0.8)
         } else if (inputName === 'Dumbbell Row') {
-          return Math.floor(this.state.input.benchWeight * 0.35)
+          return Math.floor(this.state.input.benchWeight * 0.4)
         } else if (inputName === 'Seated Cable Row') {
-          return Math.floor(this.state.input.benchWeight * 0.7)
+          return Math.floor(this.state.input.benchWeight * 0.87)
         } else if (inputName === 'Pendlay Row') {
-          return Math.floor(this.state.input.benchWeight * 0.7)
+          return Math.floor(this.state.input.benchWeight * 0.85)
         }
       } else {
         return inputWeight
