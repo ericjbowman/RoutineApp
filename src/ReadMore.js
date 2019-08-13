@@ -25,8 +25,8 @@ const ReadMore = (props) => (
                 by Brian Alsruhe, and my experiene as a NASM Personal Trainer. If you have any exercise-limitations or health-concerns, consult a physician
                 before doing any of these exercises. This app is to be used as a tool, not a personal
                 recommendation. The weight suggestions are mostly based on average ratios for one-rep maxes
-                on strengthlevel.com. For example, the average incline-bench press max is
-                80% of the average bench-press max. LunkedIn will automatically suggest this, however your true
+                on strengthlevel.com. For example, the average Romanian deadlift max is
+                75% of the average deadlift max. LunkedIn will automatically suggest this, however your true
                 one rep max may differ.</p>
                 <p>
                 Also note that this app does not suggest warmups or stretching, though I highly recommend
