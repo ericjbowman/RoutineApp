@@ -11,9 +11,7 @@ class Dropdown extends Component {
     }
   }
   handleChange = (newValue) => {
-    // console.log(newValue.label, newValue.value)
     if (newValue && newValue.hasOwnProperty('preset')) {
-      // console.log('newValue has a label')
       this.props.handleSelect(this.props.name, newValue.label, this.props.weight, this.props.reps)
     } else if (newValue && !newValue.preset) {
       this.props.handleSelect(this.props.name, newValue.label, this.props.weight)
@@ -21,14 +19,6 @@ class Dropdown extends Component {
   }
 
   render () {
-    // const customStyles = {
-    //   control: (base, state) => ({
-    //     ...base,
-    //     boxShadow: 'none'
-    //     // You can also use state.isFocused to conditionally style based on the focus state
-    //   })
-    // }
-
     const { name } = this.props
     const legPrimers = ['antagSquatName', 'antagSquat2Name', 'antagSquat3Name', 'antagDeadliftName', 'antagDeadlift2Name', 'antagDeadlift3Name']
     const squats = ['squat2Name', 'squat3Name']
@@ -128,8 +118,6 @@ class Dropdown extends Component {
       }
     }
 
-    // const oldSelection2 = { value: this.props.name, label: this.props.value, preset: true }
-
     return (
       <Fragment>
         <CreatableSelect
@@ -139,9 +127,7 @@ class Dropdown extends Component {
           onInputChange={this.handleChange}
           options={exerciseOptions}
           placeholder={this.props.label}
-          // defaultInputValue={this.props.value}
           defaultValue={oldSelection(this.props)}
-          // style={customStyles}
         />
       </Fragment>
     )

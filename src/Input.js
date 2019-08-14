@@ -171,7 +171,7 @@ class Input extends Component {
         }
       })
         .then(res => this.setState({ input: res.data.input }))
-        // .catch(err => console.log(err))
+        .catch(err => console.log(err))
     }
   }
 
