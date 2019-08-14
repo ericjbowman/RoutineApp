@@ -5,8 +5,8 @@ import RoutineExpansion from './RoutineExpansion'
 import { withRouter, Redirect } from 'react-router-dom'
 import { withSnackbar } from 'notistack'
 import axios from 'axios'
-import apiUrl from './apiConfig'
-import messages from './auth/messages'
+import apiUrl from '../apiConfig'
+import messages from '../auth/messages'
 // import Paper from '@material-ui/core/Paper'
 
 class Routine extends Component {

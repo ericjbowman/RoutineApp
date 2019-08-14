@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form1 from './Form1'
+import Form1 from './form/Form1'
 import { Redirect, withRouter } from 'react-router-dom'
 import axios from 'axios'
 import apiUrl from './apiConfig'
