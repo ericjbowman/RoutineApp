@@ -289,11 +289,9 @@ class Input extends Component {
     const updatedAutofilled = {
       [event.target.name]: true
     }
-    // console.log('updatedAutofilled from handlechange', updatedAutofilled)
     const editedInput = Object.assign(this.state.input, updatedField)
     const editedAutofilled = Object.assign(this.state.autofilled, updatedAutofilled)
     this.setState({ input: editedInput, autofilled: editedAutofilled })
-    // console.log('state from handle change', this.state)
   }
 
   handleDate = date => {
@@ -302,7 +300,6 @@ class Input extends Component {
     }
     const editedInput = Object.assign(this.state.input, updatedField)
     this.setState({ input: editedInput })
-    // console.log(this.state)
   }
 
   // Name, weight, and reps are set to false if user selects a new exercise, triggering
@@ -316,12 +313,9 @@ class Input extends Component {
       [weight]: false,
       [reps]: false
     }
-    // console.log('handleSelect updated autofilled', updatedAutofilled)
     const editedInput = Object.assign(this.state.input, updatedField)
     const editedAutofilled = Object.assign(this.state.autofilled, updatedAutofilled)
-    // console.log('editedAutofilled from handleselect', editedAutofilled)
     this.setState({ input: editedInput, updated: false, autofilled: editedAutofilled })
-    // console.log('state from handleSelect', this.state)
   }
 
   handleSubmit = event => {
